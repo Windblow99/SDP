@@ -59,7 +59,7 @@
 				<h1 style="color:#990000">Forget Password</h1><br/><br/>
 				<h4>Forgot your password? You can reset it here with ease!</h4>
 				<br/><br/><br/>
-					<form method="post" action="loginfunction.php">
+					<form method="post" action="#">
 						<table>
 							<tr><th><br/>Email: </th><td><br/><input id="email" type="email" name="email" required="required" style="margin-left: 20px; width: 225px; height: 25px;"/></td></tr>
 							<tr><th><br/><br/><br/>Your Real Name: </th><td><br/><br/><br/><input id="name" type="text" name="name" required="required" style="margin-left: 20px; width: 225px; height: 25px;"/></td></tr>
