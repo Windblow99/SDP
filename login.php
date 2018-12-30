@@ -55,7 +55,7 @@
 		<div id="page-content">
 			<center>
 
-				<h1 style="color:#990000">Log In</h1><br/><br/>
+				<h1 style="color:#990000"><b>Log In</b></h1><br/><br/>
 				<h4>Hello there! We are excited to see you again!</h4>
 				<br/><br/><br/>
 					<form method="post" action="#">
