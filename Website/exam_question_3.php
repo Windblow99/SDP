@@ -17,9 +17,7 @@
   font-size: 14px;
   height: 100px;
   text-align: center;
-  vertical-align: middle;
   border: 3px solid;
-  width: 80%;
   color: black !important;
   font-weight: bold !important;
 }
@@ -52,12 +50,12 @@
 
 <div class="container-fluid title2">
   <div class="row-xl">
-    <b>Section A</b>
+    <b>Lab Exam 1</b>
 </div>
 
 <div class="container-fluid title3">
   <div class="row-xl">
-   This section consists of 30 questions. Please answer them all.
+   This section consists of 5 questions. Please answer them all.
 </div>
 
 <hr>
@@ -70,44 +68,19 @@
 <br/>
 
 <form class="justify-content-center needs-validation" novalidate>
-	<div class="container-fluid question form-group">
-  		<div class="col-12">
-  			<br/>
-  			<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>
-		</div>
-	</div>
 
-  <div class="container-flui form-group" style="width: 65%;">
   <div class="row">
-    <div class="col">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input">0ms
-      </label>
+    <div class="col-4">
+      <img src="/Pictures/Lab.jpg">
     </div>
-    <div class="col">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input">1ms
-      </label>
+    <div class="col-8">
+      <div class="question">
+        A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.
+      </div>
+      <br/>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Enter your answer here..."></textarea>
     </div>
-  </div>  
-</div>
-
-<br/>
-
-<div class="container-flui form-group" style="width: 65%;">
-  <div class="row">
-    <div class="col">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input">0ms
-      </label>
-    </div>
-    <div class="col">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input">1ms
-      </label>
-    </div>
-  </div>  
-</div>
+  </div>
 
 <br/>
 
