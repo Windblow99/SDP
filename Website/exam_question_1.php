@@ -80,20 +80,23 @@
 	<div class="container-fluid form-group" style="width: 83%;">
     	<textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Enter your answer here..."></textarea>
   	</div>
-</form>
 
 <div class="container-fluid questionbuttons">
   <div class="row">
-  	<div class="col-1">
-   		<i class="fas fa-angle-left" style="font-size: 45px;"></i>
-   	</div>
-   	<div class="col-1">
-   		<i class="fas fa-angle-right" style="font-size: 45px;"></i>
-   	</div>
-   	<div class="col-1">
-   		<button type="button" class="btn btn-secondary">Submit</button>
-   	</div>
+    <div class="col-1">
+      <a href=""><i class="fas fa-angle-left" style="font-size: 45px;"></i></a>
+    </div>
+    <div class="col-1">
+      <a href=""><i class="fas fa-angle-right" style="font-size: 45px;"></i></a>
+    </div>
+    <div class="col-1">
+      <button type="button" class="btn btn-secondary">Submit</button>
+    </div>
 </div>
+    
+</form>
+
+
 
 </body>
 

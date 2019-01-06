@@ -17,7 +17,6 @@
 
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
 
-test code to check fonts
 
 </body>
 

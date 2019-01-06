@@ -20,8 +20,8 @@
   vertical-align: middle;
   border: 3px solid;
   width: 80%;
-  color: black !important;
-  font-weight: bold !important;
+  color: black;
+  font-weight: bold;
 }
 
 .questionbuttons{
@@ -64,52 +64,45 @@
 
 <div class="container-fluid questiontitle">
   <div class="row-xl">
-   Question 2
+   Question 1
 </div>
 
 <br/>
 
-<form class="justify-content-center needs-validation" novalidate>
+<form class="justify-content-center">
 	<div class="container-fluid question form-group">
-  		<div class="col-12">
-  			<br/>
-  			<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>
+  	<div class="col-12">
+  		<br/>
+  		<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>
 		</div>
 	</div>
 
-  <div class="container-flui form-group" style="width: 65%;">
+	<div class="container-fluid form-group" style="width: 83%;">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your answer here..."></textarea>
+  </div>
+
+<h4 style="color: #CC2865;">Your suggested answer</h4>
+
+  <div class="container-fluid form-group" style="width: 83%;">
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your answer here..."></textarea>
+  </div>
+
+<div class="container-fluid form-group" style="width: 83%;">
   <div class="row">
-    <div class="col">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input">0ms
-      </label>
+    <div class="col-2">
+      <h4 style="font-size: 0.8em;">Marks</h4>
     </div>
     <div class="col">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input">1ms
-      </label>
+      <select class="form-control form-control-sm" style="width: 50%;">
+        <option disabled>Make a selection</option>
+        <option>4 Marks</option>
+        <option>3 Marks</option>
+        <option>2 Marks</option>
+        <option>1 Mark</option>
+      </select>
     </div>
-  </div>  
+  </div>
 </div>
-
-<br/>
-
-<div class="container-flui form-group" style="width: 65%;">
-  <div class="row">
-    <div class="col">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input">0ms
-      </label>
-    </div>
-    <div class="col">
-      <label class="form-check-label">
-        <input type="radio" class="form-check-input">1ms
-      </label>
-    </div>
-  </div>  
-</div>
-
-<br/>
 
 <div class="container-fluid questionbuttons">
   <div class="row">
@@ -123,7 +116,10 @@
       <button type="button" class="btn btn-secondary">Submit</button>
     </div>
 </div>
+  
 </form>
+
+
 
 </body>
 

@@ -81,6 +81,7 @@ label{
 	top: 0;
 	margin-top: 100px;
 	height: 100%;
+}
 
 .title {
 	text-indent: 15%;
@@ -89,13 +90,13 @@ label{
 }
 
 .title2{
-	text-indent: 14.5%;
+	text-indent: 14%;
 	font-size: 0.6em;
 	color: #CC2865;
 }
 
 .title3{
-	text-indent: 13.5%;
+	text-indent: 13%;
 	font-size: 0.6em;
 	color: #8190A5;
 }
