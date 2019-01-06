@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/ico" href="/pictures/logo.jpg" />
+<title>Manage Students</title>
+
+<link rel="stylesheet" type="text/css" href="CSS/Main CSS.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <style>
+  	body{
+  		background-image: url("../Pictures/6.jpg");
+  	}
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="margin-left: 50px;">educo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Account Settings</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Account Details</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5">
+      <p class="text-center" style="font-size: 35px; color: maroon; float: left; font-weight: bold;">
+      SUBMITTED QUESTIONS
+      </p>
+    </div>
+    <div class="col-sm-7">
+      <p class="text-center" style="font-size: 18px; color: fuchsia; padding-top: 18px; float: left;">
+      CLASS 1
+      </p>
+    </div>
+  </div>
+</div>
+  <hr/>
+  <br/><br/>
+  <div class="row" style="margin-left: 170px; margin-right: 100px;">
+    <div class="dropdown col-sm-3">
+      <button class="btn btn-secondary dropdown-toggle"type="button" id="questionapproval" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Sort by status</button>
+            <div class="dropdown-menu" aria-labelledby="questionapproval">
+            <a class="dropdown-item" href="#!">Approved</a>
+            <a class="dropdown-item" href="#!">Pending</a>
+            </div>
+    </div>
+    <div class="dropdown col-sm-3">
+      <button class="btn btn-secondary dropdown-toggle"type="button" id="chapters" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Sort by chapter</button>
+            <div class="dropdown-menu" aria-labelledby="chapters">
+            <a class="dropdown-item" href="#!">Chapter 1</a>
+            <a class="dropdown-item" href="#!">Chapter 2</a>
+            </div>
+    </div>
+    <div class="dropdown col-sm-3">
+      <button class="btn btn-secondary dropdown-toggle"type="button" id="questiontype" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Sort by type</button>
+            <div class="dropdown-menu" aria-labelledby="questiontype">
+            <a class="dropdown-item" href="#!">Exam</a>
+            <a class="dropdown-item" href="#!">Lab Session</a>
+            </div>
+    </div>
+    <div class="dropdown col-sm-3">
+      <button class="btn btn-secondary dropdown-toggle"type="button" id="questiondifficulty" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Sort by difficulty</button>
+            <div class="dropdown-menu" aria-labelledby="questiondifficulty">
+            <a class="dropdown-item" href="#!">Beginner</a>
+            <a class="dropdown-item" href="#!">Intermediate</a>
+            <a class="dropdown-item" href="#!">Expert</a>
+            </div>
+    </div>
+</div>
+
+<br/><br/>
+
+<table class="table table-hover" style="margin-left: 175px; max-width: 1000px;">
+  <thead>
+    <tr style="background-color: fuchsia; color: white;">
+      <th>Question</th>
+      <th>Status</th>
+      <th>Chapter</th>
+      <th>Type</th>
+      <th>Difficulty</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="color: fuchsia;">
+
+      <td>Question 1</td>
+      <td>Approved</td>
+      <td>1</td>
+      <td>E</td>
+      <td>A</td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
+    </tr>
+    <tr style="color: fuchsia;">
+
+      <td>Question 2</td>
+      <td>Pending</td>
+      <td>1</td>
+      <td>L</td>
+      <td>B</td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
+    </tr>
+    <tr style="color: fuchsia;">
+
+      <td>Question 3</td>
+      <td>Approved</td>
+      <td>1</td>
+      <td>E</td>
+      <td>C</td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
+    </tr>
+    <tr style="color: fuchsia;">
+
+      <td>Question 4</td>
+      <td>Pending</td>
+      <td>1</td>
+      <td>E</td>
+      <td>C</td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="margin-left: 600px; opacity: 0.7">
+  Note: <br/>
+   E = Exam <br/>
+   L = Lab <br/>
+   A = Beginner <br/>
+   B = Intermediate <br/>
+   C = Expert <br/>
+</p>
+
+</body>
+</html>

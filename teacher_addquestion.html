@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/ico" href="/pictures/logo.jpg" />
+<title>Add Question</title>
+
+<link rel="stylesheet" type="text/css" href="CSS/Main CSS.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <style>
+  	body{
+  		background-image: url("../Pictures/7.jpg");
+  	}
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" style="margin-left: 50px;">educo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Account Settings</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Account Details</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Log Out</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+<a style="color: fuchsia; font-weight: bold; font-size: 17px;" href="<script>window.history.go(-1)</script>">< BACK</a>
+
+<br/>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="text-center" style="font-size: 35px; color: maroon; float: left; font-weight: bold;">
+      ADD A QUESTION
+      </p>
+    </div>
+  </div>
+</div>
+<hr/>
+
+<div class="container">
+    <div class="col-sm-12">
+      <form>
+        <div class="form-group row">
+        <label for="inputquestion" class="col-sm-2 col-form-label" style="color: fuchsia; font-weight: bold; font-size: 20px;">QUESTION: </label>
+          <div class="col-sm-10">
+          <input type="email" class="form-control" id="inputquestion" style="height: 175px;" placeholder="Enter question here...">
+          </div>
+        </div>
+        <br/>
+        <div class="form-group row">
+        <label for="inputimage" class="col-sm-2 col-form-label" style="color: fuchsia; font-weight: bold; font-size: 20px;">IMAGE: </label>
+          <div class="col-sm-3">
+            <input type="file" class="form-control-file" id="inputimage" style="color: fuchsia;">
+          </div>
+        </div>
+
+          <div class="form-group row">
+          <label for="questiontype" class="col-sm-2 col-form-label" style="color: fuchsia; font-weight: bold; font-size: 20px; float: left;">TYPE: </label>
+          <div class="dropdown col-sm-3">
+            <button class="btn btn-secondary dropdown-toggle"type="button" id="questiontype" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Choose Type</button>
+            <div class="dropdown-menu" aria-labelledby="questiontype">
+            <a class="dropdown-item" href="#!">Exam</a>
+            <a class="dropdown-item" href="#!">Lab Session</a>
+            </div>
+          </div>
+          </div>
+
+          <div class="form-group row">
+          <label for="questionchapter" class="col-sm-2 col-form-label" style="color: fuchsia; font-weight: bold; font-size: 20px">CHAPTER: </label>          
+          <div class="dropdown col-sm-3">
+            <button class="btn btn-secondary dropdown-toggle"type="button" id="questionchapter" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Select Chapter</button>
+            <div class="dropdown-menu" aria-labelledby="questionchapter">
+            <a class="dropdown-item" href="#!">Chapter 1</a>
+            <a class="dropdown-item" href="#!">Chapter 2</a>
+            </div>
+          </div>
+          </div>
+
+          <div class="form-group row">
+          <label for="questiondifficulty" class="col-sm-2 col-form-label" style="color: fuchsia; font-weight: bold; font-size: 20px;">DIFFICULTY: </label>
+          <div class="dropdown col-sm-3">
+            <button class="btn btn-secondary dropdown-toggle"type="button" id="questiondifficulty" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Select Difficulty</button>
+            <div class="dropdown-menu" aria-labelledby="questionchapter">
+            <a class="dropdown-item" href="#!">Beginner</a>
+            <a class="dropdown-item" href="#!">Intermediate</a>
+            <a class="dropdown-item" href="#!">Expert</a>
+            </div>
+          </div>
+          </div>
+
+          <div class="form-group row" style="height: 50px">
+            <label for="answerformat" class="col-sm-3 col-form-label" style="color: fuchsia; font-weight: bold; font-size: 20px;">ANSWER FORMAT: </label>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="text" autocomplete="off" checked> Text
+                </label>
+                <label class="btn btn-secondary">
+                <input type="radio" name="options" id="mcq" autocomplete="off"> MCQ
+                </label>
+            </div>
+          </div>
+        <div class="container col-sm-3 offset-sm-1" style="float: left;">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+              <input type="radio" aria-label="Radio button for first option">
+              </div>
+            </div>
+          <input type="text" class="form-control" aria-label="Text input for first option">
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+              <input type="radio" aria-label="Radio button for second option">
+              </div>
+            </div>
+          <input type="text" class="form-control" aria-label="Text input for second option">
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+              <input type="radio" aria-label="Radio button for third option">
+              </div>
+            </div>
+          <input type="text" class="form-control" aria-label="Text input for third option">
+          </div>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+              <input type="radio" aria-label="Radio button for fourth option">
+              </div>
+            </div>
+          <input type="text" class="form-control" aria-label="Text input for fourth option">
+          </div>
+        </div>
+        <br/><br/>
+
+        <div class="form-group row">
+        <label for="inputquestion" class="col-sm-2 col-form-label" style="color: fuchsia; font-weight: bold; font-size: 20px;">MARKS: </label>
+          <div class="col-sm-4">
+          <input type="email" class="form-control" id="inputquestion" placeholder="Enter full mark...">
+          </div>
+        </div>
+        <br/>
+        <button style="width: 175px; height: 35px; background-color: #333333; float: right;" type="submit" class="btn btn-primary">Add Question</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
