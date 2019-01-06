@@ -4,7 +4,8 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>educo</title>
+<link rel="icon" type="image/ico" href="/pictures/logo.jpg" />
+<title>Log In</title>
 <script>
 	function viewpassword()
 	{
@@ -27,6 +28,8 @@
   <style>
   	body{
   		background-image: url("Pictures/4.jpg");
+  		background-repeat: no-repeat;
+  		background-size: 100%;
   	}
   </style>
 </head>
@@ -45,7 +48,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       </ul>
     </div>
   </div>
@@ -58,11 +61,11 @@
 				<h1 style="color:#990000"><b>Log In</b></h1><br/><br/>
 				<h4>Hello there! We are excited to see you again!</h4>
 				<br/><br/><br/>
-					<form method="post" action="#">
+					<form method="post" action="loginfunction.php">
 						<table>
-							<tr><th><br/>E-mail: </th><td><br/><input id="id" type="text" name="userid" required="required" style="margin-left: 20px; width: 225px; height: 25px;"/></td></tr>
+							<tr><th><br/>E-mail: </th><td><br/><input id="email" type="email" name="email" required="required" style="margin-left: 20px; width: 225px; height: 25px;"/></td></tr>
 							<tr><th><br/><br/><br/>Password: </th><td><br/><br/><br/><input id="password" type="password" name="password" required="required" style="margin-left: 20px; width: 225px; height: 25px;"/> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword()"/> View Password</td></tr>
-							<tr><th></th><td><a href="#" style="margin-left: 20px;">Forget Password</a></td></tr>
+							<tr><th></th><td><a href="forgetpassword.php" style="margin-left: 20px;">Forget Password</a></td></tr>
 							<tr><th colspan="2"><br/><br/><br/><center><a><input id="submit" type="submit" value="Login" class="btn btn-default" role="button"/ style="padding: 10px 40px; background-color: #808080; color:white;"></a></center></th></tr>
 						</table>
 					</form>
