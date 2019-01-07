@@ -2,8 +2,8 @@
 <html>
 
 <head>
-<!--<?php include "header.php"; ?>-->
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
+<?php //include "header.php";
+include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>educo</title>
 <link rel="stylesheet" type="text/css" href="CSS/Main CSS.css">

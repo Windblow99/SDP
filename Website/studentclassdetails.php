@@ -16,17 +16,24 @@
 		<div id="page-content">
 		<center>
 	
-		<h1>EREN ONG</h1> ASIA PACIFIC UNIVERSITY | STUDENT <a href="studentclassdetails.php"><button>Class Details</button></a>
+		<h1>CLASS DETAILS</h1> CLASS 1
 
 		<hr>
 
-		<h5>ACADEMIC PERFORMANCE</h5>
+		<h5>Teacher in-charge:</h5>Eren Ong
 
 		<hr>
 
-		<h5>CORPORATE PERFORMANCE</h5>
+		<h5>Current in-class students</h5>
 
-		<button>View Details</button>
+		<hr>
+
+		<h5>Top Scores</h5>
+		This scoreboard only shows the Top 3 scorers.<br/><br/>
+
+		1. Student 1<br/>
+		2. Student 2 <br/>
+		3. Student 3
 
 	
 		</center>
