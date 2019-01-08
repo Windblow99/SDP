@@ -14,22 +14,72 @@
 
 
 		<div id="page-content">
-		<center>
-	
-		<h1>EREN ONG</h1> ASIA PACIFIC UNIVERSITY | STUDENT <a href="studentclassdetails.php"><button>Class Details</button></a>
+			<div class="container">
+
+			<div class="row">
+
+				<div class="col-sm" style="font-size: 36px;">
+				EREN ONG
+				</div>
+
+				<div class="col-sm">
+ 				<br/>ASIA PACIFIC UNIVERSITY | STUDENT 
+				</div>
+
+				<div class="col-sm">
+				<br/><a href="studentclassdetails.php"><button>Class Details</button></a>
+				</div>
+
+			</div>
 
 		<hr>
 
-		<h5>ACADEMIC PERFORMANCE</h5>
+
+		<h5>ACADEMIC PERFORMANCE</h5><br/>
+			<div class="row">
+
+				<div class="col-sm">
+				Overall Performance<br/>
+				75/100
+				</div>
+
+				<div class="col-sm">
+				Exam Overall Performance<br/>
+				75/100
+				</div>
+
+				<div class="col-sm">
+				Lab Performance<br/>
+				75/100
+				</div>
+
+			</div>
+
 
 		<hr>
 
-		<h5>CORPORATE PERFORMANCE</h5>
+			<div class="row">
 
-		<button>View Details</button>
+				<div class="col-sm">
+				<h5>CORPORATE PERFORMANCE</h5>
+				</div>
+
+				<div class="col-sm">
+				5/10<br/>Certificates Obtained
+				</div>
+
+				<div class="col-sm">
+				<button>View Details</button>
+				</div>
+
+			</div>
+
+
+
+		
 
 	
-		</center>
+			</div>
 		</div>
 		
 

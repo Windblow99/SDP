@@ -14,30 +14,154 @@
 
 
 		<div id="page-content">
-		<center>
+			<div class="container">
 	
-		<h1>Eren's Lab Performance</h1> ASIA PACIFIC UNIVERSITY | STUDENT
+		<div class="row">
+
+				<div class="col-sm">
+				<h1>Eren's Lab Performance</h1>
+				</div>
+
+				<div class="col-sm">
+				<br/>ASIA PACIFIC UNIVERSITY | STUDENT
+				</div>
+				
+		</div>
+		
 
 		<hr>
 
-		<h5>LAB PERFORMANCE</h5> <u>View marks for grade</u>
-		<br/>
-		<br/>
-		Overall Performance
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>LAB PERFORMANCE</h5>
+				</div>
+
+				<div class="col-sm">
+				<center><u>View marks for grade</u></center>
+				</div>
+
+				<div class="col-sm">
+				
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Overall Performance</h5>
+				</div>
+
+				<div class="col-sm">
+				75/100
+				</div>
+
+				<div class="col-sm">
+				
+				</div>
+				
+			</div>		
 
 		<hr>
 
-		<h5>Current in-class students</h5><br/>
+			<div class="row">
 
-		Chapter 1 75/100 <u>View detailed results</u><br/>
-		Chapter 2 75/100 <u>View detailed results</u><br/>
-		Chapter 3 Pending Completion <button>Take Lab Exam</button><br/>
-		Chapter 4 Pending Completion <button>Take Lab Exam</button><br/><br/>
-		Chapter 5 Pending Completion <button>Take Lab Exam</button><br/><br/>
-		Chapter 6 Pending Completion <button>Take Lab Exam</button><br/><br/>
+				<div class="col-sm">
+				<h5>Chapter 1</h5>
+				</div>
 
+				<div class="col-sm">
+				75/100
+				</div>
+
+				<div class="col-sm">
+				<u>View detailed results</u>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 2</h5>
+				</div>
+
+				<div class="col-sm">
+				75/100
+				</div>
+
+				<div class="col-sm">
+				<u>View detailed results</u>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 3</h5>
+				</div>
+
+				<div class="col-sm">
+				PENDING COMPLETION
+				</div>
+
+				<div class="col-sm">
+				<button>Take Lab Exam</button>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 4</h5>
+				</div>
+
+				<div class="col-sm">
+				PENDING COMPLETION
+				</div>
+
+				<div class="col-sm">
+				<button>Take Lab Exam</button>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 5</h5>
+				</div>
+
+				<div class="col-sm">
+				PENDING COMPLETION
+				</div>
+
+				<div class="col-sm">
+				<button>Take Lab Exam</button>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 6</h5>
+				</div>
+
+				<div class="col-sm">
+				PENDING COMPLETION
+				</div>
+
+				<div class="col-sm">
+				<button>Take Lab Exam</button>
+				</div>
+				
+			</div>
 	
-		</center>
+			</div>
 		</div>
 		
 

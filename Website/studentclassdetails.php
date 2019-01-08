@@ -14,17 +14,77 @@
 
 
 		<div id="page-content">
+			<div class="container">
 		<center>
 	
 		<h1>CLASS DETAILS</h1> CLASS 1
 
 		<hr>
 
-		<h5>Teacher in-charge:</h5>Eren Ong
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Teacher in-charge:</h5>
+				</div>
+
+				<div class="col-sm">
+				Eren Ong
+				</div>
+				
+			</div>		
 
 		<hr>
 
 		<h5>Current in-class students</h5>
+
+			<div class="row">
+
+				<div class="col-sm">
+				Student 1
+				</div>
+
+				<div class="col-sm">
+				Student 2
+				</div>
+
+				<div class="col-sm">
+				Student 3
+				</div>
+
+				<div class="col-sm">
+				Student 4
+				</div>
+
+				<div class="col-sm">
+				Student 5
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				Student 1
+				</div>
+
+				<div class="col-sm">
+				Student 2
+				</div>
+
+				<div class="col-sm">
+				Student 3
+				</div>
+
+				<div class="col-sm">
+				Student 4
+				</div>
+
+				<div class="col-sm">
+				Student 5
+				</div>
+
+			</div>
+
 
 		<hr>
 
@@ -37,6 +97,7 @@
 
 	
 		</center>
+			</div>
 		</div>
 		
 

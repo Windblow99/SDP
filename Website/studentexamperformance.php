@@ -14,28 +14,155 @@
 
 
 		<div id="page-content">
-		<center>
+			<div class="container">
 	
-		<h1>Eren's Exam Performance</h1> ASIA PACIFIC UNIVERSITY | STUDENT
+		<div class="row">
+
+				<div class="col-sm">
+				<h1>Eren's Exam Performance</h1>
+				</div>
+
+				<div class="col-sm">
+				<br/>ASIA PACIFIC UNIVERSITY | STUDENT
+				</div>
+				
+			</div>
+
 
 		<hr>
 
-		<h5>EXAM PERFORMANCE</h5> <u>View marks for grade</u>
-		<br/>
-		<br/>
-		Overall Performance
+			<div class="row">
 
+				<div class="col-sm">
+				<h5>EXAM PERFORMANCE</h5>
+				</div>
+
+				<div class="col-sm">
+				<u>View marks for grade</u>
+				</div>
+
+				<div class="col-sm">
+				<u>Select Difficulty</u>
+				</div>
+				
+			</div>
+		 
+			<div class="row">
+
+				<div class="col-sm">
+				Overall Performance
+				</div>
+
+				<div class="col-sm">
+				75/100
+				</div>
+
+				<div class="col-sm">
+				
+				</div>
+				
+			</div>
+		
 		<hr>
 
-		Chapter 1 75/100 <u>View detailed results</u><br/>
-		Chapter 2 75/100 <u>View detailed results</u><br/>
-		Chapter 3 Pending Completion <button>Take Exam</button><br/>
-		Chapter 4 Pending Completion <button>Take Exam</button><br/><br/>
-		Chapter 5 Pending Completion <button>Take Exam</button><br/><br/>
-		Chapter 6 Pending Completion <button>Take Exam</button><br/><br/>
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 1</h5>
+				</div>
+
+				<div class="col-sm">
+				75/100
+				</div>
+
+				<div class="col-sm">
+				<u>View detailed results</u>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 2</h5>
+				</div>
+
+				<div class="col-sm">
+				75/100
+				</div>
+
+				<div class="col-sm">
+				<u>View detailed results</u>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 3</h5>
+				</div>
+
+				<div class="col-sm">
+				Pending Completion
+				</div>
+
+				<div class="col-sm">
+				<button>Take Exam</button>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 4</h5>
+				</div>
+
+				<div class="col-sm">
+				Pending Completion
+				</div>
+
+				<div class="col-sm">
+				<button>Take Exam</button>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 5</h5>
+				</div>
+
+				<div class="col-sm">
+				Pending Completion
+				</div>
+
+				<div class="col-sm">
+				<button>Take Exam</button>
+				</div>
+				
+			</div>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5>Chapter 6</h5>
+				</div>
+
+				<div class="col-sm">
+				Pending Completion
+				</div>
+
+				<div class="col-sm">
+				<button>Take Exam</button>
+				</div>
+				
+			</div>
 
 	
-		</center>
+			</div>
 		</div>
 		
 

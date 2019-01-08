@@ -3,7 +3,7 @@
 
 <head>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/header.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 
 <title>Teacher Main Menu</title>
 
@@ -16,7 +16,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
 
 <br/>
 <div class="container">
