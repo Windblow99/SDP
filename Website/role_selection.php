@@ -3,19 +3,21 @@
 
 <head>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/header.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 
 <title>Role Selection</title>
 
   <style>
     body{
-      background-image: url("../Pictures/3.jpg");
+      background-image: url("/Pictures/10.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
   </style>
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
@@ -33,7 +35,7 @@
   <div class="card" style="max-width: 275px; background-color: #DDDDDD;">
     <div class="card-body">
       <h5 class="card-title">I'm a Student</h5><br/>
-        <div class="col-sm-12">
+        <div class="col-sm-10">
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Login</button>
       <br/><br/><br/>
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button>
@@ -46,7 +48,7 @@
   <div class="card" style="max-width: 275px; background-color: #DDDDDD;">
     <div class="card-body">
       <h5 class="card-title">I'm a Teacher</h5><br/>
-      <div class="col-sm-12">
+      <div class="col-sm-10">
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Login</button>
       <br/><br/><br/>
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button>
@@ -59,7 +61,7 @@
   <div class="card" style="max-width: 275px; background-color: #DDDDDD;">
     <div class="card-body">
       <h5 class="card-title">I'm a Corporate</h5><br/>
-      <div class="col-sm-12">
+      <div class="col-sm-10">
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Login</button>
       <br/><br/><br/>
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button>

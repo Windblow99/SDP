@@ -26,8 +26,14 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
   	body{
-  		background-image: url("Pictures/4.jpg");
+  		background-image: url("/Pictures/Login.jpg");
   	}
+
+  	#page-content{
+	top: 0;
+	margin-top: 100px;
+	height: 100%;
+	}
   </style>
 </head>
 
@@ -41,12 +47,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#" style="margin-left: 50px;">educo</a>
+      <a class="navbar-brand" href="index.php" style="margin-left: 50px;">educo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      	<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+        <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       </ul>
     </div>
   </div>
@@ -56,7 +62,7 @@
 		<div id="page-content">
 			<center>
 
-				<h1 style="color:#990000">Forget Password</h1><br/><br/>
+				<h1 style="color:#990000"><b>Forget Password</b></h1><br/><br/>
 				<h4>Forgot your password? You can reset it here with ease!</h4>
 				<br/><br/><br/>
 					<form method="post" action="#">

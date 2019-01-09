@@ -27,7 +27,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
   	body{
-  		background-image: url("Pictures/4.jpg");
+  		background-image: url("/Pictures/Login.jpg");
   		background-repeat: no-repeat;
   		background-size: 100%;
   	}

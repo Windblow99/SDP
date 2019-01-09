@@ -26,7 +26,7 @@
 				<br/>ASIA PACIFIC UNIVERSITY | STUDENT
 				</div>
 				
-			</div>
+		</div>
 
 
 		<hr>
