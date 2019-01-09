@@ -58,7 +58,7 @@
 
   <div class="row">
     <div class="col-sm-12" align="center">
-<a href="#" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
+<a href="aboutus.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
     </div>
   </div>
 </div>
