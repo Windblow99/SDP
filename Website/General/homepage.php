@@ -49,7 +49,7 @@
 
   <div class="row">
     <div class="col-sm-12" align="center">
-      <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Enter Now</button>
+      <button style="width: 165px; height: 40px; background-color: #333333;" onclick="window.location.href='http://localhost/website/website/general/role_selection.php'" type="submit" class="btn btn-primary">Enter Now</button>
     </div>
   </div>
 
