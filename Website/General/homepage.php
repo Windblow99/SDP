@@ -3,19 +3,19 @@
 
 <head>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/header.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 
 <title>Homepage</title>
 
   <style>
     body{
-      background-image: url("../Pictures/3.jpg");
+      background-image: url("/pictures/3.jpg");
     }
   </style>
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
 
 <br/><br/>
 

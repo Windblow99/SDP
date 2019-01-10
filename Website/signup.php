@@ -59,7 +59,6 @@
         <span class="icon-bar"></span>                        
       </button>
       <a class="navbar-brand" href="index.php" style="margin-left: 50px;">educo</a>
-    </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
       	<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -87,6 +86,7 @@
 				<tr><th><br/>Password: </th><td><br/><input type="password" placeholder=" Password" id="password" name="password" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword()"/> View Password<br/><span id="checkpassword"></span></td></tr>
 				<tr><th><br/>Confirm Password: </th><td><br/><input type="password" placeholder=" Confirm Password" id="password2" name="password2" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword2()"/> View Password<br/><span id="checkpassword"></span></td></tr>
 				<!--<tr><th>Confirm Password: </th><td><input type="password" id="cpassword" name="cpassword" required="required"/><br/><span id="checkcpassword"></span></td></tr>-->
+
 				<tr><th colspan="2"><br/><center><a><input id="submit" type="submit" value="Sign Up" class="btn btn-default" role="button"/ style="padding: 10px 40px; background-color: #808080; color:white;"></a></center></th></tr>
 			</table>
 		</form>
