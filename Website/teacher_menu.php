@@ -3,7 +3,7 @@
 
 <head>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/header.php'); ?>
 
 <title>Teacher Main Menu</title>
 
@@ -16,7 +16,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/navbar.php'); ?>
 
 <br/>
 <div class="container">
@@ -52,17 +52,17 @@
     <tr>
 
       <td>Class 1</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
     </tr>
     <tr>
 
       <td>Class 2</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
     </tr>
     <tr>
 
       <td>Class 3</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
     </tr>
 
   </tbody> <br/>

@@ -37,8 +37,9 @@
       <h5 class="card-title">I'm a Student</h5><br/>
         <div class="col-sm-10">
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Login</button>
+        <div class="col-sm-12">
       <br/><br/><br/>
-      <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button>
+      <button style="width: 165px; height: 40px; background-color: #333333;" onclick="window.location.href='http://localhost/website/signup.php'" type="submit" class="btn btn-primary">Sign Up</button>
       <br/><br/><br/>
       <a href="aboutus.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
         </div>
@@ -50,8 +51,9 @@
       <h5 class="card-title">I'm a Teacher</h5><br/>
       <div class="col-sm-10">
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Login</button>
+
       <br/><br/><br/>
-      <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button>
+      <button style="width: 165px; height: 40px; background-color: #333333;" onclick="window.location.href='http://localhost/website/signup.php'" type="submit" class="btn btn-primary">Sign Up</button>
       <br/><br/><br/>
       <a href="aboutus.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
       </div>
@@ -63,8 +65,10 @@
       <h5 class="card-title">I'm a Corporate</h5><br/>
       <div class="col-sm-10">
       <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Login</button>
+
+      <div class="col-sm-12">
       <br/><br/><br/>
-      <button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button>
+      <button style="width: 165px; height: 40px; background-color: #333333;" onclick="window.location.href='http://localhost/website/signup.php'" type="submit" class="btn btn-primary">Sign Up</button>
       <br/><br/><br/>
       <a href="aboutus.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
       </div>
