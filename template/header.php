@@ -1,5 +1,5 @@
 <!-- Tab bar image -->
-<link rel="icon" type="image/ico" href="/pictures/logo.jpg" />
+<link rel="icon" type="image/ico" href="/Pictures/e.png" />
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">

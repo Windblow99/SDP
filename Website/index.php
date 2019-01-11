@@ -5,7 +5,7 @@
 
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 
-<title>Homepage</title>
+<title>Educo</title>
 
   <style>
     body{
@@ -26,7 +26,7 @@
 <body>
 <section class="layer">
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top" style="background-color: #e3f2fd;">
-  <a class="navbar-brand" href="studentmainpage.php"><img src="/Pictures/e.png" height="35" width="35">duco</a>
+  <a class="navbar-brand" href="index.php"><img src="/Pictures/e.png" height="35" width="35">duco</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -41,22 +41,6 @@
       </li>
   </ul>
       </div>
-
-    <ul class="navbar-nav">
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item">
-        <a class="nav-link" href="login.php">Log In</a>
-      </li>
-
-       <li class="nav-item">
-        <a class="nav-link" href="signup.php">Sign Up</a>
-      </li>
-  </ul>
-      </div>
-      </ul>
-
-
 </nav>
 
 
@@ -66,8 +50,9 @@
   <div class="row">
     <div class="col-sm-12">
       <p class="text-center" style="font-size: 60px; color: #2B2B2B; text-align: center;">
-      educo
+      <img src="/Pictures/e(2).png" height="100" width="100">duco
       </p>
+      <br/>
     </div>
   </div>
   <div class="row">

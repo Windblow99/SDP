@@ -59,9 +59,10 @@
         <span class="icon-bar"></span>                        
       </button>
       <a class="navbar-brand" href="index.php" style="margin-left: 50px;">educo</a>
+    </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
       </ul>
     </div>
   </div>
