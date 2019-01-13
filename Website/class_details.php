@@ -3,7 +3,7 @@
 
 <head>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/header.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 
 <title>Class Details</title>
 
@@ -16,7 +16,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/Website/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
 <br/>
 
 <a style="color: fuchsia; font-weight: bold; font-size: 17px;" href="<script>window.history.go(-1)</script>">< BACK</a>
@@ -95,7 +95,7 @@
 
 <button style="width: 175px; height: 35px; margin-left: 250px; background-color: #333333; margin-top: 10px; float: left;" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addstudent">Add Students</button> 
 
-<button style="width: 175px; height: 35px;  margin-right: 600px; background-color: #333333; margin-top: 10px; float: right;" type="submit" class="btn btn-primary">Manage Students</button> 
+<button style="width: 175px; height: 35px;  margin-right: 600px; background-color: #333333; margin-top: 10px; float: right;" onclick="window.location.href='http://localhost/website/manage_students.php'" type="submit" class="btn btn-primary">Manage Students</button> 
 
 <br/><br/>
 

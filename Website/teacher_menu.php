@@ -54,23 +54,19 @@
     <tr>
 
       <td>Class 1</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
     </tr>
     <tr>
 
       <td>Class 2</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
     </tr>
     <tr>
 
       <td>Class 3</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
     </tr>
-
-  </tbody> <br/>
-  <button style="width: 175px; height: 35px;  margin-right: 250px; background-color: #333333; margin-top: 10px; float: right;" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addclass">Add Class</button> 
-  <label style="color: fuchsia; font-size: 18px; font-weight: bold; float: right; padding-right: 12px; padding-top: 15px;">Add a class here: </label>
-  
+<button style="width: 175px; height: 35px;  margin-right: 400px; background-color: #333333; margin-top: 10px; float: right;" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addclass">Add A Class Here</button>  
 </table>
 <br/>
 <hr/>
