@@ -2,8 +2,8 @@
 <html>
 
 <head>
+<link rel="icon" type="image/ico" href="/Pictures/e.png" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<link rel="icon" type="image/ico" href="/pictures/logo.jpg" />
 <title>Sign Up</title>
 <script>
 	function viewpassword()
