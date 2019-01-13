@@ -9,7 +9,9 @@
 
   <style>
   	body{
-  		background-image: url("../Pictures/6.jpg");
+  		background-image: url("/Pictures/6.jpg");
+  		background-repeat: no-repeat;
+  		background-size: 100%;
   	}
   </style>
 </head>

@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <link rel="icon" type="image/ico" href="/pictures/logo.jpg" />
-<title>educo</title>
+<title>Sign Up</title>
 <script>
 	function viewpassword()
 	{
@@ -43,7 +43,6 @@
   		background-image: url("/Pictures/Login.jpg");
   		background-repeat: no-repeat;
   		background-size: 100%;
-  		height: 725px;
   	}
   </style>
 </head>

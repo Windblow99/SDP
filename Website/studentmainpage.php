@@ -5,7 +5,14 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
-<title>educo</title>
+<title>Student</title>
+  <style>
+  	body{
+  		background-image: url("/Pictures/11.png");
+  		background-repeat: no-repeat;
+  		background-size: 100%;
+  	}
+  </style>
 </head>
 
 <body>
@@ -27,7 +34,7 @@
 				</div>
 
 				<div class="col-sm">
-				<br/><a href="studentclassdetails.php"><button>Class Details</button></a>
+				<br/><a href="studentclassdetails.php" ><button style="padding: 10px 40px; background-color: #808080; color:white;">Class Details</button></a>
 				</div>
 
 			</div>
@@ -40,17 +47,20 @@
 
 				<div class="col-sm">
 				Overall Performance<br/>
-				75/100
+				<center>75/100</center>
 				</div>
 
 				<div class="col-sm">
 				Exam Overall Performance<br/>
-				75/100
+				<center>75/100<br/><br/>
+				<button>View Details</button></center>
 				</div>
+				
 
 				<div class="col-sm">
 				Lab Performance<br/>
-				75/100
+				<center>75/100<br/><br/>
+				<button>View Details</button></center>
 				</div>
 
 			</div>
