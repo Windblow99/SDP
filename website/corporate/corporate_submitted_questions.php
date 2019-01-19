@@ -9,14 +9,16 @@
 
   <style>
   	body{
-  		background-image: url("../Pictures/Corporate Background.png");
+  		background-image: url("/pictures/Corporate Background.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
   	}
   </style>
 </head>
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/corporatenavbar.php'); ?>
 
 <br/>
 

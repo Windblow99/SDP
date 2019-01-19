@@ -7,31 +7,34 @@
 
 <title>Admin Panel</title>
 
-  <style>
-    body{
-      background-image: url("../Pictures/5.jpg");
-    }
-  </style>
+<style>
+  body{
+    background-image: url("/Pictures/5.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+</style>
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/adminnavbar.php'); ?>
+
+<br/>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
-      <p class="text-center" style="font-size: 35px; color: maroon; float: right; font-weight: bold;">
-      ADMIN PANEL
-      </p>
-    </div>
-    <div class="col-sm-6">
-      <p class="text-center" style="font-size: 18px; color: fuchsia; padding-top: 18px; float: left;">
-      MANAGE REGISTERED ACCOUNTS
+    <div class="col-lg-10">
+      <h4 class="float-left" style="font-size: 2.5em; color: #953031; font-weight: bold;">
+      ADMIN PANEL&nbsp;&nbsp;&nbsp;
+      </h4>
+      <p class="float-left" style="font-size: 1em; color: #CC2865; padding-top: 18px;float: left;">
+      Manage Registered Accounts
       </p>
     </div>
   </div>
 </div>
-<hr/>
+
+<hr/><br/>
 
 <div class="container">
   <div class="row">
@@ -59,11 +62,12 @@
   </div>
 </div>
 
-<br/>
+<br/><br/>
 
-<table class="table table-hover" style="margin-left: 175px; max-width: 1000px;">
+<center>
+<table class="table table-hover" style="width: 70%;">
   <thead>
-    <tr style="background-color: fuchsia; color: white;">
+    <tr style="background-color: #CC2865; color: white;">
       <th>Name</th>
       <th>Role</th>
       <th>Date Registered</th>
@@ -72,7 +76,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr style="color: fuchsia;">
+    <tr>
 
       <td>Name 1</td>
       <td>Student</td>
@@ -80,7 +84,7 @@
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Ban</button></td>
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
     </tr>
-    <tr style="color: fuchsia;">
+    <tr>
 
       <td>Name 2</td>
       <td>Teacher</td>
@@ -88,7 +92,7 @@
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Ban</button></td>
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
     </tr>
-    <tr style="color: fuchsia;">
+    <tr>
 
       <td>Name 3</td>
       <td>Corporate</td>
@@ -96,7 +100,7 @@
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Ban</button></td>
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
     </tr>
-    <tr style="color: fuchsia;"style="color: fuchsia;">
+    <tr>
 
       <td>Name 4</td>
       <td>Teacher</td>
@@ -106,7 +110,7 @@
     </tr>
   </tbody>
 </table>
-
+</center>
 
 </body>
 </html>

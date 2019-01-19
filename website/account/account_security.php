@@ -9,7 +9,9 @@
 
   <style>
     body{
-      background-image: url("../Pictures/2.jpg");
+      background-image: url("/pictures/2.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
   </style>
 </head>
@@ -17,30 +19,28 @@
 <body>
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <p class="text-center" style="font-size: 35px; color: maroon; float: right; font-weight: bold;">
-      ACCOUNT SETTINGS
-      </p>
-    </div>
-    <div class="col-sm-3">
-      <p class="text-center" style="font-size: 18px; color: fuchsia; padding-top: 18px;">
-      ACCOUNT NAME
-      </p>
-    </div>
-    <div class="col-sm-3">
-      <p class="text-center" style="font-size: 18px; color: fuchsia; float: left; padding-top: 18px;">
-      ACCOUNT TYPE
-      </p>
-    </div>
-  </div>
-  <hr/>
+<br/>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-3" style="background-color: fuchsia; color: white; text-align: center; 
-                                           padding-top: 3px; height: 30px;"> 
+    <div class="col-lg-4">
+      <h4 class="float-left" style="font-size: 2em; color: #953031; font-weight: bold;">
+      ACCOUNT SETTINGS
+      </h4>
+    </div>
+    <div class="col-lg-8">
+      <h4 class="float-left" style="font-size: 1em; color: #CC2865; padding-top: 18px;">
+      ACCOUNT NAME | ACCOUNT TYPE
+      </h4>
+    </div>
+  </div>
+</div>
+
+<hr/>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" style="background-color: #CC2865; color: white; text-align: center; padding-top: 3px; height: 30px;"> 
       <p>ACCOUNT PASSWORD</p>
     </div>
   </div>
@@ -48,7 +48,9 @@
 
 <br/><br/>
 
-<form>
+<center>
+
+<form style="width: 80%;">
   <div class="form-group row">
     <label for="old_pass" class="col-sm-2 col-form-label">Old Password: </label>
     <div class="col-sm-10">
@@ -79,8 +81,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-3" style="background-color: fuchsia; color: white; text-align: center; 
-                                           padding-top: 3px; height: 30px;"> 
+    <div class="col-sm-3" style="background-color: #CC2865; color: white; text-align: center; padding-top: 3px; height: 30px;"> 
       <p>ACCOUNT EMAIL</p>
     </div>
   </div>
@@ -88,7 +89,7 @@
 
 <br/><br/>
 
-<form>
+<form style="width: 80%;">
   <div class="form-group row">
     <label for="old_email" class="col-sm-2 col-form-label">Old Email: </label>
     <div class="col-sm-10">
@@ -113,6 +114,8 @@
     </div>
   </div>
 </form>
+
+</center>
 
 </div>
 
