@@ -17,7 +17,7 @@
 
 <body>
 
-		<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+		<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
 
 
 		<div id="page-content">
@@ -25,42 +25,44 @@
 
 			<div class="row">
 
-				<div class="col-sm" style="font-size: 36px;">
+				<div class="col-sm" style="font-size: 36px; color: #953031; font-weight: bold;"><br/>
 				EREN ONG
 				</div>
 
-				<div class="col-sm">
- 				<br/>ASIA PACIFIC UNIVERSITY | STUDENT 
+				<div class="col-sm" style="color: #ff1a8c; font-size: 18px;"><br/><br/><br/>
+ 				ASIA PACIFIC UNIVERSITY | STUDENT 
 				</div>
 
 				<div class="col-sm">
-				<br/><a href="studentclassdetails.php" ><button style="padding: 10px 40px; background-color: #808080; color:white;">Class Details</button></a>
+				<br/><br/>
+				<a href="studentclassdetails.php" ><center><button style="box-sizing: border-box; padding: 10px 40px; border-style: solid; background-color: #333333; color:white;">Class Details</button></center></a>
 				</div>
+
 
 			</div>
 
 		<hr>
 
 
-		<h5>ACADEMIC PERFORMANCE</h5><br/>
+		<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>ACADEMIC PERFORMANCE</center></h5><br/>
 			<div class="row">
 
 				<div class="col-sm">
-				Overall Performance<br/>
-				<center>75/100</center>
+				<label style="font-size: 20px;">Overall Performance</label><br/><br/>
+				<center style="font-size: 50px;">75 / 100</center>
 				</div>
 
 				<div class="col-sm">
-				Exam Overall Performance<br/>
-				<center>75/100<br/><br/>
-				<button>View Details</button></center>
+				<label style="font-size: 20px;">Exam Overall Performance</label><br/><br/>
+				<center style="font-size: 50px;">75 / 100<br/><br/></center>
+				<center><button style="box-sizing: border-box; padding: 10px 40px; border-style: solid; background-color: #333333; color:white;">View Details</button></center>
 				</div>
 				
 
 				<div class="col-sm">
-				Lab Performance<br/>
-				<center>75/100<br/><br/>
-				<button>View Details</button></center>
+				<label style="font-size: 20px;">Lab Performance</label><br/><br/>
+				<center style="font-size: 50px;">75 / 100<br/><br/></center>
+				<center><button style="box-sizing: border-box; padding: 10px 40px; border-style: solid; background-color: #333333; color:white;">View Details</button></center>
 				</div>
 
 			</div>
@@ -68,18 +70,35 @@
 
 		<hr>
 
+
+
+				<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>CORPORATE PERFORMANCE</center></h5>
+
+				<div class="row">
+
+				<div class="col-sm">
+				</div>
+
+				<div class="col-sm" style="font-size: 50px;">
+				<center>5 &nbsp; / &nbsp; 10</center><br/>
+				</div>
+
+				<div class="col-sm" style="color: #ff1a8c; font-size: 20px; font-weight: bold;"><br/>
+					Certificates Obtained
+				</div>
+
+			</div>
+
 			<div class="row">
 
 				<div class="col-sm">
-				<h5>CORPORATE PERFORMANCE</h5>
 				</div>
 
 				<div class="col-sm">
-				5/10<br/>Certificates Obtained
 				</div>
 
 				<div class="col-sm">
-				<button>View Details</button>
+				<button style="box-sizing: border-box; padding: 10px 40px; border-style: solid; background-color: #333333; color:white;">View Details</button>
 				</div>
 
 			</div>

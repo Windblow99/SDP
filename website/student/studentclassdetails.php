@@ -6,11 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 <title>educo</title>
+  <style>
+  	body{
+  		background-image: url("/Pictures/11.png");
+  		background-repeat: no-repeat;
+  		background-size: 100%;
+  	}
+  </style>
 </head>
 
 <body>
 
-		<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+		<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
 
 
 		<div id="page-content">
