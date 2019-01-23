@@ -21,7 +21,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/corporatenavbar.php'); ?>
 
 <br/>
 
@@ -30,10 +30,10 @@
     <b>ADD A QUESTION</b>
 </div>
 
-<hr>
+<hr><br>
 
 <form class="justify-content-center">
-	<div class="container-fluid form-group" style="width: 83%;">
+	<div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Question</h4>
@@ -44,7 +44,7 @@
     </div>
   </div>
 
-	<div class="container-fluid form-group" style="width: 83%;">
+	<div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Image</h4>
@@ -63,7 +63,7 @@
     </div>
   </div>
 
-  <div class="container-fluid form-group" style="width: 83%;">
+  <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Format</h4>
@@ -84,7 +84,7 @@
     </div>
   </div>
 
-  <div class="container-fluid form-group" style="width: 83%;">
+  <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Selections</h4>
@@ -95,7 +95,7 @@
     </div>
   </div>
 
-  <div class="container-fluid form-group" style="width: 83%;">
+  <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
       </div>
@@ -105,7 +105,7 @@
     </div>
   </div>
 
-  <div class="container-fluid form-group" style="width: 83%;">
+  <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
       </div>
@@ -115,7 +115,7 @@
     </div>
   </div>
 
-  <div class="container-fluid form-group" style="width: 83%;">
+  <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
       </div>

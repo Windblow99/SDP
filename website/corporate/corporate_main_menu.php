@@ -9,7 +9,7 @@
 
   <style>
   	body{
-  		background-image: url("/Pictures/Corporate Background.png");
+  		background-image: url("/pictures/Corporate Background.png");
       background-repeat: no-repeat;
       background-size: 100%;
   	}
@@ -18,20 +18,20 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/corporatenavbar.php'); ?>
 
 <br/>
 
 <div class="container">
   <div class="row">
     <div class="col-lg-4">
-      <h4 class="float-left" style="font-size: 2.5em; color: #953031; font-weight: bold;">
-      TEACHERS NAME
+      <h4 class="float-left" style="font-size: 2em; color: #953031; font-weight: bold;">
+      CORPORATE NAME
       </h4>
     </div>
     <div class="col-lg-8">
       <h4 class="float-left" style="font-size: 1em; color: #CC2865; padding-top: 18px;">
-      ASIA PACIFIC UNIVERSITY | TEACHER
+      CORPORATE NAME | EMPLOYEE
       </h4>
     </div>
   </div>

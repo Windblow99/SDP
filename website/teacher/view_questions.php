@@ -9,13 +9,13 @@
 
   <style>
     body{
-      background-image: url("../Pictures/6.jpg");
+      background-image: url("/pictures/6.jpg");
     }
   </style>
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/adminnavbar.php'); ?>
 
 <br/>
 <div class="container">

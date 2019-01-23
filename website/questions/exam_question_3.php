@@ -70,10 +70,10 @@
 <form class="justify-content-center needs-validation" novalidate>
 
   <div class="row">
-    <div class="col-4">
+    <div class="col-3">
       <img src="/Pictures/Lab.jpg">
     </div>
-    <div class="col-8">
+    <div class="col-9">
       <div class="question">
         A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.
       </div>

@@ -1,87 +1,4 @@
-body{
-	background-size: center;
-	background-repeat: repeat;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	margin-right: 0px;	
-}
-
-#header{
-	background-color: #f2f2f2;
-	text-align: left;
-	margin-top: 10px;
-	padding-bottom: 15px;
-	padding-top: 15px;
-	width: 100%;
-	margin-top: 0;
-	top: 0;
-	left: 0;
-	
-}
-
-#header a.logo{
-	font-size: 28px;
-	color: black;
-	text-decoration: none;
-	margin-left: 50px;
-}
-
-#header a.logo:hover{
-	text-decoration: none;
-	border-style: none;
-}
-
-#header a{
-	color: black;
-	box-sizing: border-box;
-	padding: 5px 30px;
-	height: auto;
-	font-size: 18px;
-	text-align: center;
-	text-decoration: none;
-}
-
-#header a.nav{
-	position: relative;
-	left: 50px;
-}
-
-#header a.nav:hover{
-	border-color: #000000;
-	border-style: solid;
-	border-radius: 20px;
-	transition: 0.5s;
-}
-
-#header a.active {
-	margin-left: 50px;
-	margin-right: 50px;
-	border-color: #000000;
-	border-style: solid;
-	border-radius: 20px;	
-}
-
-label{
-	color: black;
-	box-sizing: border-box;
-	padding: 5px 30px;
-	height: auto;
-	font-size: 18px; text-align: center;
-	text-decoration: none;
-	position: absolute;
-	right: 0px;
-}
-
-#header a.account:hover{
-	text-decoration: underline;
-}
-
-#page-content{
-	top: 0;
-	margin-top: 100px;
-	height: 100%;
-}
+/*Question forms CSS */
 
 .title {
 	text-indent: 15%;
@@ -90,13 +7,13 @@ label{
 }
 
 .title2{
-	text-indent: 14%;
+	text-indent: 15%;
 	font-size: 0.6em;
 	color: #CC2865;
 }
 
 .title3{
-	text-indent: 13%;
+	text-indent: 15%;
 	font-size: 0.6em;
 	color: #8190A5;
 }
