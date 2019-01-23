@@ -5,6 +5,7 @@
 <link rel="icon" type="image/ico" href="/Pictures/e.png" />
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>Sign Up</title>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 <script>
 	function viewpassword()
 	{
@@ -34,10 +35,10 @@
 	}
 </script>
 
-<link rel="stylesheet" type="text/css" href="CSS/Main CSS.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--<link rel="stylesheet" type="text/css" href="CSS/Main CSS.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
   <style>
   	body{
   		background-image: url("/Pictures/Login.jpg");
@@ -49,7 +50,23 @@
 
 <body>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="index.php"><img src="/Pictures/e.png" height="35" width="35">duco</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/website/general/login.php">Log In</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -65,7 +82,7 @@
       </ul>
     </div>
   </div>
-</nav>
+</nav>-->
 	
 	<div class="container">
 		<div id="page-content">
@@ -78,13 +95,13 @@
 		
 		<form method="post" action="#">
 			<table>
-				<tr><th><br/>Name: </th><td><br/><input id="name" type="text" placeholder=" Name" name="name" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
-				<tr><th><br/>IC: </th><td><br/><input id="name" type="text" placeholder=" IC number" name="name" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
-				<tr><th><br/>Date of Birth: </th><td><br/><input id="dob" type="date" name="dob" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
-				<tr><th><br/>Contact Number: </th><td><br/><input type="number" placeholder=" Contact Number" id="contact" name="contact" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
-				<tr><th><br/>E-mail: </th><td><br/><input id="email" type="text" placeholder=" E-mail" name="email" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
-				<tr><th><br/>Password: </th><td><br/><input type="password" placeholder=" Password" id="password" name="password" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword()"/> View Password<br/><span id="checkpassword"></span></td></tr>
-				<tr><th><br/>Confirm Password: </th><td><br/><input type="password" placeholder=" Confirm Password" id="password2" name="password2" required="required" style="padding-top: 5px; padding-bottom: 5px; width: 300px;"> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword2()"/> View Password<br/><span id="checkpassword"></span></td></tr>
+				<tr><th><br/>Name: </th><td><br/><input id="name" type="text" placeholder=" Name" name="name" required="required" style="margin-left: 20px; padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
+				<tr><th><br/>IC: </th><td><br/><input id="name" type="text" placeholder=" IC number" name="name" required="required" style="margin-left: 20px; padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
+				<tr><th><br/>Date of Birth: </th><td><br/><input id="dob" type="date" name="dob" required="required" style="margin-left: 20px; padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
+				<tr><th><br/>Contact Number: </th><td><br/><input type="number" placeholder=" Contact Number" id="contact" name="contact" required="required" style="margin-left: 20px; padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
+				<tr><th><br/>E-mail: </th><td><br/><input id="email" type="text" placeholder=" E-mail" name="email" required="required" style="margin-left: 20px; padding-top: 5px; padding-bottom: 5px; width: 300px;"></td></tr>
+				<tr><th><br/>Password: </th><td><br/><input type="password" placeholder=" Password" id="password" name="password" required="required" style="margin-left: 20px; padding-top: 5px; padding-bottom: 5px; width: 300px;"> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword()"/> View Password<br/><span id="checkpassword"></span></td></tr>
+				<tr><th><br/>Confirm Password: </th><td><br/><input type="password" placeholder=" Confirm Password" id="password2" name="password2" required="required" style="margin-left: 20px;padding-top: 5px; padding-bottom: 5px; width: 300px;"> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword2()"/> View Password<br/><span id="checkpassword"></span></td></tr>
 				<!--<tr><th>Confirm Password: </th><td><input type="password" id="cpassword" name="cpassword" required="required"/><br/><span id="checkcpassword"></span></td></tr>-->
 
 				<tr><th colspan="2"><br/><center><a><input id="submit" type="submit" value="Sign Up" class="btn btn-default" role="button"/ style="padding: 10px 40px; background-color: #808080; color:white;"></a></center></th></tr>
