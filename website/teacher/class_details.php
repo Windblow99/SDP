@@ -9,19 +9,22 @@
 
   <style>
     body{
-      background-image: url("../Pictures/6.jpg");
+      background-image: url("/pictures/6.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
   </style>
 </head>
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/teachernavbar.php'); ?>
 <br/>
 
-<a style="color: fuchsia; font-weight: bold; font-size: 17px;" href="<script>window.history.go(-1)</script>">< BACK</a>
+<!--<a style="color: fuchsia; font-weight: bold; font-size: 17px;" href="<script>window.history.go(-1)</script>">< BACK</a>
 
-<br/>
+<br/> -->
+
 <div class="container">
   <div class="row">
     <div class="col-sm-3">
@@ -29,7 +32,7 @@
       CLASS DETAILS
       </p>
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-3">
       <p class="text-center" style="font-size: 18px; color: fuchsia; padding-top: 18px; float: left;">
       CLASS 1
       </p>
@@ -38,10 +41,9 @@
 </div>
 <hr/>
 
-  <div class="container">
+<div class="container">
   <div class="row">
-    <div class="col-sm-3" style="background-color: fuchsia; color: white; text-align: center; 
-                                           padding-top: 3px; height: 30px;"> 
+    <div class="col-sm-3" style="background-color: #CC2865; color: white; text-align: center; padding-top: 3px; height: 30px;"> 
       <p>ACADEMIC PERFORMANCE</p>
     </div>
   </div>
@@ -49,9 +51,11 @@
 
 <br/><br/>
 
-<table class="table table-hover" style="margin-left: 175px; max-width: 700px;">
+<center>
 
-  <tbody style="color: fuchsia; font-size: 18px; font-weight: bold;">
+<table class="table table-hover" style="margin-left: 25%; width: 70%;">
+
+  <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
     <tr>
 
       <td>Overall Performance</td>
@@ -84,8 +88,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-3" style="background-color: fuchsia; color: white; text-align: center; 
-                                           padding-top: 3px; height: 30px;"> 
+    <div class="col-sm-3" style="background-color: #CC2865; color: white; text-align: center; padding-top: 3px; height: 30px;"> 
       <p>MANAGE</p>
     </div>
   </div>
@@ -93,12 +96,18 @@
 
 <br/><br/>
 
-<button style="width: 175px; height: 35px; margin-left: 250px; background-color: #333333; margin-top: 10px; float: left;" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addstudent">Add Students</button> 
+<div class="row" style="margin-left: 25%;">
+  <div class="col-2">
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#addstudent">Add Students</button> 
+  </div>
+  <div class="col-2">
+    <button onclick="window.location.href='http://localhost/website/manage_students.php'" type="submit" class="btn btn-secondary">Manage Students</button> 
+  </div>
+</div>
 
-<button style="width: 175px; height: 35px;  margin-right: 600px; background-color: #333333; margin-top: 10px; float: right;" onclick="window.location.href='http://localhost/website/manage_students.php'" type="submit" class="btn btn-primary">Manage Students</button> 
+</center>
 
-<br/><br/>
-
+<!-- Data Modal Starts Here -->
 <div class="modal" style="color: maroon;" id="addstudent" tabindex="-1" role="dialog" aria-labelledby="addstudentlabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content" style="background-color: beige; opacity: 0.9;">

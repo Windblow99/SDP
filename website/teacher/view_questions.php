@@ -10,12 +10,14 @@
   <style>
     body{
       background-image: url("/pictures/6.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
   </style>
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/adminnavbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/teachernavbar.php'); ?>
 
 <br/>
 <div class="container">
@@ -25,56 +27,55 @@
       SUBMITTED QUESTIONS
       </p>
     </div>
-    <div class="col-sm-7">
-      <p class="text-center" style="font-size: 18px; color: fuchsia; padding-top: 18px; float: left;">
+    <div class="col-sm-3">
+      <p class="text-center" style="font-size: 18px; color: #F7478A; padding-top: 18px; float: left;">
       CLASS 1
       </p>
     </div>
   </div>
 </div>
-  <hr/>
-  <br/><br/>
-  <div class="row" style="margin-left: 170px; margin-right: 100px;">
-    <div class="dropdown col-sm-3">
-      <button class="btn btn-secondary dropdown-toggle"type="button" id="questionapproval" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Sort by status</button>
-            <div class="dropdown-menu" aria-labelledby="questionapproval">
-            <a class="dropdown-item" href="#!">Approved</a>
-            <a class="dropdown-item" href="#!">Pending</a>
-            </div>
-    </div>
-    <div class="dropdown col-sm-3">
-      <button class="btn btn-secondary dropdown-toggle"type="button" id="chapters" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Sort by chapter</button>
-            <div class="dropdown-menu" aria-labelledby="chapters">
-            <a class="dropdown-item" href="#!">Chapter 1</a>
-            <a class="dropdown-item" href="#!">Chapter 2</a>
-            </div>
-    </div>
-    <div class="dropdown col-sm-3">
-      <button class="btn btn-secondary dropdown-toggle"type="button" id="questiontype" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Sort by type</button>
-            <div class="dropdown-menu" aria-labelledby="questiontype">
-            <a class="dropdown-item" href="#!">Exam</a>
-            <a class="dropdown-item" href="#!">Lab Session</a>
-            </div>
-    </div>
-    <div class="dropdown col-sm-3">
-      <button class="btn btn-secondary dropdown-toggle"type="button" id="questiondifficulty" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Sort by difficulty</button>
-            <div class="dropdown-menu" aria-labelledby="questiondifficulty">
-            <a class="dropdown-item" href="#!">Beginner</a>
-            <a class="dropdown-item" href="#!">Intermediate</a>
-            <a class="dropdown-item" href="#!">Expert</a>
-            </div>
-    </div>
+
+<hr/>
+<br/><br/>
+
+<center>
+<div class="row" style="margin-left: 25%;">
+  <div class="dropdown col-sm-2">
+    <button class="btn btn-secondary dropdown-toggle"type="button" id="questionapproval" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by status</button>
+      <div class="dropdown-menu" aria-labelledby="questionapproval">
+        <a class="dropdown-item" href="#!">Approved</a>
+        <a class="dropdown-item" href="#!">Pending</a>
+      </div>
+  </div>
+  <div class="dropdown col-sm-2">
+    <button class="btn btn-secondary dropdown-toggle"type="button" id="chapters" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by chapter</button>
+      <div class="dropdown-menu" aria-labelledby="chapters">
+        <a class="dropdown-item" href="#!">Chapter 1</a>
+        <a class="dropdown-item" href="#!">Chapter 2</a>
+      </div>
+  </div>
+  <div class="dropdown col-sm-2">
+    <button class="btn btn-secondary dropdown-toggle"type="button" id="questiontype" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by type</button>
+      <div class="dropdown-menu" aria-labelledby="questiontype">
+        <a class="dropdown-item" href="#!">Exam</a>
+        <a class="dropdown-item" href="#!">Lab Session</a>
+      </div>
+  </div>
+  <div class="dropdown col-sm-2">
+    <button class="btn btn-secondary dropdown-toggle"type="button" id="questiondifficulty" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by difficulty</button>
+      <div class="dropdown-menu" aria-labelledby="questiondifficulty">
+        <a class="dropdown-item" href="#!">Beginner</a>
+        <a class="dropdown-item" href="#!">Intermediate</a>
+        <a class="dropdown-item" href="#!">Expert</a>
+      </div>
+  </div>
 </div>
 
 <br/><br/>
 
-<table class="table table-hover" style="margin-left: 175px; max-width: 1000px;">
+<table class="table table-hover" style="width: 80%;">
   <thead>
-    <tr style="background-color: fuchsia; color: white;">
+    <tr style="background-color: #CC2865; color: white;">
       <th>Question</th>
       <th>Status</th>
       <th>Chapter</th>
@@ -85,7 +86,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr style="color: fuchsia;">
+    <tr style="color: #F7478A;">
 
       <td>Question 1</td>
       <td>Approved</td>
@@ -95,7 +96,7 @@
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
     </tr>
-    <tr style="color: fuchsia;">
+    <tr style="color: #F7478A;">
 
       <td>Question 2</td>
       <td>Pending</td>
@@ -105,7 +106,7 @@
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
     </tr>
-    <tr style="color: fuchsia;">
+    <tr style="color: #F7478A;">
 
       <td>Question 3</td>
       <td>Approved</td>
@@ -115,7 +116,7 @@
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
       <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
     </tr>
-    <tr style="color: fuchsia;">
+    <tr style="color: #F7478A;">
 
       <td>Question 4</td>
       <td>Pending</td>
@@ -128,7 +129,7 @@
   </tbody>
 </table>
 
-<p style="margin-left: 600px; opacity: 0.7">
+<p style="opacity: 0.7">
   Note: <br/>
    E = Exam <br/>
    L = Lab <br/>
@@ -137,5 +138,6 @@
    C = Expert <br/>
 </p>
 
+</center>
 </body>
 </html>

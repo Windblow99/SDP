@@ -9,18 +9,20 @@
 
   <style>
     body{
-      background-image: url("../Pictures/6.jpg");
+      background-image: url("/Pictures/6.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
     }
   </style>
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/teachernavbar.php'); ?>
 
 <br/>
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <p class="text-center" style="font-size: 35px; color: maroon; float: left; font-weight: bold;">
       STUDENTS LIST
       </p>
@@ -32,26 +34,26 @@
     </div>
   </div>
 </div>
+
 <hr/>
 
   <div class="container">
   <div class="row">
-    <div class="col-sm-3" style="background-color: fuchsia; color: white; text-align: center; 
-                                           padding-top: 3px; height: 30px;"> 
+    <div class="col-sm-3" style="background-color: #CC2865; color: white; text-align: center; padding-top: 3px; height: 30px;"> 
       <p>CURRENT IN-CLASS STUDENTS</p>
     </div>
   </div>
 </div>
 
-<br/><br/>
+<br/>
 
-<table class="table table-hover" style="margin-left: 175px; max-width: 500px;">
+<table class="table table-hover" style="margin-left: 25%; max-width: 500px;">
 
-  <tbody style="color: fuchsia; font-size: 18px; font-weight: bold;">
+  <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
     <tr>
 
       <td>Student 1</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-secondary">Remove</button></td>
     </tr>
     <tr>
 
