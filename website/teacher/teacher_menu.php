@@ -18,7 +18,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/navbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/teachernavbar.php'); ?>
 
 <br/>
 <div class="container">
@@ -37,44 +37,45 @@
 </div>
 <hr/>
 
-  <div class="container">
+<div class="container">
   <div class="row">
-    <div class="col-sm-3" style="background-color: fuchsia; color: white; text-align: center; 
-                                           padding-top: 3px; height: 30px;"> 
+    <div class="col-3" style="background-color: #CC2865; color: white; text-align: center; padding-top: 3px; height: 30px;"> 
       <p>CLASSES</p>
+    </div>
+    <div class="col-3">
+      <button style="width: 175px; height: 35px; background-color: #333333; float: right;" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addclass">Add A Class Here</button> 
     </div>
   </div>
 </div>
 
 <br/><br/>
 
-<table class="table table-hover" style="margin-left: 175px; max-width: 500px;">
+<table class="table table-hover" style="margin-left: 25%; width: 60%;">
 
-  <tbody style="color: fuchsia; font-size: 18px; font-weight: bold;">
+  <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
     <tr>
-
       <td>Class 1</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px;  margin-right: 400px; background-color: #333333; margin-top: 10px; float: right;" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addclass">Add A Class Here</button></td>
     </tr>
-    <tr>
 
+    <tr>
       <td>Class 2</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
     </tr>
-    <tr>
 
+    <tr>
       <td>Class 3</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='http://localhost/website/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
+      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
     </tr>
-<button style="width: 175px; height: 35px;  margin-right: 400px; background-color: #333333; margin-top: 10px; float: right;" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addclass">Add A Class Here</button>  
+
 </table>
 <br/>
 <hr/>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-3" style="background-color: fuchsia; color: white; text-align: center; 
-                                           padding-top: 3px; height: 30px;"> 
+    <div class="col-sm-3" style="background-color: #CC2865; color: white; text-align: center; padding-top: 3px; height: 30px;"> 
       <p>QUESTIONS</p>
     </div>
   </div>
@@ -82,12 +83,15 @@
 
 <br/><br/>
 
-<button style="width: 175px; height: 35px; margin-left: 250px; background-color: #333333; margin-top: 10px; float: left;" type="submit" class="btn btn-primary">Add Question</button> 
+<div class="row" style="margin-left: 25%;">
+  <div class="col-2">
+    <button type="submit" class="btn btn-secondary">Add Question</button>
+  </div>
+  <div class="col-2">
+    <button type="submit" class="btn btn-secondary">View Details</button> 
+  </div>
 
-<button style="width: 175px; height: 35px;  margin-right: 600px; background-color: #333333; margin-top: 10px; float: right;" type="submit" class="btn btn-primary">View Details</button> 
-
-<br/><br/>
-
+<!-- Modal here -->
 <div class="modal" style="color: maroon;" id="addclass" tabindex="-1" role="dialog" aria-labelledby="addclasslabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content" style="background-color: beige; opacity: 0.9;">
