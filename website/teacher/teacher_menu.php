@@ -56,7 +56,6 @@
     <tr>
       <td>Class 1</td>
       <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
-      <td><button style="width: 175px; height: 35px;  margin-right: 400px; background-color: #333333; margin-top: 10px; float: right;" type="submit" class="btn btn-primary" data-toggle="modal" data-target="#addclass">Add A Class Here</button></td>
     </tr>
 
     <tr>
