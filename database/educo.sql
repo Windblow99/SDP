@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 23, 2019 at 05:46 PM
+-- Generation Time: Jan 24, 2019 at 03:21 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -52,30 +52,6 @@ CREATE TABLE IF NOT EXISTS `class` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `corporation`
---
-
-DROP TABLE IF EXISTS `corporation`;
-CREATE TABLE IF NOT EXISTS `corporation` (
-  `Corp_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Contact_No` int(11) NOT NULL,
-  `Password` varchar(255) NOT NULL,
-  PRIMARY KEY (`Corp_ID`),
-  UNIQUE KEY `Email` (`Email`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `corporation`
---
-
-INSERT INTO `corporation` (`Corp_ID`, `Name`, `Email`, `Contact_No`, `Password`) VALUES
-(1, 'MAN', 'john123@gmail.com', 123456789, '827ccb0eea8a706c4c34a16891f84e7b');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `examq_request`
 --
 
@@ -107,26 +83,6 @@ CREATE TABLE IF NOT EXISTS `exam_exercise` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `moderator`
---
-
-DROP TABLE IF EXISTS `moderator`;
-CREATE TABLE IF NOT EXISTS `moderator` (
-  `M_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) NOT NULL,
-  `IC` int(12) NOT NULL,
-  `DoB` date NOT NULL,
-  `Contact_No` int(12) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL,
-  PRIMARY KEY (`M_ID`),
-  UNIQUE KEY `IC` (`IC`),
-  UNIQUE KEY `Email` (`Email`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `question`
 --
 
@@ -151,34 +107,6 @@ CREATE TABLE IF NOT EXISTS `question` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student`
---
-
-DROP TABLE IF EXISTS `student`;
-CREATE TABLE IF NOT EXISTS `student` (
-  `S_ID` int(10) NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) NOT NULL,
-  `IC` varchar(12) NOT NULL,
-  `DoB` date NOT NULL,
-  `Contact_No` varchar(12) NOT NULL,
-  `Email` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL,
-  `C_No` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`S_ID`),
-  UNIQUE KEY `IC` (`IC`),
-  UNIQUE KEY `Email` (`Email`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `student`
---
-
-INSERT INTO `student` (`S_ID`, `Name`, `IC`, `DoB`, `Contact_No`, `Email`, `Password`, `C_No`) VALUES
-(8, 'John', '010101101234', '2019-01-20', '0123456789', 'john123@gmail.com', 'e99a18c428cb38d5f260853678922e03', NULL);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `student_question`
 --
 
@@ -195,29 +123,29 @@ CREATE TABLE IF NOT EXISTS `student_question` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `teacher`
+-- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `teacher`;
-CREATE TABLE IF NOT EXISTS `teacher` (
-  `T_ID` int(11) NOT NULL AUTO_INCREMENT,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `U_ID` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) NOT NULL,
-  `IC` varchar(12) NOT NULL,
-  `DoB` date NOT NULL,
-  `Contact_No` int(11) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
-  PRIMARY KEY (`T_ID`),
-  UNIQUE KEY `IC` (`IC`),
+  `Contact_No` int(11) NOT NULL,
+  `Role` varchar(255) NOT NULL,
+  PRIMARY KEY (`U_ID`),
   UNIQUE KEY `Email` (`Email`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `teacher`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `teacher` (`T_ID`, `Name`, `IC`, `DoB`, `Contact_No`, `Email`, `Password`) VALUES
-(2, 'John', '010101101234', '2019-01-09', 123456789, 'john123@hotmail.com', '81b073de9370ea873f548e31b8adc081');
+INSERT INTO `users` (`U_ID`, `Name`, `Email`, `Password`, `Contact_No`, `Role`) VALUES
+(7, 'abc', 'abc123@hotmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'teacher'),
+(6, 'John', 'john123@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student'),
+(13, 'def', 'def@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'corporate');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
