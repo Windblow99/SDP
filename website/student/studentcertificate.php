@@ -25,7 +25,7 @@
 				Eren's Obtained Certificates
 				</div>
 
-				<div class="col-sm" style="color: #ff1a8c; font-size: 18px;"><br/><br/>
+				<div class="col-sm" style="color: #CC2865; font-size: 18px;"><br/><br/>
 				<br/>ASIA PACIFIC UNIVERSITY | STUDENT
 				</div>
 				
@@ -52,7 +52,7 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Certificate Obtained</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Certificate Obtained</h5>
 				</div>
 
 				<div class="col-sm" style="font-size: 30px;">
@@ -70,15 +70,15 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Certificate 1</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Certificate 1</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px; color: #00ff00;">
+				PASSED
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px; color: #00ff00;">PASSED</label>
-				</div>
-
-				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">View Certificate</button>&nbsp;<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Official Website</button>
+				<button class="btn btn-secondary" style="width: 150px;">View Certificate</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
 				</div>				
 				
 			</div><br/>
@@ -86,15 +86,15 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Certificate 2</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Certificate 2</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px; color: #00ff00;">
+				PASSED
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px; color: #00ff00;">PASSED</label>
-				</div>
-
-				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">View Certificate</button>&nbsp;<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Official Website</button>
+				<button class="btn btn-secondary" style="width: 150px;">View Certificate</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
 				</div>				
 				
 			</div><br/>
@@ -102,15 +102,15 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Certificate 3</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Certificate 3</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				PENDING COMPLETION
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px;">PENDING COMPLETION</label>
-				</div>
-
-				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Take Exam</button>&nbsp;<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Official Website</button>
+				<button class="btn btn-secondary" style="width: 150px;">Take Exam</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
 				</div>				
 				
 			</div><br/>
@@ -118,15 +118,15 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Certificate 4</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Certificate 4</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				PENDING COMPLETION
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px;">PENDING COMPLETION</label>
-				</div>
-
-				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Take Exam</button>&nbsp;<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Official Website</button>
+				<button class="btn btn-secondary" style="width: 150px;">Take Exam</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
 				</div>				
 				
 			</div><br/>
@@ -134,15 +134,15 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Certificate 5</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Certificate 5</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				PENDING COMPLETION
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px;">PENDING COMPLETION</label>
-				</div>
-
-				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Take Exam</button>&nbsp;<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Official Website</button>
+				<button class="btn btn-secondary" style="width: 150px;">Take Exam</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
 				</div>				
 				
 			</div><br/>
@@ -151,15 +151,15 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Certificate 6</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Certificate 6</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				PENDING COMPLETION
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px;">PENDING COMPLETION</label>
-				</div>
-
-				<div class="col-sm">
-					<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px;  background-color: #333333; color:white; width: 150px;">Take Exam</button></td>&nbsp;<td><button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Official Website</button></td>
+					<button class="btn btn-secondary" style="width: 150px;">Take Exam</button></td>&nbsp;<td><button class="btn btn-secondary" style="width: 150px;">Official Website</button></td>
 
 				
 				</div>				

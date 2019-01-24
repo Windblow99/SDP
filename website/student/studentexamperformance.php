@@ -27,7 +27,7 @@
 				Eren's Exam Performance
 				</div>
 
-				<div class="col-sm" style="color: #ff1a8c; font-size: 18px;"><br/><br/>
+				<div class="col-sm" style="color: #CC2865; font-size: 18px;"><br/><br/>
 				<br/>ASIA PACIFIC UNIVERSITY | STUDENT
 				</div>
 				
@@ -42,11 +42,11 @@
 				<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>EXAM PERFORMANCE</center></h5>
 				</div>
 
-				<div class="col-sm"><br/>
+				<div class="col-sm" style="padding-top: 18px;">
 				<a href="#"><center>View marks for grade</center></a>
 				</div>
 
-				<div class="col-sm">
+				<div class="col-sm" style="padding-top: 18px;">
 				<select>
 					<option selected disabled>Select Difficulty</option>
 					<option value="beginner">Beginner</option>
@@ -60,7 +60,7 @@
 			<div class="row">
 
 				<div class="col-sm" ><br/>
-				<h5 style="color: #ff1a8c; font-weight: bold;">Overall Performance</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Overall Performance</h5>
 				</div>
 
 				<div class="col-sm" style="font-size: 30px;"><br/>
@@ -78,27 +78,11 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Chapter 1</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Chapter 1</h5>
 				</div>
 
-				<div class="col-sm">
-				<label style="font-size: 20px;">75 / 100</label>
-				</div>
-
-				<div class="col-sm">
-				<a href="#">View detailed results</a>
-				</div>
-				
-			</div><br/>
-
-			<div class="row">
-
-				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Chapter 2</h5>
-				</div>
-
-				<div class="col-sm">
-				<label style="font-size: 20px;">75 / 100</label>
+				<div class="col-sm" style="font-size: 20px;">
+				75 / 100
 				</div>
 
 				<div class="col-sm">
@@ -110,31 +94,15 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Chapter 3</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Chapter 2</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				75 / 100
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px;">PENDING COMPLETION</label>
-				</div>
-
-				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Take Exam</button>
-				</div>
-				
-			</div><br/>
-
-			<div class="row">
-
-				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Chapter 4</h5>
-				</div>
-
-				<div class="col-sm">
-				<label style="font-size: 20px;">PENDING COMPLETION</label>
-				</div>
-
-				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Take Exam</button>
+				<a href="#">View detailed results</a>
 				</div>
 				
 			</div><br/>
@@ -142,15 +110,15 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Chapter 5</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Chapter 3</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				PENDING COMPLETION
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px;">PENDING COMPLETION</label>
-				</div>
-
-				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Take Exam</button>
+				<button class="btn btn-secondary">Take Exam</button>
 				</div>
 				
 			</div><br/>
@@ -158,15 +126,47 @@
 			<div class="row">
 
 				<div class="col-sm">
-				<h5 style="color: #ff1a8c; font-weight: bold;">Chapter 6</h5>
+				<h5 style="color: #CC2865; font-weight: bold;">Chapter 4</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				PENDING COMPLETION
 				</div>
 
 				<div class="col-sm">
-				<label style="font-size: 20px;">PENDING COMPLETION</label>
+				<button class="btn btn-secondary">Take Exam</button>
+				</div>
+				
+			</div><br/>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5 style="color: #CC2865; font-weight: bold;">Chapter 5</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				PENDING COMPLETION
 				</div>
 
 				<div class="col-sm">
-				<button style="box-sizing: border-box; border-style: solid; padding: 10px 10px; background-color: #333333; color:white; width: 150px;">Take Exam</button>
+				<button class="btn btn-secondary">Take Exam</button>
+				</div>
+				
+			</div><br/>
+
+			<div class="row">
+
+				<div class="col-sm">
+				<h5 style="color: #CC2865; font-weight: bold;">Chapter 6</h5>
+				</div>
+
+				<div class="col-sm" style="font-size: 20px;">
+				PENDING COMPLETION
+				</div>
+
+				<div class="col-sm">
+				<button class="btn btn-secondary">Take Exam</button>
 				</div>
 				
 			</div>

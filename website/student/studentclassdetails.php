@@ -20,9 +20,7 @@
 		<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
 
 
-		<div id="page-content">
-			<div class="container">
-		
+			<div class="container">		
 	
 				<div class="row">
 
@@ -30,7 +28,7 @@
 				CLASS DETAILS
 				</div>
 
-				<div class="col-sm" style="color: #ff1a8c; font-size: 18px;"><br/><br/>
+				<div class="col-sm" style="color: #CC2865; font-size: 18px;"><br/><br/>
 				<br/>CLASS 1
 				</div>
 				
@@ -110,7 +108,7 @@
 				<h5 style="box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>Top Scores</center></h5>
 			</div>
 
-			<div class="col-sm"><br/>
+			<div class="col-sm" style="padding-top: 40px;">
 					Overall / Chapter:&nbsp;
 				<select>
 					<option value="chapter1">Chapter 1</option>
@@ -120,7 +118,7 @@
 		</div>
 		<br/>
 
-		<label style="margin-left: 50px;">This scoreboard only shows the Top 3 scorers.</label><br/><br/>
+		This scoreboard only shows the Top 3 scorers.<br/><br/>
 
 		
 
@@ -139,7 +137,6 @@
 
 	
 		
-			</div>
 		</div>
 		
 
