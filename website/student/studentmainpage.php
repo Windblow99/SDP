@@ -6,21 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 <title>Student</title>
-  <style>
+<style>
   	body{
   		background-image: url("/Pictures/11.png");
   		background-repeat: no-repeat;
   		background-size: 100%;
   	}
-  </style>
+</style>
 </head>
 
-<body>
+<body>	
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
 
-		<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
-
-
-		<div id="page-content">
 			<div class="container">
 
 			<div class="row">
@@ -109,7 +106,7 @@
 
 	
 			</div>
-		</div>
+		
 		
 
 

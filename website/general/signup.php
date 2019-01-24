@@ -49,8 +49,8 @@
 </head>
 
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top" style="background-color: #e3f2fd;">
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/homenavbar.php'); ?>
+<!--<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg sticky-top" style="background-color: #e3f2fd;">
   <a class="navbar-brand" href="index.php"><img src="/Pictures/e.png" height="35" width="35">duco</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -65,7 +65,7 @@
       </li>
     </ul>
   </div>
-</nav>
+</nav>-->
 <!--<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
