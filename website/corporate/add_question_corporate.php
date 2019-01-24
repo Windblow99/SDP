@@ -70,7 +70,7 @@
       </div>
       <div class="col-4">
         <select class="form-control form-control-sm">
-          <option disabled selected>Select a certificate</option>
+          <option disabled selected>Select a format</option>
           <option>Text</option>
           <option>MCQ</option>
         </select>
