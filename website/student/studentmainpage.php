@@ -41,26 +41,28 @@
 		<hr>
 
 
-		<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>ACADEMIC PERFORMANCE</center></h5><br/>
+		<h5 style="box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>ACADEMIC PERFORMANCE</center></h5><br/>
 			<div class="row">
-
-				<div class="col-sm">
-				<label style="font-size: 20px;">Overall Performance</label><br/><br/>
-				<center style="font-size: 50px;">75 / 100</center>
-				</div>
-
-				<div class="col-sm">
-				<label style="font-size: 20px;">Exam Overall Performance</label><br/><br/>
-				<center style="font-size: 50px;">75 / 100<br/><br/></center>
-				<center><button style="box-sizing: border-box; padding: 10px 40px; border-style: solid; background-color: #333333; color:white;">View Details</button></center>
-				</div>
 				
 
-				<div class="col-sm">
-				<label style="font-size: 20px;">Lab Performance</label><br/><br/>
-				<center style="font-size: 50px;">75 / 100<br/><br/></center>
-				<center><button style="box-sizing: border-box; padding: 10px 40px; border-style: solid; background-color: #333333; color:white;">View Details</button></center>
-				</div>
+					<div class="col-sm">
+					<label style="font-size: 20px;">Overall Performance</label><br/><br/>
+					<center style="font-size: 50px;">75 / 100</center>
+					</div>
+
+					<div class="col-sm">
+					<label style="font-size: 20px;">Exam Overall Performance</label><br/><br/>
+					<center style="font-size: 50px;">75 / 100<br/><br/></center>
+					<center><button style="box-sizing: border-box; padding: 10px 40px; border-style: solid; background-color: #333333; color:white;">View Details</button></center>
+					</div>
+				
+
+					<div class="col-sm">
+					<label style="font-size: 20px;">Lab Performance</label><br/><br/>
+					<center style="font-size: 50px;">75 / 100<br/><br/></center>
+					<center><button style="box-sizing: border-box; padding: 10px 40px; border-style: solid; background-color: #333333; color:white;">View Details</button></center>
+					</div>
+				
 
 			</div>
 

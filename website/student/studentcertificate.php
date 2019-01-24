@@ -17,8 +17,7 @@
 
 		<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
 
-		<div id="page-content">
-			<div class="container">
+		<div class="container">
 	
 		<div class="row">
 
@@ -167,8 +166,7 @@
 				
 			</div>
 
-			</div>
-		</div>
+
 		
 
 

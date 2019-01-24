@@ -66,6 +66,21 @@ include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
     <!--<div id="footer">
       <a href="#">Feedback</a> | Copyright 2018 educo Malaysia
     </div>-->
+              <!--<?php 
+      //  $role = $_GET['role'];
+
+      //    if($role == 'corporation'){
+      //    echo "<tr><th><br/>IC: </th><td><br/><input id='ic' type='text' placeholder=' IC number' name='ic' required='required' style='margin-left: 20px; padding-top: 5px; padding-bottom: 5px; width: 300px;'></td></tr>";
+        //  } 
+          ?> 
+                      <script>
+          function select(){
+          //document.getElementById("role").value = "corporation";
+            if(document.getElementById("role").value = "corporation"){
+            }
+
+          }             
+</script>-->
 
 
 </body>

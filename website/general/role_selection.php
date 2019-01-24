@@ -56,7 +56,7 @@
       <br/><br/><br/>
       <a href="signup.php"><button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button></a>
       <br/><br/><br/>
-      <a href="studentmainpage.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
+      <a href="aboutus.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
         </div>
     </div>
   </div>
@@ -69,7 +69,7 @@
       <br/><br/><br/>
       <a href="signup.php"><button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button></a>
       <br/><br/><br/>
-      <a href="teacher_menu.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
+      <a href="aboutus.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@
       <br/><br/><br/>
       <a href="signup.php"><button style="width: 165px; height: 40px; background-color: #333333;" type="submit" class="btn btn-primary">Sign Up</button></a>
       <br/><br/><br/>
-      <a href="corporate_main_menu.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
+      <a href="aboutus.php" class="alert-link" style="font-size: 20px; color: #0E3F27;">Learn More</a>
       </div>
     </div>
   </div> 

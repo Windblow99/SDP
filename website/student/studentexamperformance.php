@@ -19,9 +19,7 @@
 
 		<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
 
-
-		<div id="page-content">
-			<div class="container">
+		<div class="container">
 	
 		<div class="row">
 
@@ -48,9 +46,9 @@
 				<a href="#"><center>View marks for grade</center></a>
 				</div>
 
-				<div class="col-sm"><br/>
-					Select Difficulty:&nbsp;
+				<div class="col-sm">
 				<select>
+					<option selected disabled>Select Difficulty</option>
 					<option value="beginner">Beginner</option>
  					<option value="intermediate">Intermediate</option>
  					<option value="expert">Expert</option>
@@ -175,7 +173,7 @@
 
 	
 			</div>
-		</div>
+		
 		
 
 
