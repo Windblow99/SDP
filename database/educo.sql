@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 24, 2019 at 03:21 PM
--- Server version: 5.7.23
--- PHP Version: 7.2.10
+-- Generation Time: Jan 26, 2019 at 04:04 PM
+-- Server version: 5.7.21
+-- PHP Version: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -46,8 +46,18 @@ DROP TABLE IF EXISTS `class`;
 CREATE TABLE IF NOT EXISTS `class` (
   `C_No` int(10) NOT NULL AUTO_INCREMENT,
   `T_ID` int(10) NOT NULL,
+  `C_Name` varchar(25) NOT NULL,
   PRIMARY KEY (`C_No`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `class`
+--
+
+INSERT INTO `class` (`C_No`, `T_ID`, `C_Name`) VALUES
+(2, 7, 'Class A'),
+(3, 7, 'Class B'),
+(4, 7, 'Class C');
 
 -- --------------------------------------------------------
 
