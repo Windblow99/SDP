@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 26, 2019 at 04:04 PM
+-- Generation Time: Jan 26, 2019 at 08:23 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -113,6 +113,27 @@ CREATE TABLE IF NOT EXISTS `question` (
   `FinalAnswer` varchar(255) NOT NULL,
   PRIMARY KEY (`Q_No`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_class`
+--
+
+DROP TABLE IF EXISTS `student_class`;
+CREATE TABLE IF NOT EXISTS `student_class` (
+  `C_ID` int(10) NOT NULL,
+  `S_ID` int(10) NOT NULL,
+  `S_Name` varchar(50) NOT NULL,
+  PRIMARY KEY (`C_ID`,`S_ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `student_class`
+--
+
+INSERT INTO `student_class` (`C_ID`, `S_ID`, `S_Name`) VALUES
+(2, 6, 'John');
 
 -- --------------------------------------------------------
 

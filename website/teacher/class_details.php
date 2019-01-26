@@ -108,25 +108,29 @@
 </center>
 
 <!-- Data Modal Starts Here -->
-<div class="modal" style="color: maroon;" id="addstudent" tabindex="-1" role="dialog" aria-labelledby="addstudentlabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content" style="background-color: beige; opacity: 0.9;">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addstudentlabel">ADD STUDENT</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <input class="form-control" type="text" placeholder="Student Name">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+  <form method="post" action="add_student_function.php">
+    <div class="modal" style="color: maroon;" id="addstudent" tabindex="-1" role="dialog" aria-labelledby="addstudentlabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: beige; opacity: 0.9;">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addstudentlabel">ADD STUDENT</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input name="class_select" class="form-control" type="text" placeholder="Select Class">
+          </div>
+          <div class="modal-body">
+            <input name="student_name" class="form-control" type="text" placeholder="Student Name">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
+  </form>
 </body>
 </html>
