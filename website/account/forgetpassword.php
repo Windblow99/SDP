@@ -87,10 +87,11 @@
 				<h1 style="color:#990000"><b>Forget Password</b></h1><br/><br/>
 				<h4>Forgot your password? You can reset it here with ease!</h4>
 				<br/><br/><br/>
-					<form method="post" action="#">
+					<form method="post" action="forgetpassword_function.php">
 						<table>
 							<tr><th colspan="2"><br/><center><input id="email" type="email" name="email" placeholder="E-mail Address Registered" required="required" style="width: 300px; height: 25px; border-radius: 5px; padding: 20px 10px; font-weight: normal;"/></center></th></tr>
-							<tr><th colspan="2"><br/><br/><br/><center><input id="name" type="text" name="name" placeholder="Your Real Name" required="required" style="width: 300px; height: 25px; border-radius: 5px; padding: 20px 10px; font-weight: normal;"/></center></th><td><br/><br/><br/></td></tr>
+						<!--	<tr><th colspan="2"><br/><br/><br/><center><input id="name" type="text" name="name" placeholder="Your Real Name" required="required" style="width: 300px; height: 25px; border-radius: 5px; padding: 20px 10px; font-weight: normal;"/></center></th><td><br/><br/><br/></td></tr>-->
+            <tr><th colspan="2"><br/><input id="password" type="password" name="password" placeholder="New Password" required="required" style="width: 300px; height: 25px; border-radius: 5px; padding: 20px 10px; font-weight: normal;"/><br/><input type="checkbox" onclick="viewpassword()"/>View Password</th>
 							<tr><th colspan="2"><br/><br/><br/><center><a><input id="submit" type="submit" value="Submit Request" class="btn btn-default" role="button"/ style="padding: 10px 40px; background-color: #808080; color:white;"></a></center></th></tr>
 						</table>
 					</form>

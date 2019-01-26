@@ -20,6 +20,7 @@
 		}
 	}
 </script>
+
 <script>
 	function viewpassword2()
 	{
@@ -34,6 +35,7 @@
 		}
 	}
 </script>
+
 
 
   <style>
