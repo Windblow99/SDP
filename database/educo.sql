@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 26, 2019 at 08:23 PM
+-- Generation Time: Jan 27, 2019 at 11:28 AM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -34,7 +34,15 @@ CREATE TABLE IF NOT EXISTS `certificate` (
   `Corp_ID` int(10) NOT NULL,
   `Cert_File` varchar(255) NOT NULL,
   PRIMARY KEY (`Cert_No`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `certificate`
+--
+
+INSERT INTO `certificate` (`Cert_No`, `Corp_ID`, `Cert_File`) VALUES
+(16, 13, 'C:wamp64	mpphp3413.tmp'),
+(15, 13, 'C:wamp64	mpphp9A62.tmp');
 
 -- --------------------------------------------------------
 
@@ -48,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `class` (
   `T_ID` int(10) NOT NULL,
   `C_Name` varchar(25) NOT NULL,
   PRIMARY KEY (`C_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `class`
@@ -57,7 +65,9 @@ CREATE TABLE IF NOT EXISTS `class` (
 INSERT INTO `class` (`C_No`, `T_ID`, `C_Name`) VALUES
 (2, 7, 'Class A'),
 (3, 7, 'Class B'),
-(4, 7, 'Class C');
+(4, 7, 'Class C'),
+(5, 7, 'Class D'),
+(6, 7, 'Class E');
 
 -- --------------------------------------------------------
 
@@ -133,7 +143,9 @@ CREATE TABLE IF NOT EXISTS `student_class` (
 --
 
 INSERT INTO `student_class` (`C_ID`, `S_ID`, `S_Name`) VALUES
-(2, 6, 'John');
+(2, 6, 'John'),
+(6, 14, 'Peter Parker'),
+(2, 15, 'James Frank');
 
 -- --------------------------------------------------------
 
@@ -167,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `Role` varchar(255) NOT NULL,
   PRIMARY KEY (`U_ID`),
   UNIQUE KEY `Email` (`Email`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
@@ -176,7 +188,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`U_ID`, `Name`, `Email`, `Password`, `Contact_No`, `Role`) VALUES
 (7, 'abc', 'abc123@hotmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'teacher'),
 (6, 'John', 'john123@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student'),
-(13, 'def', 'def@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'corporate');
+(13, 'def', 'def@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'corporate'),
+(14, 'Peter Parker', 'spiderman@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student'),
+(15, 'James Frank', 'james@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

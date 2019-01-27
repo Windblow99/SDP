@@ -50,46 +50,30 @@
 <table class="table table-hover" style="margin-left: 25%; max-width: 500px;">
 
   <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
-    <tr>
+<?php
+  $conn = mysqli_connect('localhost','root','','educo');
 
-      <td>Student 1</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-secondary">Remove</button></td>
-    </tr>
-    <tr>
+  if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
-      <td>Student 2</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
+  $sql = "SELECT S_Name FROM student_class";
 
-      <td>Student 3</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
+  $result = mysqli_query($conn, $sql);
 
-      <td>Student 4</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
+  while($row = mysqli_fetch_array($result))
+  {
+    echo "<tr>";
+    echo "<td>" . $row['S_Name'] . "</td>";
+    echo "<td>";
+    echo "<button class= btn btn-primary style='width: 165px; height: 40px; color: white; background-color: #333333; type='submit'>Remove</button></td>";
+    echo "</tr>";
+    }
+    echo "</table>";
 
-      <td>Student 5</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
-
-      <td>Student 6</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
-
-      <td>Student 7</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
-
-      <td>Student 8</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
+  mysqli_close($conn);
+?>
   </tbody> <br/>
   
 </table>

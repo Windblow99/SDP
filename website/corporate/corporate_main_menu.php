@@ -90,14 +90,19 @@
 
 <br/>
 
-  <div class="row">
-    <div class="col-3">
-      <h4 style="color: #F7478A; font-size: 1.5em; text-indent: 20px;">Add Certificate</h4>
+  <form method="post" action="add_certificate_function.php" enctype="multipart/form-data">
+    <div class="row">
+      <div class="col-3">
+        <h4 style="color: #F7478A; font-size: 1.5em; text-indent: 20px;">Add Certificate</h4>
+      </div>
+      <div class="col-3">
+          <input type="file" id="fileupload" name="fileupload" class="form-control-file form-control-sm">
+      </div>
+      <div class="col-2">
+          <button type="submit" class="btn btn-secondary">Add Certificate</button>
+      </div>
     </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">Add Certificate</button>
-    </div>
-  </div>
+  </form>
 
 </div>
 

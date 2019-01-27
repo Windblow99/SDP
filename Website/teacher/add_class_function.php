@@ -13,7 +13,7 @@ mysqli_query($conn, $sql);
 
 if(mysqli_affected_rows($conn) <=0)
 {
-	die("<script>alert('Fail: unable to create new class!');window.history.go(0);</script>");
+	die("<script>alert('Fail: unable to create new class!');window.history.go(-1);</script>");
 }
 
 echo "<script>alert('New class created!')</script>";

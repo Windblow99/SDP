@@ -51,24 +51,39 @@
 <br/><br/>
 
 <table class="table table-hover" style="margin-left: 25%; width: 60%;">
-
   <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
-    <tr>
-      <td>Class 1</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
-    </tr>
 
-    <tr>
-      <td>Class 2</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
-    </tr>
+<?php
+$conn = mysqli_connect('localhost','root','','educo');
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
-    <tr>
-      <td>Class 3</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" onclick="window.location.href='/website/teacher/class_details.php'" type="submit" class="btn btn-primary">View Details</button></td>
-    </tr>
+$sql = "SELECT C_Name FROM class";
+
+$result = mysqli_query($conn, $sql);
+
+
+
+while($row = mysqli_fetch_array($result))
+{
+  echo "<tr>";
+  echo "<td>" . $row['C_Name'] . "</td>";
+  echo "<td>";
+  echo "<button class= btn btn-primary style='width: 165px; height: 40px; color: white; background-color:       #333333;'onclick=\"window.location.href='class_details.php'\">View Details</button></td>";
+  echo "</tr>";
+  }
+  echo "</table>";
+
+mysqli_close($conn);
+?>
+
+
 
 </table>
+
 <br/>
 <hr/>
 
@@ -84,10 +99,10 @@
 
 <div class="row" style="margin-left: 25%;">
   <div class="col-2">
-    <button type="submit" class="btn btn-secondary">Add Question</button>
+    <a href="add_question_teacher.php"><button type="submit" class="btn btn-secondary">Add Question</button>
   </div>
   <div class="col-2">
-    <button type="submit" class="btn btn-secondary">View Details</button> 
+    <a href="#"><button type="submit" class="btn btn-secondary">View Details</button> 
   </div>
 
 <!-- Modal here -->
