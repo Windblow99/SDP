@@ -1,19 +1,17 @@
 <?php
 	
 	session_start();
-	//i want to the basename from the file path e.g. C:/wamp64/image1.jpg
-	//from there i will get image1.jpg
+	//obtain basename from filepath eg. C:/wamp64/image.jpg
 	$filename = basename($_FILES['fileupload']['name']);
 	
-	//to get the filesize
+	//to obtain file size
 	$getfilesize = $_FILES['fileupload']['size'];
 	
-	//to get the filetype
+	//to obatin file type
 	$getFileType = pathinfo($filename,PATHINFO_EXTENSION);
 
 	$username = $_SESSION['user'];
 	
-	//mediumblob max size = 16777215
 	if($getfilesize > 16777215)
 	{
 		echo "<script>alert('Sorry file size is too big.";
@@ -21,7 +19,7 @@
 		die("<script>window.history.go(-1);</script>");
 	}
 
-	//check for the file type
+	//checking the file type
 	if($getFileType != "jpg" && $getFileType != "jpeg"
 	&& $getFileType != "png" && $getFileType !="gif")
 	{
@@ -30,15 +28,13 @@
 		die("<script>window.history.go(-1);</script>");
 	}
 	
-	//all the testing was passed then go to the tmp folder to get the file
-	//and straight upload to the database	
+	//testing completed then is sent to tmp
+	//followed by upload to database	
 	$fileobjectpath = $_FILES['fileupload']['tmp_name'];
 	
-	//connection to db
 	$conn = mysqli_connect('localhost','root','','educo')
 	or die("<script>alert('error in db connection');</script>");
 	
-	//insert to the database
 	$sql = "INSERT INTO certificate (Corp_ID,Cert_File) VALUES 
 		((SELECT U_ID FROM users WHERE Name = '$username'),'$fileobjectpath')";
 
