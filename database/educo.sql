@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 27, 2019 at 11:28 AM
+-- Generation Time: Jan 27, 2019 at 12:28 PM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -47,6 +47,27 @@ INSERT INTO `certificate` (`Cert_No`, `Corp_ID`, `Cert_File`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `chapter`
+--
+
+DROP TABLE IF EXISTS `chapter`;
+CREATE TABLE IF NOT EXISTS `chapter` (
+  `Chap_ID` int(10) NOT NULL AUTO_INCREMENT,
+  `Chap_Name` varchar(50) NOT NULL,
+  `Year_No` int(1) NOT NULL,
+  PRIMARY KEY (`Chap_ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `chapter`
+--
+
+INSERT INTO `chapter` (`Chap_ID`, `Chap_Name`, `Year_No`) VALUES
+(2, 'Chapter 1', 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `class`
 --
 
@@ -56,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `class` (
   `T_ID` int(10) NOT NULL,
   `C_Name` varchar(25) NOT NULL,
   PRIMARY KEY (`C_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `class`
