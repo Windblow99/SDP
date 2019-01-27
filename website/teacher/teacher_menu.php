@@ -102,6 +102,9 @@ mysqli_close($conn);
     <a href="add_question_teacher.php"><button type="submit" class="btn btn-secondary">Add Question</button>
   </div>
   <div class="col-2">
+    <a href="#"><button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#addchapter">Add Chapter</button> 
+  </div>
+  <div class="col-2">
     <a href="#"><button type="submit" class="btn btn-secondary">View Details</button> 
   </div>
 
@@ -127,5 +130,32 @@ mysqli_close($conn);
       </div>
     </div>
   </form>
+
+<!-- Second Modal -->
+  <form method="post" action="add_chapter_function.php">
+    <div class="modal" style="color: maroon;" id="addchapter" tabindex="-1" role="dialog" aria-labelledby="addclasslabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: beige; opacity: 0.9;">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addclasslabel">ADD A CHAPTER</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input name="chapter" class="form-control" type="text" placeholder="Insert Chapter">
+          </div>
+          <div class="modal-body">
+            <input name="year" class="form-control" type="text" placeholder="Insert Year Number 4/5">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
 </body>
 </html>
