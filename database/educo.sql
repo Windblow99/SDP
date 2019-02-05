@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 27, 2019 at 12:28 PM
+-- Generation Time: Feb 05, 2019 at 08:33 AM
 -- Server version: 5.7.21
 -- PHP Version: 5.6.35
 
@@ -33,16 +33,17 @@ CREATE TABLE IF NOT EXISTS `certificate` (
   `Cert_No` int(10) NOT NULL AUTO_INCREMENT,
   `Corp_ID` int(10) NOT NULL,
   `Cert_File` varchar(255) NOT NULL,
+  `Cert_Name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`Cert_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `certificate`
 --
 
-INSERT INTO `certificate` (`Cert_No`, `Corp_ID`, `Cert_File`) VALUES
-(16, 13, 'C:wamp64	mpphp3413.tmp'),
-(15, 13, 'C:wamp64	mpphp9A62.tmp');
+INSERT INTO `certificate` (`Cert_No`, `Corp_ID`, `Cert_File`, `Cert_Name`) VALUES
+(19, 13, 'C:wamp64	mpphpD46A.tmp', 'Physics 1'),
+(18, 13, 'C:wamp64	mpphp67B5.tmp', 'Science 1');
 
 -- --------------------------------------------------------
 
@@ -56,14 +57,16 @@ CREATE TABLE IF NOT EXISTS `chapter` (
   `Chap_Name` varchar(50) NOT NULL,
   `Year_No` int(1) NOT NULL,
   PRIMARY KEY (`Chap_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chapter`
 --
 
 INSERT INTO `chapter` (`Chap_ID`, `Chap_Name`, `Year_No`) VALUES
-(2, 'Chapter 1', 4);
+(2, 'Chapter 1', 4),
+(3, 'Chapter 2', 4),
+(4, 'Chapter 3', 4);
 
 -- --------------------------------------------------------
 
@@ -77,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `class` (
   `T_ID` int(10) NOT NULL,
   `C_Name` varchar(25) NOT NULL,
   PRIMARY KEY (`C_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `class`
@@ -88,7 +91,9 @@ INSERT INTO `class` (`C_No`, `T_ID`, `C_Name`) VALUES
 (3, 7, 'Class B'),
 (4, 7, 'Class C'),
 (5, 7, 'Class D'),
-(6, 7, 'Class E');
+(6, 7, 'Class E'),
+(10, 13, 'Class F'),
+(11, 7, 'Class G');
 
 -- --------------------------------------------------------
 

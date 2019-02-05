@@ -10,6 +10,8 @@
 	//to obatin file type
 	$getFileType = pathinfo($filename,PATHINFO_EXTENSION);
 
+	$certname = $_POST['certname'];
+
 	$username = $_SESSION['user'];
 	
 	if($getfilesize > 16777215)
@@ -35,8 +37,8 @@
 	$conn = mysqli_connect('localhost','root','','educo')
 	or die("<script>alert('error in db connection');</script>");
 	
-	$sql = "INSERT INTO certificate (Corp_ID,Cert_File) VALUES 
-		((SELECT U_ID FROM users WHERE Name = '$username'),'$fileobjectpath')";
+	$sql = "INSERT INTO certificate (Corp_ID,Cert_File,Cert_Name) VALUES 
+		((SELECT U_ID FROM users WHERE Name = '$username'),'$fileobjectpath','$certname')";
 
 	mysqli_query($conn, $sql);
 
