@@ -28,8 +28,32 @@
 				CLASS DETAILS
 				</div>
 
-				<div class="col-sm" style="color: #CC2865; font-size: 18px;"><br/><br/>
-				<br/>CLASS 1
+				<div class="col-sm" style="color: #CC2865; font-size: 22px;"><br/><br/>
+				<?php
+				$conn = mysqli_connect('localhost','root','','educo');
+				$username = $_SESSION['user'];
+				
+				if (mysqli_connect_errno())
+				{
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				}
+
+				$sql = "SELECT C_Name FROM class WHERE C_no = 
+					(SELECT C_ID FROM student_class WHERE S_Name = '$username')";
+
+				$result = mysqli_query($conn, $sql);
+
+				while($row = mysqli_fetch_array($result))
+				{
+				  echo "<tr>";
+				  echo "<td>" . $row['C_Name'] . "</td>";
+
+				  echo "</tr>";
+				  }
+				  echo "</table>";
+
+				mysqli_close($conn);
+				?>
 				</div>
 				
 		</div>
@@ -42,8 +66,34 @@
 				<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>Teacher in-charge:</center></h5>
 				</div>
 
-				<div class="col-sm"><br/>
-				<h5 style="font-weight: bold;">Eren Ong<h5>
+				<div class="col-sm" style="color: #CC2865; font-size: 25px;"><br/>
+				<?php
+				$conn = mysqli_connect('localhost','root','','educo');
+				$username = $_SESSION['user'];
+				
+				if (mysqli_connect_errno())
+				{
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				}
+
+				$sql = "SELECT Name FROM users WHERE U_ID = 
+					(SELECT T_ID FROM class WHERE C_Name = 
+					(SELECT C_Name FROM class WHERE C_no = 
+					(SELECT C_ID FROM student_class WHERE S_Name = '$username')))";
+
+				$result = mysqli_query($conn, $sql);
+
+				while($row = mysqli_fetch_array($result))
+				{
+				  echo "<tr>";
+				  echo "<td>" . $row['Name'] . "</td>";
+
+				  echo "</tr>";
+				  }
+				  echo "</table>";
+
+				mysqli_close($conn);
+				?>
 				</div>
 				
 			</div>		
@@ -52,53 +102,37 @@
 
 		<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>Current in-class students</center></h5><br/>
 
-			<div class="row">
+			<table class="table table-hover" style="margin-left: 25%; width: 60%;">
+  <tbody style="color: #F7478A; font-size: 18px; font-weight: bold; text-align: center;">
 
-				<div class="col-sm" style="font-weight: bold;">
-				Student 1
-				</div>
+<?php
 
-				<div class="col-sm" style="font-weight: bold;">
-				Student 2
-				</div>
+$conn = mysqli_connect('localhost','root','','educo');
+$username = $_SESSION['user'];
 
-				<div class="col-sm" style="font-weight: bold;">
-				Student 3
-				</div>
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
-				<div class="col-sm" style="font-weight: bold;">
-				Student 4
-				</div>
+$sql = "SELECT S_Name FROM student_class WHERE C_ID = 
+		(SELECT C_ID FROM student_class WHERE S_Name = '$username')";
 
-				<div class="col-sm" style="font-weight: bold;">
-				Student 5
-				</div>
+$result = mysqli_query($conn, $sql);
 
-			</div><br/>
 
-			<div class="row">
 
-				<div class="col-sm" style="font-weight: bold;">
-				Student 6
-				</div>
+while($row = mysqli_fetch_array($result))
+{
+  echo "<tr>";
+  echo "<td>" . $row['S_Name'] . "</td>";
+  }
+  echo "</table>";
 
-				<div class="col-sm" style="font-weight: bold;">
-				Student 7
-				</div>
+mysqli_close($conn);
+?>
 
-				<div class="col-sm" style="font-weight: bold;">
-				Student 8
-				</div>
-
-				<div class="col-sm" style="font-weight: bold;">
-				Student 9
-				</div>
-
-				<div class="col-sm" style="font-weight: bold;">
-				Student 10
-				</div>
-
-			</div>
+</table>
 
 
 		<hr>
@@ -123,47 +157,16 @@
 		
 
 		<div class="row">
-			<div class="col-sm-1">
+			<div class="col-sm-3">
 			<label style="font-weight: bold; color: #ffcc00; font-size: 30px;">1.</label>
-			</div>
+			<div>
 
-			<div class="col-sm-4" style="font-size: 30px;">
+			<div class="col-sm-3" style="font-size: 30px;">
 			Student 1
 			</div>
-
-			<div class="col-sm-4" style="font-size: 30px;">
-			75 / 100
-			</div>
 		</div>
-
-		<div class="row">
-			<div class="col-sm-1">
-			<label style="font-weight: bold; color: #bfbfbf; font-size: 30px;">2.</label>
-			</div>
-
-			<div class="col-sm-4" style="font-size: 30px;">
-			Student 2
-			</div>
-
-			<div class="col-sm-4" style="font-size: 30px;">
-			75 / 100
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm-1">
-			<label style="font-weight: bold; color: #663300; font-size: 30px;">3.</label>
-			</div>
-
-			<div class="col-sm-4" style="font-size: 30px;">
-			Student 3
-			</div>
-
-			<div class="col-sm-4" style="font-size: 30px;">
-			75 / 100
-			</div>
-		</div>
-
+			2. Student 2 <br/>
+			3. Student 3
 		</div>
 
 	
