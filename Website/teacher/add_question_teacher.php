@@ -32,14 +32,14 @@
 
 <hr><br>
 
-<form class="justify-content-center">
+<form class="justify-content-center" method="post" action="add_question_teacher_function.php">
 	<div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Question</h4>
       </div>
       <div class="col">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your question here..."></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="question" rows="3" placeholder="Enter your question here..."></textarea>
       </div>
     </div>
   </div>
@@ -50,14 +50,18 @@
         <h4>Image</h4>
       </div>
       <div class="col-4">
-        <input type="file" class="form-control-file form-control-sm">
+        <input type="file" name="fileupload" class="form-control-file form-control-sm">
       </div>
+
       <div class="col-2">
         <h4>Chapter</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" name="chapter">
         <option disabled selected>Select a chapter</option>
+          <option>Chapter 1</option>
+          <option>Chapter 2</option>  
+          <option>Chapter 3</option>                
       </select>
       </div>
     </div>
@@ -69,7 +73,7 @@
         <h4>Format</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" name="format">
           <option disabled selected>Select a format</option>
           <option>Text</option>
           <option>MCQ</option>
@@ -79,7 +83,7 @@
         <h4>Difficulty</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" name="difficulty">
           <option disabled selected>Select difficulty</option>
           <option>Beginner</option>
           <option>Intermediate</option>
@@ -95,7 +99,7 @@
         <h4>Marks</h4>
       </div>
       <div class="col-4">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter marks here...">
+        <input type="number" class="form-control form-control-sm" name="mark" id="colFormLabelSm" placeholder="Enter marks here...">
       </div>
     </div>
   </div>
@@ -106,7 +110,7 @@
         <h4>Selections</h4>
       </div>
       <div class="col">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter first selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer1" id="colFormLabelSm" placeholder="Enter first selection here...">
       </div>
     </div>
   </div>
@@ -116,7 +120,7 @@
       <div class="col-2">
       </div>
       <div class="col">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter second selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer2" id="colFormLabelSm" placeholder="Enter second selection here...">
       </div>
     </div>
   </div>
@@ -126,7 +130,7 @@
       <div class="col-2">
       </div>
       <div class="col">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter third selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer3" id="colFormLabelSm" placeholder="Enter third selection here...">
       </div>
     </div>
   </div>
@@ -136,14 +140,15 @@
       <div class="col-2">
       </div>
       <div class="col">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter fourth selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer4" id="colFormLabelSm" placeholder="Enter fourth selection here...">
       </div>
     </div>
   </div>
 
   <div class="container-fluid questionbuttons">
     <div class="col">
-      <button type="button" class="btn btn-secondary">Add Question</button>
+      <input type="submit" value="Add Question" class="btn btn-secondary">
+      <!--<button type="button" class="btn btn-secondary">Add Question</button>-->
     </div>
   </div>
   

@@ -12,8 +12,8 @@
 	//echo $sql
 	if(mysqli_num_rows($result)<=0)
 	{
-		//echo "<script>alert('Unable to Login!');</script>";
-	//	die ("<script>window.history.go(-1);</script>");
+		echo "<script>alert('Unable to Login!');</script>";
+		die ("<script>window.history.go(-1);</script>");
 	}
 	
 	if($row = mysqli_fetch_array($result))

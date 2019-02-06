@@ -101,7 +101,7 @@
     <button class="btn btn-secondary" data-toggle="modal" data-target="#addstudent">Add Students</button> 
   </div>
   <div class="col-3">
-    <button onclick="window.location.href='http://localhost:8080/website/teacher/manage_students.php'" type="submit" class="btn btn-secondary">Manage Students</button> 
+    <button onclick="window.location.href='manage_students.php'" type="submit" class="btn btn-secondary">Manage Students</button> 
   </div>
 </div>
 
