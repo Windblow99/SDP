@@ -29,7 +29,7 @@
 }
 </style>
 
-<title>Log In</title>
+<title>Exam</title>
 
 </head>
 
@@ -39,25 +39,28 @@
 
 <br/>
 
-<div class="container-fluid">
+<!--<div class="container-fluid">
 	<div class="row-xl" style="text-indent: 80%;">
 		<h4>59:00:00</h4>
 	</div>
-</div>
+</div>-->
 
 <div class="container-fluid title">
   <div class="row-xl">
     <b>Chapter 1: Inertia</b>
+
 </div>
 
 <div class="container-fluid title2">
   <div class="row-xl">
     <b>Section A</b>
+
 </div>
 
 <div class="container-fluid title3">
   <div class="row-xl">
    This section consists of 30 questions. Please answer them all.
+  </div>
 </div>
 
 <hr>
@@ -65,6 +68,7 @@
 <div class="container-fluid questiontitle">
   <div class="row-xl">
    Question 1
+  </div>
 </div>
 
 <br/>
@@ -74,12 +78,12 @@
   		<div class="col-12">
   			<br/>
   			<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>
-		</div>
+		  </div>
 	</div>
 
 	<div class="container-fluid form-group" style="width: 83%;">
     	<textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Enter your answer here..."></textarea>
-  	</div>
+  </div>
 
 <div class="container-fluid questionbuttons">
   <div class="row">
@@ -92,6 +96,7 @@
     <div class="col-1">
       <button type="button" class="btn btn-secondary">Submit</button>
     </div>
+  </div>
 </div>
     
 </form>

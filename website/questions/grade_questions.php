@@ -80,7 +80,7 @@
   <div class="container-fluid question form-group">
     <div class="col-12">
       <br/>
-      <p><?php $sql = "Select * from question where Q_No=;"; $result = mysqli_query($conn,$sql) or die("<script>alert('Maybe select wrong table / columns');</script>"); ?></p>
+      <p><?php $sql = "Select * from student_question INNER JOIN question ON student_question.Q_No= question.Q_No;"; $result = mysqli_query($conn,$sql) or die("<script>alert('Maybe select wrong table / columns');</script>"); ?></p>
     </div>
   </div>
 
