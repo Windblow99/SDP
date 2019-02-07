@@ -30,16 +30,16 @@
     <b>ADD A QUESTION</b>
 </div>
 
-<hr><br>
+<hr>
 
-<form class="justify-content-center">
+<form class="justify-content-center"  method="post" action="add_question_corporate_function.php" enctype="multipart/form-data" style="padding-top: 30px;">
 	<div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Question</h4>
       </div>
       <div class="col">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your question here..."></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="question" rows="3" placeholder="Enter your question here..."></textarea>
       </div>
     </div>
   </div>
@@ -50,13 +50,13 @@
         <h4>Image</h4>
       </div>
       <div class="col-4">
-        <input type="file" class="form-control-file form-control-sm">
+        <input type="file" name="fileupload" class="form-control-file form-control-sm">
       </div>
       <div class="col-2">
         <h4>Certificate</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" name="difficulty">
         <option disabled selected>Select a certificate</option>
       </select>
       </div>
@@ -69,7 +69,7 @@
         <h4>Format</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm">
+        <select class="form-control form-control-sm" name="format">
           <option disabled selected>Select a format</option>
           <option>Text</option>
           <option>MCQ</option>
@@ -79,7 +79,7 @@
         <h4>Marks</h4>
       </div>
       <div class="col-4">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter marks here...">
+        <input type="number" class="form-control form-control-sm" name="mark" id="colFormLabelSm" placeholder="Enter marks here...">
       </div>
     </div>
   </div>
@@ -121,6 +121,17 @@
       </div>
       <div class="col">
         <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter fourth selection here...">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid form-group" style="width: 80%;">
+    <div class="row">
+      <div class="col-2">
+        <h4>True Answer</h4>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control form-control-sm" name="trueanswer" id="colFormLabelSm" placeholder="Enter true answer here.">
       </div>
     </div>
   </div>

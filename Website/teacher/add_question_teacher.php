@@ -93,7 +93,7 @@
     </div>
   </div>
 
- <!-- <div class="container-fluid form-group" style="width: 80%;">
+ <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Marks</h4>
@@ -102,7 +102,7 @@
         <input type="number" class="form-control form-control-sm" name="mark" id="colFormLabelSm" placeholder="Enter marks here...">
       </div>
     </div>
-  </div>-->
+  </div>
 
   <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
