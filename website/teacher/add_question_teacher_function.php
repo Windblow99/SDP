@@ -43,17 +43,6 @@
 	$answer4 = $_POST['answer4'];
 	$trueanswer = $_POST['trueanswer'];
 
-	/*echo "$question";
-	echo "$chapter";
-	echo "$format";
-	echo "$category";
-	echo "$difficulty";
-	echo "$mark";
-	echo "$answer1";
-	echo "$answer2";
-	echo "$answer3";
-	echo "$answer4";*/
-
 	$sql = "INSERT INTO question (Chapter, Format, Difficulty, Mark, QuestionContent, Image, Imagepath, Answer1, Answer2, Answer3, Answer4, TrueAnswer) VALUES ('$chapter', '$format', '$difficulty', '$mark', 'question', '$getimageobj', '$destination', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
 	
 	mysqli_query($conn, $sql);

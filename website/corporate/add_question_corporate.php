@@ -58,6 +58,7 @@
       <div class="col-4">
         <select class="form-control form-control-sm" name="difficulty">
         <option disabled selected>Select a certificate</option>
+        <option>Certificate 1</option>
       </select>
       </div>
     </div>
@@ -90,7 +91,7 @@
         <h4>Selections</h4>
       </div>
       <div class="col">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter first selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer1" id="colFormLabelSm" placeholder="Enter first selection here...">
       </div>
     </div>
   </div>
@@ -100,7 +101,7 @@
       <div class="col-2">
       </div>
       <div class="col">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter second selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer2" id="colFormLabelSm" placeholder="Enter second selection here...">
       </div>
     </div>
   </div>
@@ -110,7 +111,7 @@
       <div class="col-2">
       </div>
       <div class="col">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter third selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer3" id="colFormLabelSm" placeholder="Enter third selection here...">
       </div>
     </div>
   </div>
@@ -120,7 +121,7 @@
       <div class="col-2">
       </div>
       <div class="col">
-        <input type="number" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Enter fourth selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer4" id="colFormLabelSm" placeholder="Enter fourth selection here...">
       </div>
     </div>
   </div>
@@ -138,7 +139,7 @@
 
   <div class="container-fluid questionbuttons">
     <div class="col">
-      <button type="button" class="btn btn-secondary">Add Question</button>
+      <input type="submit" value="Add Question" class="btn btn-secondary">
     </div>
   </div>
   

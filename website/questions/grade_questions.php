@@ -29,7 +29,7 @@
 }
 </style>
 
-<title>Log In</title>
+<title>Grade Questions</title>
 
 </head>
 
@@ -39,11 +39,11 @@
 
 <br/>
 
-<div class="container-fluid">
+<!--<div class="container-fluid">
 	<div class="row-xl" style="text-indent: 80%;">
 		<h4>59:00:00</h4>
 	</div>
-</div>
+</div>-->
 
 <div class="container-fluid title">
   <div class="row-xl">
@@ -70,15 +70,22 @@
 <br/>
 
 <form class="justify-content-center">
-	<div class="container-fluid question form-group">
+	<!--<div class="container-fluid question form-group">
   	<div class="col-12">
   		<br/>
   		<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>
 		</div>
-	</div>
+	</div>-->
+
+  <div class="container-fluid question form-group">
+    <div class="col-12">
+      <br/>
+      <p><?php $sql = "Select * from question where Q_No=;"; $result = mysqli_query($conn,$sql) or die("<script>alert('Maybe select wrong table / columns');</script>"); ?></p>
+    </div>
+  </div>
 
 	<div class="container-fluid form-group" style="width: 83%;">
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your answer here..."></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" disabled="disabled" rows="3" placeholder="Enter your answer here..."><?php $sql = "Select * from question where Q_No=;"; $result = mysqli_query($conn,$sql) or die("<script>alert('Maybe select wrong table / columns');</script>"); ?></textarea>
   </div>
 
 <h4 style="color: #CC2865;">Your suggested answer</h4>
