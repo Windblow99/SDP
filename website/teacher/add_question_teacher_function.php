@@ -1,7 +1,7 @@
 <?php
 	$conn = mysqli_connect('localhost','root','','educo');
 
-	/*$filename = basename($_FILES['fileupload']['name']);
+	$filename = basename($_FILES['fileupload']['name']);
 	
 	$getfilesize = $_FILES['fileupload']['size'];
 	
@@ -18,29 +18,29 @@
 	{
 		echo "<script>alert('Wrong file type.";
 		echo "Please choose others pic!');</script>";
-	//	die("<script>window.history.go(-1);</script>");
+		die("<script>window.history.go(-1);</script>");
 	}
 	
 	$fileobjectpath = $_FILES['fileupload']['tmp_name'];
 	$getimageobj = base64_encode(file_get_contents($fileobjectpath));
-	 
+	
+	$destination = "Pictures/".$filename; 
 				
-	if(!move_uploaded_file($_FILES['fileupload']['tmp_name']))
+	if(!move_uploaded_file($_FILES['fileupload']['tmp_name'], $destination))
 	{
 		echo "<script>alert('Technical Problem: File not uploaded!');</script>";
-	//	die("<script>window.history.go(-1);</script>");
-	}*/
+		die("<script>window.history.go(-1);</script>");
+	}
 	
-	$category = $_POST['category'];
 	$chapter = $_POST['chapter'];
 	$format = $_POST['format'];
 	$difficulty = $_POST['difficulty'];
 	$question = $_POST['question'];
-	$mark = $_POST['mark'];
 	$answer1 = $_POST['answer1'];
 	$answer2 = $_POST['answer2'];
 	$answer3 = $_POST['answer3'];
 	$answer4 = $_POST['answer4'];
+	$trueanswer = $_POST['trueanswer'];
 
 	/*echo "$question";
 	echo "$chapter";
@@ -53,14 +53,16 @@
 	echo "$answer3";
 	echo "$answer4";*/
 
-	$sql = "INSERT INTO question (Chapter, Format, Difficulty, Mark, QuestionContent, Answer1, Answer2, Answer3, Answer4) VALUES ('$chapter', '$format', '$difficulty', '$mark', '$question', '$answer1', '$answer2', '$answer3', '$answer4');";
+	$sql = "INSERT INTO question (Chapter, Format, Difficulty, QuestionContent, Image, Answer1, Answer2, Answer3, Answer4) VALUES ('$chapter', '$format', '$difficulty', '$question', '$getimageobj', '$answer1', '$answer2', '$answer3', '$answer4');";
+
+	//$sql = "INSERT INTO question (Image, Imagepath) VALUES ('$getimageobj', '$destination');";
 	
 	mysqli_query($conn, $sql);
 	
 	if (mysqli_affected_rows($conn) <= 0)
 	{
-//		echo "<script>alert('Insert Failed!');</script>";
-//		die ("<script>window.history.go(-1);</script>");
+		echo "<script>alert('Insert Failed!');</script>";
+	//	die ("<script>window.history.go(-1);</script>");
 	}
 
 //	echo "<script>alert('New question added into database!');</script>";

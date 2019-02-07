@@ -30,9 +30,9 @@
     <b>ADD A QUESTION</b>
 </div>
 
-<hr><br>
+<hr>
 
-<form class="justify-content-center" method="post" action="add_question_teacher_function.php">
+<form class="justify-content-center" method="post" action="add_question_teacher_function.php" enctype="multipart/form-data" style="padding-top: 30px;">
 	<div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
@@ -93,7 +93,7 @@
     </div>
   </div>
 
-  <div class="container-fluid form-group" style="width: 80%;">
+ <!-- <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Marks</h4>
@@ -102,7 +102,7 @@
         <input type="number" class="form-control form-control-sm" name="mark" id="colFormLabelSm" placeholder="Enter marks here...">
       </div>
     </div>
-  </div>
+  </div>-->
 
   <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
@@ -141,6 +141,17 @@
       </div>
       <div class="col">
         <input type="text" class="form-control form-control-sm" name="answer4" id="colFormLabelSm" placeholder="Enter fourth selection here...">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid form-group" style="width: 80%;">
+    <div class="row">
+      <div class="col-2">
+        <h4>True Answer</h4>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control form-control-sm" name="trueanswer" id="colFormLabelSm" placeholder="Enter true answer here.">
       </div>
     </div>
   </div>
