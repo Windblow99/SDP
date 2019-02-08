@@ -77,11 +77,13 @@
 	<div class="container-fluid question form-group">
   		<div class="col-12">
   			<br/>
-  			<p><?php
+  		<!--	<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>-->
+
+        <p><?php
             $conn = mysqli_connect("localhost","root","","educo")
             or die("<script>alert('error in db connection');<script>");
         
-            $sql = "Select QuestionContent from question ORDER BY Difficulty;";
+            $sql = "Select QuestionContent from question WHERE Q_No=41;";
             $result = mysqli_query($conn,$sql)
             or die("<script>alert('Maybe select wrong table / columns');</script>");
       
