@@ -29,7 +29,7 @@
 }
 </style>
 
-<title>Log In</title>
+<title>Exam</title>
 
 </head>
 
@@ -39,11 +39,11 @@
 
 <br/>
 
-<div class="container-fluid">
+<!--<div class="container-fluid">
 	<div class="row-xl" style="text-indent: 80%;">
 		<h4>59:00:00</h4>
 	</div>
-</div>
+</div>-->
 
 <div class="container-fluid title">
   <div class="row-xl">
@@ -73,38 +73,73 @@
 	<div class="container-fluid question form-group">
   		<div class="col-12">
   			<br/>
-  			<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>
-		</div>
-	</div>
+  			<!--<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>-->
+        <?php
+            $conn = mysqli_connect("localhost","root","","educo")
+            or die("<script>alert('error in db connection');<script>");
+        
+            $sql = "Select * from question where Format='MCQ' order by rand() limit 1";
+            $result = mysqli_query($conn,$sql)
+            or die("<script>alert('Maybe select wrong table / columns');</script>");
+      
+            $count = (mysqli_num_rows($result)>=1? true:
+            die("<script>alert('No data available in the table!');</script>"));
+            
+            While($rows = mysqli_fetch_array($result))
+            {
+              echo "<p>".$rows['QuestionContent']."</p>";
+           
+               
+		echo "</div>";
+	echo "</div>";
 
-  <div class="container-flui form-group" style="width: 65%;">
-  <div class="row">
-    <div class="col">
-      <label class="form-check-label">
+  echo "<div class='container-flui form-group' style='width: 65%;''>";
+ echo "<div class='row'>";
+   echo "<div class='col'>";
+   /*<label class="form-check-label">
         <input type="radio" class="form-check-input">0ms
-      </label>
-    </div>
-    <div class="col">
-      <label class="form-check-label">
+      </label>-->*/
+
+              echo "<label class='form-check-label'>
+        <input type='radio' class='form-check-input'>".$rows['Answer1']."</label>";
+            
+                
+  echo "</div>";
+   echo "<div class='col'>";
+      /*<!--<label class="form-check-label">
         <input type="radio" class="form-check-input">1ms
-      </label>
-    </div>
-  </div>  
-</div>
+      </label>-->*/
+              echo "<label class='form-check-label'>
+        <input type='radio' class='form-check-input'>".$rows['Answer2']."</label>";
+            
+                
+   echo "</div>";
+  echo "</div>"; 
+echo "</div>";
 
-<br/>
+echo "<br/>";
 
-<div class="container-flui form-group" style="width: 65%;">
-  <div class="row">
-    <div class="col">
-      <label class="form-check-label">
+echo "<div class='container-flui form-group' style='width: 65%;'>";
+  echo "<div class='row'>";
+    echo "<div class='col'>";
+     /* <!--<label class="form-check-label">
         <input type="radio" class="form-check-input">0ms
-      </label>
-    </div>
-    <div class="col">
-      <label class="form-check-label">
+      </label>-->*/
+        
+              echo "<label class='form-check-label'>
+        <input type='radio' class='form-check-input'>".$rows['Answer3']."</label>";
+            
+                
+    echo "</div>";
+    echo "<div class='col'>";
+      /*<!--<label class="form-check-label">
         <input type="radio" class="form-check-input">1ms
-      </label>
+      </label>-->*/
+
+              echo "<label class='form-check-label'>
+        <input type='radio' class='form-check-input'>".$rows['Answer4']."</label>";
+            }
+          ?>      
     </div>
   </div>  
 </div>

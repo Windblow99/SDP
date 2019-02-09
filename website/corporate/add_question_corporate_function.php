@@ -45,7 +45,6 @@
 
 $sql = "INSERT INTO question (Format, Difficulty, Mark, QuestionContent, Image, Imagepath, Answer1, Answer2, Answer3, Answer4, TrueAnswer) VALUES ('$format', '$difficulty', '$mark', '$question','$getimageobj', '$destination', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
 
-//$sql = "INSERT INTO question (Image, Imagepath) VALUES ('$getimageobj', '$destination');";
 	
 	mysqli_query($conn, $sql);
 	

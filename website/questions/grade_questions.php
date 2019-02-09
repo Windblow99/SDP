@@ -80,12 +80,27 @@
   <div class="container-fluid question form-group">
     <div class="col-12">
       <br/>
-      <p><?php $sql = "Select * from student_question INNER JOIN question ON student_question.Q_No= question.Q_No;"; $result = mysqli_query($conn,$sql) or die("<script>alert('Maybe select wrong table / columns');</script>"); ?></p>
+            <?php
+            $conn = mysqli_connect("localhost","root","","educo")
+            or die("<script>alert('error in db connection');<script>");
+        
+            $sql = "Select * from question where Q_No=50";
+            $result = mysqli_query($conn,$sql)
+            or die("<script>alert('Maybe select wrong table / columns');</script>");
+      
+            $count = (mysqli_num_rows($result)>=1? true:
+            die("<script>alert('No data available in the table!');</script>"));
+            
+            While($rows = mysqli_fetch_array($result))
+            {
+              echo "<p>".$rows['QuestionContent']."</p>";
+            }
+          ?>
     </div>
   </div>
 
 	<div class="container-fluid form-group" style="width: 83%;">
-    <textarea class="form-control" id="exampleFormControlTextarea1" disabled="disabled" rows="3" placeholder="Enter your answer here..."><?php $sql = "Select * from question where Q_No=;"; $result = mysqli_query($conn,$sql) or die("<script>alert('Maybe select wrong table / columns');</script>"); ?></textarea>
+    <textarea class="form-control" id="exampleFormControlTextarea1" disabled="disabled" rows="3" placeholder="Enter your answer here..."></textarea>
   </div>
 
 <h4 style="color: #CC2865;">Your suggested answer</h4>

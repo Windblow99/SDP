@@ -79,22 +79,22 @@
   			<br/>
   		<!--	<p>A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.</p>-->
 
-        <p><?php
+        <?php
             $conn = mysqli_connect("localhost","root","","educo")
             or die("<script>alert('error in db connection');<script>");
         
-            $sql = "Select QuestionContent from question WHERE Q_No=41;";
+            $sql = "Select * from question where Format='Text' order by rand() limit 1";
             $result = mysqli_query($conn,$sql)
             or die("<script>alert('Maybe select wrong table / columns');</script>");
       
             $count = (mysqli_num_rows($result)>=1? true:
             die("<script>alert('No data available in the table!');</script>"));
             
-            /*While($rows = mysqli_fetch_array($result))
+            While($rows = mysqli_fetch_array($result))
             {
-              echo .$rows['QuestionContent'].;
-            }*/
-          ?></p>
+              echo "<p>".$rows['QuestionContent']."</p>";
+            }
+          ?>
 		  </div>
 	</div>
 
