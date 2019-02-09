@@ -27,7 +27,7 @@
 }
 </style>
 
-<title>Log In</title>
+<title>Exam</title>
 
 </head>
 
@@ -37,11 +37,11 @@
 
 <br/>
 
-<div class="container-fluid">
+<!--<div class="container-fluid">
 	<div class="row-xl" style="text-indent: 80%;">
 		<h4>59:00:00</h4>
 	</div>
-</div>
+</div>-->
 
 <div class="container-fluid title">
   <div class="row-xl">
@@ -70,12 +70,32 @@
 <form class="justify-content-center needs-validation" novalidate>
 
   <div class="row">
-    <div class="col-3">
-      <img src="/Pictures/Lab.jpg">
-    </div>
-    <div class="col-9">
-      <div class="question">
-        A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.
+    
+      <!--<img src="/Pictures/Lab.jpg">-->
+        <?php
+            $conn = mysqli_connect("localhost","root","","educo")
+            or die("<script>alert('error in db connection');<script>");
+        
+            $sql = "Select * from question where Format='Text' order by rand() limit 1";
+            $result = mysqli_query($conn,$sql)
+            or die("<script>alert('Maybe select wrong table / columns');</script>");
+      
+            $count = (mysqli_num_rows($result)>=1? true:
+            die("<script>alert('No data available in the table!');</script>"));
+            
+            While($rows = mysqli_fetch_array($result))
+            {
+              $getFileType = pathinfo($rows['QuestionContent'],PATHINFO_EXTENSION);
+              echo "<div class='col-3'><img src='data:image/$getFileType;base64,".$rows['Image']."'width='200px' height='200px'/></div>";
+       
+    
+   echo "<div class='col-9'>";
+     echo "<div class='question'>";
+       /*<!-- A 2-kg object is moving horizontally with a speed of 4 m/s. How much net force is required to keep the object moving at this speed and in this direction? Show your calculation.-->*/
+
+              echo "<p>".$rows['QuestionContent']."</p>";
+            }
+          ?>       
       </div>
       <br/>
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Enter your answer here..."></textarea>

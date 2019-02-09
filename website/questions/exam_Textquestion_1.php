@@ -53,13 +53,13 @@
 
 <div class="container-fluid title2">
   <div class="row-xl">
-    <b>Section A</b>
+    <b>Section B</b>
 
 </div>
 
 <div class="container-fluid title3">
   <div class="row-xl">
-   This section consists of 30 questions. Please answer them all.
+   This section consists of 4 questions. Please answer them all.
   </div>
 </div>
 
@@ -105,10 +105,10 @@
 <div class="container-fluid questionbuttons">
   <div class="row">
     <div class="col-1">
-      <a href=""><i class="fas fa-angle-left" style="font-size: 45px;"></i></a>
+      <a href="#"><i class="fas fa-angle-left" style="font-size: 45px;"></i></a>
     </div>
     <div class="col-1">
-      <a href=""><i class="fas fa-angle-right" style="font-size: 45px;"></i></a>
+      <a href="#"><i class="fas fa-angle-right" style="font-size: 45px;"></i></a>
     </div>
     <div class="col-1">
       <button type="button" class="btn btn-secondary">Submit</button>

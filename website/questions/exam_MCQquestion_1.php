@@ -35,7 +35,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/examnavbar.php'); ?>
 
 <br/>
 
@@ -57,14 +57,14 @@
 
 <div class="container-fluid title3">
   <div class="row-xl">
-   This section consists of 30 questions. Please answer them all.
+   This section consists of 40 questions. Please answer them all.
 </div>
 
 <hr>
 
 <div class="container-fluid questiontitle">
   <div class="row-xl">
-   Question 2
+   Question 1
 </div>
 
 <br/>
@@ -100,8 +100,8 @@
         <input type="radio" class="form-check-input">0ms
       </label>-->*/
 
-              echo "<label class='form-check-label'>
-        <input type='radio' class='form-check-input'>".$rows['Answer1']."</label>";
+      echo "<label class='form-check-label'>
+        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer1'].">".$rows['Answer1']."</label>";
             
                 
   echo "</div>";
@@ -109,8 +109,8 @@
       /*<!--<label class="form-check-label">
         <input type="radio" class="form-check-input">1ms
       </label>-->*/
-              echo "<label class='form-check-label'>
-        <input type='radio' class='form-check-input'>".$rows['Answer2']."</label>";
+      echo "<label class='form-check-label'>
+        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer2'].">".$rows['Answer2']."</label>";
             
                 
    echo "</div>";
@@ -126,8 +126,8 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
         <input type="radio" class="form-check-input">0ms
       </label>-->*/
         
-              echo "<label class='form-check-label'>
-        <input type='radio' class='form-check-input'>".$rows['Answer3']."</label>";
+      echo "<label class='form-check-label'>
+        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer3'].">".$rows['Answer3']."</label>";
             
                 
     echo "</div>";
@@ -136,8 +136,8 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
         <input type="radio" class="form-check-input">1ms
       </label>-->*/
 
-              echo "<label class='form-check-label'>
-        <input type='radio' class='form-check-input'>".$rows['Answer4']."</label>";
+      echo "<label class='form-check-label'>
+        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer4'].">".$rows['Answer4']."</label>";
             }
           ?>      
     </div>
@@ -149,10 +149,10 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
 <div class="container-fluid questionbuttons">
   <div class="row">
     <div class="col-1">
-      <a href=""><i class="fas fa-angle-left" style="font-size: 45px;"></i></a>
+      <!--<a href=""><i class="fas fa-angle-left" style="font-size: 45px;"></i></a>-->
     </div>
     <div class="col-1">
-      <a href=""><i class="fas fa-angle-right" style="font-size: 45px;"></i></a>
+      <a href="exam_MCQquestion_2.php"><i class="fas fa-angle-right" style="font-size: 45px;"></i></a>
     </div>
     <div class="col-1">
       <button type="button" class="btn btn-secondary">Submit</button>

@@ -117,6 +117,12 @@
     <div class="col">
       <select class="form-control form-control-sm" style="width: 50%;">
         <option disabled>Make a selection</option>
+        <!--<option>10 Marks</option>
+        <option>9 Marks</option>
+        <option>8 Marks</option>
+        <option>7 Marks</option>
+        <option>6 Marks</option>-->
+        <option>5 Marks</option>
         <option>4 Marks</option>
         <option>3 Marks</option>
         <option>2 Marks</option>
