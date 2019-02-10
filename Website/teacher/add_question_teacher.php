@@ -73,10 +73,10 @@
         <h4>Format</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm" name="format">
+        <select class="form-control form-control-sm" name="format" id="format">
           <option disabled selected>Select a format</option>
-          <option>Text</option>
-          <option>MCQ</option>
+          <option value='Text'>Text</option>
+          <option value='MCQ'>MCQ</option>
         </select>
       </div>
       <div class="col-2">
