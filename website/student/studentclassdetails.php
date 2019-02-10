@@ -66,7 +66,7 @@
 				<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>Teacher in-charge:</center></h5>
 				</div>
 
-				<div class="col-sm" style="color: #CC2865; font-size: 25px;"><br/>
+				<div class="col-sm" style="color: #CC2865; font-size: 25px; margin-right: 40px;"><br/>
 				<?php
 				$conn = mysqli_connect('localhost','root','','educo');
 				$username = $_SESSION['user'];
@@ -142,13 +142,27 @@ mysqli_close($conn);
 				<h5 style="box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>Top Scores</center></h5>
 			</div>
 
-			<div class="col-sm" style="padding-top: 40px;">
-					Overall / Chapter:&nbsp;
-				<select>
-					<option value="chapter1">Chapter 1</option>
- 					<option value="chapter2">Chapter 2</option>
-				</select>
-			</div>
+		<div class="col-sm-6" style="margin-top: 40px; margin-right: 5px;">
+			<?php
+
+			$conn = mysqli_connect('localhost','root','','educo');
+
+			$sql = "SELECT Chap_Name FROM chapter";
+
+			$result = mysqli_query($conn, $sql);
+
+			echo '<select name="Chapter">';
+
+			while ($row = mysqli_fetch_assoc($result)) {
+
+			    echo "<option value='" . $row['Chap_Name'] ."'>" . $row['Chap_Name'] ."</option>";
+
+			}
+
+			echo '</select>';
+
+			?>
+		</div>
 		</div>
 		<br/>
 

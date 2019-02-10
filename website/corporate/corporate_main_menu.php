@@ -26,7 +26,7 @@
   <div class="row">
     <div class="col-lg-4">
       <h4 class="float-left" style="font-size: 2em; color: #953031; font-weight: bold;">
-      CORPORATE NAME
+      <?php echo $_SESSION['user']; ?>
       </h4>
     </div>
     <div class="col-lg-8">

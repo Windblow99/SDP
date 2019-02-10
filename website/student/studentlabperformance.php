@@ -25,7 +25,7 @@
 		<div class="row">
 
 				<div class="col-sm" style="font-size: 36px; color: #953031; font-weight: bold;"><br/>
-				Eren's Lab Performance
+				<?php echo $_SESSION['user']; ?>'s Lab Performance
 				</div>
 
 				<div class="col-sm" style="color: #CC2865; font-size: 18px;"><br/><br/>
