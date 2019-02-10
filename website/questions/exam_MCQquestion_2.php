@@ -35,7 +35,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/studentnavbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/examnavbar.php'); ?>
 
 <br/>
 
