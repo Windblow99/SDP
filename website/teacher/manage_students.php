@@ -29,7 +29,24 @@
     </div>
     <div class="col-sm-8">
       <p class="text-center" style="font-size: 18px; color: fuchsia; padding-top: 18px; float: left;">
-      CLASS 1
+        <?php 
+          $id = $_GET['id'];
+          $conn = mysqli_connect('localhost','root','','educo');
+          if (mysqli_connect_errno())
+          {
+          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          }
+
+          $sql = "SELECT C_Name FROM class WHERE C_No = '$id'";
+          $result = mysqli_query($conn, $sql);
+
+          while($row = mysqli_fetch_array($result))
+          {
+            echo "<td>" . $row['C_Name'] . "</td>";
+          }
+
+          mysqli_close($conn);
+        ?>
       </p>
     </div>
   </div>
@@ -51,6 +68,9 @@
 
   <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
 <?php
+  
+  $id = $_GET['id'];
+
   $conn = mysqli_connect('localhost','root','','educo');
 
   if (mysqli_connect_errno())
@@ -58,7 +78,7 @@
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-  $sql = "SELECT S_Name FROM student_class";
+  $sql = "SELECT S_Name FROM student_class WHERE C_ID = '$id'";
 
   $result = mysqli_query($conn, $sql);
 

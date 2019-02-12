@@ -34,9 +34,24 @@
     </div>
     <div class="col-sm-3">
       <p class="text-center" style="font-size: 18px; color: fuchsia; padding-top: 18px; float: left;">
-      <?php $class = $_POST['class_select'];
-            echo $class;
-       ?>
+        <?php 
+          $id = $_GET['id'];
+          $conn = mysqli_connect('localhost','root','','educo');
+          if (mysqli_connect_errno())
+          {
+          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          }
+
+          $sql = "SELECT C_Name FROM class WHERE C_No = '$id'";
+          $result = mysqli_query($conn, $sql);
+
+          while($row = mysqli_fetch_array($result))
+          {
+            echo "<td>" . $row['C_Name'] . "</td>";
+          }
+
+          mysqli_close($conn);
+        ?>
       </p>
     </div>
   </div>
@@ -103,7 +118,8 @@
     <button class="btn btn-secondary" data-toggle="modal" data-target="#addstudent">Add Students</button> 
   </div>
   <div class="col-3">
-    <button onclick="window.location.href='http://localhost:8080/website/teacher/manage_students.php'" type="submit" class="btn btn-secondary">Manage Students</button> 
+    <button onclick="window.location.href='manage_students.php?id=<?php echo $_GET['id'];?>'" 
+      class="btn btn-secondary">Manage Students</button> 
   </div>
 </div>
 
@@ -121,8 +137,24 @@
             </button>
           </div>
           <div class="modal-body">
-            <input name="class_select" value="<?php $class = $_POST['class_select'];echo $class;?>" 
-                   readonly class="form-control" type="text" placeholder="Select Class">
+            <input name="class_select" 
+            value="<?php 
+                $id = $_GET['id'];
+                $conn = mysqli_connect('localhost','root','','educo');
+                if (mysqli_connect_errno())
+                {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                }
+                $sql = "SELECT C_Name FROM class WHERE C_No = '$id'";
+                $result = mysqli_query($conn, $sql);
+
+                while($row = mysqli_fetch_array($result))
+                {
+                  echo $row['C_Name'];
+                }
+                mysqli_close($conn);
+              ?>" 
+            readonly class="form-control" type="text" placeholder="Select Class">
           </div>
           <div class="modal-body">
             <input name="student_name" class="form-control" type="text" placeholder="Student Name">

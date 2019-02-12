@@ -18,6 +18,6 @@ if(mysqli_affected_rows($conn) <=0)
 }
 
 echo "<script>alert('New student added!')</script>";
-echo "<script>window.location.href='class_details.php';</script>";
+echo "<script>window.history.go(-1);</script>";
 
 ?>

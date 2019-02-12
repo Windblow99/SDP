@@ -10,9 +10,9 @@
 	//to obatin file type
 	$getFileType = pathinfo($filename,PATHINFO_EXTENSION);
 
-	$certname = $_POST['certname'];
+	$certno = $_POST['cert_no'];
 
-	$username = $_SESSION['user'];
+	$certname = $_POST['cert_name'];
 	
 	if($getfilesize > 16777215)
 	{
@@ -37,8 +37,8 @@
 	$conn = mysqli_connect('localhost','root','','educo')
 	or die("<script>alert('error in db connection');</script>");
 	
-	$sql = "INSERT INTO certificate (Corp_ID,Cert_File,Cert_Name) VALUES 
-		((SELECT U_ID FROM users WHERE Name = '$username'),'$fileobjectpath','$certname')";
+	$sql = "UPDATE certificate SET (Cert_File = '$fileobjectpath', Cert_Name ='$certname') 
+			WHERE Cert_No ='$certno'";
 
 	mysqli_query($conn, $sql);
 
@@ -47,5 +47,5 @@
 		die("<script>alert('Fail: Unable To Upload File!');window.history.go(-1);</script>");
 	}
 
-	echo "<script>alert('New Certificate Added!')</script>";
-	echo "<script>window.location.href='corporate_main_menu.php';</script>";
+	echo "<script>alert('Certificate Updated!')</script>";
+	echo "<script>window.history.go(-1);</script>";

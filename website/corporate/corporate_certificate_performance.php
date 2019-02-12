@@ -29,7 +29,24 @@
       CERTIFICATE PERFORMANCE&nbsp;&nbsp;&nbsp;
       </h4>
       <p class="float-left" style="font-size: 1em; color: #CC2865; padding-top: 18px;float: left;">
-      CERTIFICATE 1
+      <?php 
+          $id = $_GET['id'];
+          $conn = mysqli_connect('localhost','root','','educo');
+          if (mysqli_connect_errno())
+          {
+          echo "Failed to connect to MySQL: " . mysqli_connect_error();
+          }
+
+          $sql = "SELECT Cert_Name FROM certificate WHERE Cert_No = '$id'";
+          $result = mysqli_query($conn, $sql);
+
+          while($row = mysqli_fetch_array($result))
+          {
+            echo "<td>" . $row['Cert_Name'] . "</td>";
+          }
+
+          mysqli_close($conn);
+        ?>
       </p>
     </div>
   </div>
@@ -51,6 +68,9 @@
         <option value="4">NOT GRADED</option>
       </select>
     </div>
+    <div class="col-sm-2">
+    <button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#modifycert">Modify Certificate</button> 
+  </div>
   </div>
 
 <br/><br/>
@@ -135,5 +155,50 @@
 
 </div>
 
+<!-- Modal here -->
+<form method="post" action="modify_cert_function.php" enctype="multipart/form-data">
+    <div class="modal" style="color: maroon;" id="modifycert" tabindex="-1" role="dialog" aria-labelledby="addclasslabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: beige; opacity: 0.9;">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modifycertlabel">INSERT NEW DETAILS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input name="cert_no"
+            value="<?php 
+                $id = $_GET['id'];
+                $conn = mysqli_connect('localhost','root','','educo');
+                if (mysqli_connect_errno())
+                {
+                echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                }
+                $sql = "SELECT Cert_No FROM certificate WHERE Cert_No = '$id'";
+                $result = mysqli_query($conn, $sql);
+
+                while($row = mysqli_fetch_array($result))
+                {
+                  echo $row['Cert_No'];
+                }
+                mysqli_close($conn);
+              ?>" 
+            readonly class="form-control" class="form-control" type="text" placeholder="Certificate No">
+          </div>
+          <div class="modal-body">
+            <input type="file" id="fileupload" name="fileupload" class="form-control-file form-control-sm">
+          </div>
+          <div class="modal-body">
+            <input name="cert_name" class="form-control" type="text" placeholder="Certificate Name">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 </body>
 </html>

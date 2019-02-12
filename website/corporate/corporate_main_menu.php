@@ -31,7 +31,7 @@
     </div>
     <div class="col-lg-8">
       <h4 class="float-left" style="font-size: 1em; color: #CC2865; padding-top: 18px;">
-      CORPORATE NAME | EMPLOYEE
+      CORPORATION | EMPLOYEE
       </h4>
     </div>
   </div>
@@ -60,7 +60,7 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql = "SELECT Cert_Name FROM certificate";
+$sql = "SELECT Cert_No,Cert_Name FROM certificate";
 
 $result = mysqli_query($conn, $sql);
 
@@ -69,11 +69,10 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result))
 {
   echo "<tr>";
+  echo "<td>" . $row['Cert_No'] . "</td>";
   echo "<td>" . $row['Cert_Name'] . "</td>";
   echo "<td>";
-  echo "<button class= btn btn-primary style='width: 165px; height: 40px; color: white; background-color:       #333333;'onclick=\"window.location.href='corporate_certificate_performance.php'\">View Details</button></td>";
-  echo "<td>";
-  echo "<button class= btn btn-primary style='width: 165px; height: 40px; color: white; background-color:       #333333;'onclick=\"window.location.href='#.php'\">Modify Link</button></td>";
+  echo "<button class= btn btn-primary style='width: 165px; height: 40px; color: white; background-color:       #333333;'onclick=\"window.location.href='corporate_certificate_performance.php?id=".$row['Cert_No']."'\">View Details</button></td>";
   echo "</tr>";
   }
   echo "</table>";
@@ -130,12 +129,35 @@ mysqli_close($conn);
       <button onclick="window.location.href='add_question_corporate.php'" class="btn btn-secondary">Add Questions</button>
     </div>
     <div class="col-3">
-      <button onclick="window.location.href='#'" class="btn btn-secondary">View Details</button>
+      <button onclick="window.location.href='corporate_submitted_questions.php'" class="btn btn-secondary">View Details</button>
     </div>
   </div>
 </center>
 
 </div>  
+
+<!-- Modal here -->
+<form method="post" action="modify_cert_function.php">
+    <div class="modal" style="color: maroon;" id="modifycert" tabindex="-1" role="dialog" aria-labelledby="addclasslabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: beige; opacity: 0.9;">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addclasslabel">ADD A CLASS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input name="class_name" class="form-control" type="text" placeholder="Class Name">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
 
 </body>
 </html>

@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 $conn = mysqli_connect('localhost','root','','educo');
 
 $student = $_POST['student_name'];
@@ -15,6 +16,6 @@ if(mysqli_affected_rows($conn) <=0)
 }
 
 echo "<script>alert('Student removed from class!')</script>";
-echo "<script>window.location.href='manage_students.php';</script>";
-
+echo "<script>window.history.go(-1);</script>";
+ 
 ?>
