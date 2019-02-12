@@ -118,7 +118,7 @@
 				</div>
 
 				<div class="col-sm">
-				<button class="btn btn-secondary">Take Exam</button>
+				<a href="/website/questions/exam_function.php"<button class="btn btn-secondary">Take Exam</button></a>
 				</div>
 				
 			</div><br/>

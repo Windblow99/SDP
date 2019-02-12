@@ -149,7 +149,7 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
 <div class="container-fluid questionbuttons">
   <div class="row">
     <div class="col-1">
-      <a><i class="fas fa-angle-left" onclick="goback()" style="font-size: 45px;"><?php echo "<script>function goback() {window.history.go(-1);}</script>" ?></i></a>
+      <a href="exam_MCQquestion_1"><i class="fas fa-angle-left" onclick="goback()" style="font-size: 45px;"></i></a>
     </div>
     <div class="col-1">
       <a href=""><i class="fas fa-angle-right" style="font-size: 45px;"></i></a>

@@ -69,7 +69,7 @@
 
 <br/>
 
-<form class="justify-content-center needs-validation" novalidate>
+<form class="justify-content-center needs-validation" novalidate method="post" action="MCQquestion_function.php">
 	<div class="container-fluid question form-group">
   		<div class="col-12">
   			<br/>
@@ -87,7 +87,7 @@
             
             While($rows = mysqli_fetch_array($result))
             {
-              echo "<p>".$rows['QuestionContent']."</p>";
+              echo "<p>".$rows['Q_No'].".".$rows['QuestionContent']."</p>";
            
                
 		echo "</div>";

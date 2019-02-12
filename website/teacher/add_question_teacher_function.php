@@ -33,8 +33,8 @@
 	}
 	
 	$chapter = $_POST['chapter'];
-	$format = $_POST['format'];
-	$difficulty = $_POST['difficulty'];
+	$format = "MCQ";
+	$difficulty = "Exam";
 	//$mark = $_POST['mark'];
 	$question = $_POST['question'];
 	$answer1 = $_POST['answer1'];
@@ -43,17 +43,12 @@
 	$answer4 = $_POST['answer4'];
 	$trueanswer = $_POST['trueanswer'];
 
-	if($format=="MCQ")
-	{
-		$mark = "2";
-	}
+/*echo "$difficulty";
+echo "$format";*/
 
-	if($format=="Text")
-	{
-		$mark = "5";
-	}
+	$sql = "INSERT INTO question (Chapter, Format, Difficulty, QuestionContent, A, B, C, D, TrueAnswer) VALUES ('$chapter', '$format', '$difficulty', '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
 
-	$sql = "INSERT INTO question (Chapter, Format, Difficulty, Mark, QuestionContent, Image, Imagepath, Answer1, Answer2, Answer3, Answer4, TrueAnswer) VALUES ('$chapter', '$format', '$difficulty', '$mark', '$question', '$getimageobj', '$destination', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
+	//$sql = "INSERT INTO question (Image, Imagepath) VALUES ('$getimageobj', '$destination');";
 	
 	mysqli_query($conn, $sql);
 	
