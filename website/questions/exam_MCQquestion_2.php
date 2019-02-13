@@ -78,7 +78,7 @@
             $conn = mysqli_connect("localhost","root","","educo")
             or die("<script>alert('error in db connection');<script>");
         
-            $sql = "Select * from question where Format='MCQ' order by rand() limit 1";
+            $sql = "SELECT * FROM question WHERE Difficulty='Exam' AND Chapter='Chapter 3' order by rand() limit 20";
             $result = mysqli_query($conn,$sql)
             or die("<script>alert('Maybe select wrong table / columns');</script>");
       
@@ -93,7 +93,7 @@
 		echo "</div>";
 	echo "</div>";
 
-  echo "<div class='container-flui form-group' style='width: 65%;''>";
+  echo "<div class='container-flui form-group' style='width: 65%;'>";
  echo "<div class='row'>";
    echo "<div class='col'>";
    /*<label class="form-check-label">
@@ -101,7 +101,7 @@
       </label>-->*/
 
       echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer1'].">".$rows['Answer1']."</label>";
+        <input type='radio' name='answer' class='form-check-input' value=".$rows['A'].">".$rows['A']."</label>";
             
                 
   echo "</div>";
@@ -110,7 +110,7 @@
         <input type="radio" class="form-check-input">1ms
       </label>-->*/
       echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer2'].">".$rows['Answer2']."</label>";
+        <input type='radio' name='answer' class='form-check-input' value=".$rows['B'].">".$rows['B']."</label>";
             
                 
    echo "</div>";
@@ -127,7 +127,7 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
       </label>-->*/
         
       echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer3'].">".$rows['Answer3']."</label>";
+        <input type='radio' name='answer' class='form-check-input' value=".$rows['C'].">".$rows['C']."</label>";
             
                 
     echo "</div>";
@@ -137,7 +137,7 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
       </label>-->*/
 
       echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer4'].">".$rows['Answer4']."</label>";
+        <input type='radio' name='answer' class='form-check-input' value=".$rows['D'].">".$rows['D']."</label>";
             }
           ?>      
     </div>

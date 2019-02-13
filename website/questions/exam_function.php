@@ -2,90 +2,73 @@
             $conn = mysqli_connect("localhost","root","","educo")
             or die("<script>alert('error in db connection');<script>");
         
-            $sql = "Select TOP 20 from question where Difficulty='Exam' & Chapter='Chapter 3' order by rand()";
+            $sql = "SELECT * FROM question WHERE Difficulty='Exam' AND Chapter='Chapter 3' order by rand() limit 20";
             $result = mysqli_query($conn,$sql)
             or die("<script>alert('Maybe select wrong table / columns');</script>");
       
             $count = (mysqli_num_rows($result)>=1? true:
             die("<script>alert('No data available in the table!');</script>"));
-            
-            $q_no = .$rows['Q_No'].;
-            $question = .$rows['QuestionContent'].;
-            $A = .$rows['A'].;
-            $B = .$rows['B'].;
-            $C = .$rows['C'].;
-            $D = .$rows['D'].;
-            $trueanswer = .$rows['trueanswer'].;
+            While($rows = mysqli_fetch_array($result))
+            {            
+            //echo "<p>".$rows['QuestionContent']."</p>";
+          
+            $q_no = $rows['Q_No'];
+            $chapter = $rows['Chapter'];
+            $question = $rows['QuestionContent'];
+            $A = $rows['A'];
+            $B = $rows['B'];
+            $C = $rows['C'];
+            $D = $rows['D'];
+            $trueanswer = $rows['TrueAnswer'];
             $useranswer = "NULL";
 
-  $sql = "INSERT INTO test (Q_No, QuestionContent, A, B, C, D, TrueAnswer, UserAnswer) VALUES ('q_no', '$question', '$A', '$B', '$C', '$D', '$trueanswer', $useranswer);";
-
-  //$sql = "INSERT INTO question (Image, Imagepath) VALUES ('$getimageobj', '$destination');";
+            //$update1 = "Update test SET Chapter= '$chapter', Q_No = '$q_no', QuestionContent = '$question', A='$A', B='$B', C='$C', D='$D', TrueAnswer='$trueanswer' WHERE T_No = 1;";
+            $insert = "INSERT INTO test (Q_No, Chapter, QuestionContent, A, B, C, D, TrueAnswer, UserAnswer) VALUES ('$q_no', '$chapter', '$question', '$A', '$B', '$C', '$D', '$trueanswer', $useranswer);";
   
-  mysqli_query($conn, $sql);
+            mysqli_query($conn, $insert);
   
-  if (mysqli_affected_rows($conn) <= 0)
-  {
-    echo "<script>alert('Insert Failed!');</script>";
-    die ("<script>window.history.go(-1);</script>");
-  }
-
-  echo "<script>alert('New question added into database!');</script>";
-  echo ("<script>window.location.href='exam_MCQquestion_1.php';</script>");            
-
-
-            /*While($rows = mysqli_fetch_array($result))
+            if (mysqli_affected_rows($conn) <= 0)
             {
-              echo "<p>".$rows['Q_No'].".".$rows['QuestionContent']."</p>";
-           
-               
-		echo "</div>";
-	echo "</div>";
+              echo "<script>alert('Insert Failed!');</script>";
+              die ("<script>window.history.go(-1);</script>");
+            }
 
-  echo "<div class='container-flui form-group' style='width: 65%;''>";
- echo "<div class='row'>";
-   echo "<div class='col'>";
-   /*<label class="form-check-label">
-        <input type="radio" class="form-check-input">0ms
-      </label>-->
+            echo "<script>alert('New question added into database!');</script>";
+            echo ("<script>window.location.href='exam_MCQquestion_1.php';</script>");
 
-      echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer1'].">".$rows['Answer1']."</label>";
-            
-                
-  echo "</div>";
-   echo "<div class='col'>";
-      /*<!--<label class="form-check-label">
-        <input type="radio" class="form-check-input">1ms
-      </label>-->
-      echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer2'].">".$rows['Answer2']."</label>";
-            
-                
-   echo "</div>";
-  echo "</div>"; 
-echo "</div>";
+            }           
 
-echo "<br/>";
+            $insert2 = "INSERT INTO exam_exercise (S_ID, E_Result) VALUES (0,0);";
 
-echo "<div class='container-flui form-group' style='width: 65%;'>";
-  echo "<div class='row'>";
-    echo "<div class='col'>";
-     /* <!--<label class="form-check-label">
-        <input type="radio" class="form-check-input">0ms
-      </label>-->
-        
-      echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer3'].">".$rows['Answer3']."</label>";
-            
-                
-    echo "</div>";
-    echo "<div class='col'>";
-      /*<!--<label class="form-check-label">
-        <input type="radio" class="form-check-input">1ms
-      </label>-->
+  
+            mysqli_query($conn, $insert2);
+  
+            if (mysqli_affected_rows($conn) <= 0)
+            {
+              echo "<script>alert('Insert Failed!');</script>";
+              die ("<script>window.history.go(-1);</script>");
+            }
+             echo "<script>alert('New Exam No. added into database!');</script>";
+             echo ("<script>window.location.href='exam_MCQquestion_1.php';</script>");            
 
-      echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['Answer4'].">".$rows['Answer4']."</label>";
-            }*/
+/*Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 1;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 2;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 3;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 4;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 5;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 6;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 7;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 8;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 9;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 10;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 11;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 12;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 13;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 14;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 15;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 16;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 17;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 18;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 19;
+Update test SET Chapter=NULL, Q_No = NULL, QuestionContent = NULL, A=NULL, B=NULL, C=NULL, D=NULL, TrueAnswer=NULL WHERE T_No = 20;*/
           ?>

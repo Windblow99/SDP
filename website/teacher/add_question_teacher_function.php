@@ -1,7 +1,7 @@
 <?php
 	$conn = mysqli_connect('localhost','root','','educo');
 
-	$filename = basename($_FILES['fileupload']['name']);
+	/*$filename = basename($_FILES['fileupload']['name']);
 	
 	$getfilesize = $_FILES['fileupload']['size'];
 	
@@ -30,7 +30,7 @@
 	{
 		echo "<script>alert('Technical Problem: File not uploaded!');</script>";
 		die("<script>window.history.go(-1);</script>");
-	}
+	}*/
 	
 	$chapter = $_POST['chapter'];
 	$format = "MCQ";
