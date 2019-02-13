@@ -45,10 +45,14 @@
 	</div>
 </div>-->
         <?php
+            $eno = $_GET['eno'];
+            $tno = $_GET['tno']; 
+            $qno = $_GET['qno'];
+
             $conn = mysqli_connect("localhost","root","","educo")
             or die("<script>alert('error in db connection');<script>");
         
-            $sql = "Select * from test order by T_No limit 1";
+            $sql = "Select * from test WHERE T_No = ".$tno." limit 1";
             $result = mysqli_query($conn,$sql)
             or die("<script>alert('Maybe select wrong table / columns');</script>");
       
@@ -75,11 +79,11 @@ echo "</div>";
 echo "<hr>";
 
 echo "<div class='container-fluid questiontitle'>";
-  echo "<div class='row-xl'>Question ".$rows['T_No']."</div>";
+  echo "<div class='row-xl'>Question ".$qno."</div>";
 
 echo "<br/>";
 
-echo "<form class='justify-content-center needs-validation' novalidate method='post' action='MCQquestion_function.php'>";
+echo "<form class='justify-content-center needs-validation' novalidate method='post' action='MCQquestion_function.php?eno=".$eno."&tno=".$tno."&qno=".$qno."'>";
 	echo "<div class='container-fluid question form-group'>";
   		echo "<div class='col-12'>";
   			echo "<br/>";
@@ -99,7 +103,7 @@ echo "<form class='justify-content-center needs-validation' novalidate method='p
       </label>-->*/
 
       echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['A'].">".$rows['A']."</label>";
+        <input type='radio' name='answer' class='form-check-input' value='A'>".$rows['A']."</label>";
             
                 
   echo "</div>";
@@ -108,7 +112,7 @@ echo "<form class='justify-content-center needs-validation' novalidate method='p
         <input type="radio" class="form-check-input">1ms
       </label>-->*/
       echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['B'].">".$rows['B']."</label>";
+        <input type='radio' name='answer' class='form-check-input' value='B'>".$rows['B']."</label>";
             
                 
    echo "</div>";
@@ -125,7 +129,7 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
       </label>-->*/
         
       echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['C'].">".$rows['C']."</label>";
+        <input type='radio' name='answer' class='form-check-input' value='C'>".$rows['C']."</label>";
             
                 
     echo "</div>";
@@ -135,31 +139,51 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
       </label>-->*/
 
       echo "<label class='form-check-label'>
-        <input type='radio' name='answer' class='form-check-input' value=".$rows['D'].">".$rows['D']."</label>";
+        <input type='radio' name='answer' class='form-check-input' value='D'>".$rows['D']."</label>";
                  
-    echo "</div>";
-  echo "</div>";  
-echo "</div>";
+    echo "</div>
+  </div>  
+</div>
 
-echo "<br/>";
+<br/>
 
-echo "<div class='container-fluid questionbuttons'>";
-  echo "<div class='row'>";
-    echo "<div class='col-1'>";
-      /*<!--<a href=""><i class="fas fa-angle-left" style="font-size: 45px;"></i></a>-->*/
-    echo "</div>";
-    echo "<div class='col-1'>";
-      echo "<a href=''><i class='fas fa-angle-right' style='font-size: 45px;''></i></a>";
-      //echo "<a href='exam_MCQquestion_2.php'><i class='fas fa-angle-right' style='font-size: 45px;''></i></a>";
-    echo "</div>";
-    echo "<div class='col-1'>";
-      echo "<button type='button' class='btn btn-secondary'>Submit</button>";
-    echo "</div>";
-echo "</div>";
-echo "</form>";
+<div class='container-fluid questionbuttons'>
+  <div class='row'>
+    <div class='col-1'>";
+    if($qno == 1)
+      {echo "<i class='fas fa-angle-left' style='font-size: 45px;'></i>";}
+    else
+    {
+      echo "<a href='backquestion.php?eno=".$eno."&tno=".$tno."&qno=".$qno."'><i class='fas fa-angle-left' style='font-size: 45px;''></i></a>";
+    }      
+    echo "</div>
 
-echo "</body>";
+    <div class='col-1'>";
+    /*if($qno != 20)
+      {echo "<a href='nextquestion.php?tno=".$tno."&qno=".$qno."'><i class='fas fa-angle-right' style='font-size: 45px;''></i></a>";
+       //echo "<input id='submit' type='submit' value='Submit' class='fas fa-angle-right' style='font-size: 45px;'>";
+    }
+    else
+    {
+       echo "<i class='fas fa-angle-right' style='font-size: 45px;'></i>";
+    }  */    
+      echo "<input id='submit' type='submit' value='Submit' class='btn btn-secondary'>"; 
+    echo "</div>";
 
-echo "</html>";
+    /*echo "<div class='col-1'>";
+    if($qno == 20)
+      {echo "<input id='submit' type='submit' value='Submit' class='btn btn-secondary'>";}
+    else
+    {
+      echo "";
+    } */     
+      
+    echo "</div>";
+echo "</div>
+</form>
+
+</body>
+
+</html>";
         }
       ?> 

@@ -43,10 +43,7 @@
 	$answer4 = $_POST['answer4'];
 	$trueanswer = $_POST['trueanswer'];
 
-/*echo "$difficulty";
-echo "$format";*/
-
-	$sql = "INSERT INTO question (Chapter, Format, Difficulty, QuestionContent, A, B, C, D, TrueAnswer) VALUES ('$chapter', '$format', '$difficulty', '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
+	$sql = "INSERT INTO question (Chapter, Format, Difficulty, Mark, QuestionContent, A, B, C, D, TrueAnswer) VALUES ('$chapter', '$format', '$difficulty', 5, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
 
 	//$sql = "INSERT INTO question (Image, Imagepath) VALUES ('$getimageobj', '$destination');";
 	
