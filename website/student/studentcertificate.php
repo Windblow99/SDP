@@ -56,7 +56,55 @@
 				</div>
 
 				<div class="col-sm" style="font-size: 30px;">
-				5 / 10
+				<?php
+					$conn = mysqli_connect('localhost','root','','educo');
+					$username = $_SESSION['user'];
+					// Check connection
+					if (mysqli_connect_errno())
+					{
+					echo "Failed to connect to MySQL: " . mysqli_connect_error();
+					}
+
+					$sql = "SELECT COUNT(E_Result) AS E_Result FROM result
+							WHERE U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
+							AND Difficulty = 'Certificate'";
+
+					$result = mysqli_query($conn, $sql);
+
+					while($row = mysqli_fetch_array($result))
+					{
+					  echo "<tr>";
+					  echo "<td>" . $row['E_Result'] . "</td>";
+					  echo "</tr>";
+					  }
+					  echo "</table>";
+
+					mysqli_close($conn);
+					?> 
+					/ 
+					<?php
+					$conn = mysqli_connect('localhost','root','','educo');
+					$username = $_SESSION['user'];
+					// Check connection
+					if (mysqli_connect_errno())
+					{
+					echo "Failed to connect to MySQL: " . mysqli_connect_error();
+					}
+
+					$sql = "SELECT COUNT(Cert_No) AS Cert_No FROM certificate";
+
+					$result = mysqli_query($conn, $sql);
+
+					while($row = mysqli_fetch_array($result))
+					{
+					  echo "<tr>";
+					  echo "<td>" . $row['Cert_No'] . "</td>";
+					  echo "</tr>";
+					  }
+					  echo "</table>";
+
+					mysqli_close($conn);
+					?>
 				</div>
 
 				<div class="col-sm">
@@ -66,111 +114,206 @@
 			</div>
 
 		<hr>
+		<div class="row">
 
-			<div class="row">
-
-				<div class="col-sm">
-				<h5 style="color: #CC2865; font-weight: bold;">Certificate 1</h5>
-				</div>
-
-				<div class="col-sm" style="font-size: 20px; color: #00ff00;">
-				PASSED
-				</div>
-
-				<div class="col-sm">
-				<button class="btn btn-secondary" style="width: 150px;">View Certificate</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
-				</div>				
+			<div class="col-sm">
+			<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>RESULTS</center></h5>
+			</div>
 				
-			</div><br/>
+		</div>
+		<br/>
+		<table class="table table-hover" style="width: 90%;">
+		  <thead>
+		    <tr style="background-color: #CC2865; color: white;">
+		      <th>Certificate No</th>
+		      <th>Certificate Result</th>
+		      <th>Chapter</th>
+		      <th></th>
+		      <th></th>
+		    </tr>
+		  </thead>
+	  	<tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
 
-			<div class="row">
+		<?php
+		$conn = mysqli_connect('localhost','root','','educo');
+		$username = $_SESSION['user'];
+		// Check connection
+		if (mysqli_connect_errno())
+		{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		}
 
-				<div class="col-sm">
-				<h5 style="color: #CC2865; font-weight: bold;">Certificate 2</h5>
-				</div>
+		$sql = "SELECT E_No,E_Result,Chapter FROM result
+				WHERE U_ID = (SELECT U_ID FROM users WHERE Name = '$username') 
+				AND Difficulty = 'Certificate' ";
 
-				<div class="col-sm" style="font-size: 20px; color: #00ff00;">
-				PASSED
-				</div>
+		$result = mysqli_query($conn, $sql);
 
-				<div class="col-sm">
-				<button class="btn btn-secondary" style="width: 150px;">View Certificate</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
-				</div>				
-				
-			</div><br/>
+		while($row = mysqli_fetch_array($result))
+		{
+		  echo "<tr>";
+		  echo "<td>" . $row['E_No'] . "</td>";
+		  echo "<td>" . $row['E_Result'] . "</td>";
+		  echo "<td>" . $row['Chapter'] . "</td>";
+		  echo "<td>";
+		  echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+		        background-color:#333333;' onclick=\"window.location.href='detailed_result.php?id=".$row['E_No']."'\">View Detailed Result</button></td>";
+		  echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
+		  echo "</tr>";
+		  }
+		  echo "</table>";
 
-			<div class="row">
+		mysqli_close($conn);
+		?>
 
-				<div class="col-sm">
-				<h5 style="color: #CC2865; font-weight: bold;">Certificate 3</h5>
-				</div>
+</table>
+<hr>
+	<div class="row">
 
-				<div class="col-sm" style="font-size: 20px;">
-				PENDING COMPLETION
-				</div>
-
-				<div class="col-sm">
-				<button class="btn btn-secondary" style="width: 150px;">Take Exam</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
-				</div>				
-				
-			</div><br/>
-
-			<div class="row">
-
-				<div class="col-sm">
-				<h5 style="color: #CC2865; font-weight: bold;">Certificate 4</h5>
-				</div>
-
-				<div class="col-sm" style="font-size: 20px;">
-				PENDING COMPLETION
-				</div>
-
-				<div class="col-sm">
-				<button class="btn btn-secondary" style="width: 150px;">Take Exam</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
-				</div>				
-				
-			</div><br/>
-
-			<div class="row">
-
-				<div class="col-sm">
-				<h5 style="color: #CC2865; font-weight: bold;">Certificate 5</h5>
-				</div>
-
-				<div class="col-sm" style="font-size: 20px;">
-				PENDING COMPLETION
-				</div>
-
-				<div class="col-sm">
-				<button class="btn btn-secondary" style="width: 150px;">Take Exam</button>&nbsp;<button class="btn btn-secondary" style="width: 150px;">Official Website</button>
-				</div>				
-				
-			</div><br/>
-			
-
-			<div class="row">
-
-				<div class="col-sm">
-				<h5 style="color: #CC2865; font-weight: bold;">Certificate 6</h5>
-				</div>
-
-				<div class="col-sm" style="font-size: 20px;">
-				PENDING COMPLETION
-				</div>
-
-				<div class="col-sm">
-					<button class="btn btn-secondary" style="width: 150px;">Take Exam</button></td>&nbsp;<td><button class="btn btn-secondary" style="width: 150px;">Official Website</button></td>
-
-				
-				</div>				
+		<div class="col-sm">
+		<h5 style=" box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>PENDING CERTIFICATES</center></h5>
+		</div>
 				
 			</div>
+			<br/>
+	<table class="table table-hover" style="width: 90%;">
+	  <thead>
+	    <tr style="background-color: #CC2865; color: white;">
+	      <th>Certificate</th>
+	      <th></th>
+	      <th></th>
+	    </tr>
+	  </thead>
+	  <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
 
+	<?php
+	$conn = mysqli_connect('localhost','root','','educo');
+	$username = $_SESSION['user'];
+	$certificate = "Physics 1";
+	// Check connection
+	if (mysqli_connect_errno())
+	{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
 
-		
+	$sql = "SELECT Chapter FROM result
+			WHERE Chapter = 'Physics 1' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+			AND Difficulty = 'Certificate'";
 
+	$result = mysqli_query($conn, $sql);
 
+	if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
+				{	
+					echo "<tr>";
+					echo "<td>".$certificate."</td>";
+					echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Certificate Exam</button></td>";
+	        		echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
+					echo "</tr>";
+				}
 
+	mysqli_close($conn);
+	?>
+	<?php
+	$conn = mysqli_connect('localhost','root','','educo');
+	$username = $_SESSION['user'];
+	$certificate = "Physics 2";
+	// Check connection
+	if (mysqli_connect_errno())
+	{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+
+	$sql = "SELECT Chapter FROM result
+			WHERE Chapter = 'Physics 2' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+			AND Difficulty = 'Certificate'";
+
+	$result = mysqli_query($conn, $sql);
+
+	if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
+				{	
+					echo "<tr>";
+					echo "<td>".$certificate."</td>";
+					echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Certificate Exam</button></td>";
+	        		echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
+					echo "</tr>";
+				}
+
+	mysqli_close($conn);
+	?>
+	<?php
+	$conn = mysqli_connect('localhost','root','','educo');
+	$username = $_SESSION['user'];
+	$certificate = "Physics 3";
+	// Check connection
+	if (mysqli_connect_errno())
+	{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+
+	$sql = "SELECT Chapter FROM result
+			WHERE Chapter = 'Physics 3' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+			AND Difficulty = 'Certificate'";
+
+	$result = mysqli_query($conn, $sql);
+
+	if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
+				{	
+					echo "<tr>";
+					echo "<td>".$certificate."</td>";
+					echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Certificate Exam</button></td>";
+	        		echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
+					echo "</tr>";
+				}
+
+	mysqli_close($conn);
+	?>
+	<?php
+	$conn = mysqli_connect('localhost','root','','educo');
+	$username = $_SESSION['user'];
+	$certificate = "Physics 4";
+	// Check connection
+	if (mysqli_connect_errno())
+	{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+
+	$sql = "SELECT Chapter FROM result
+			WHERE Chapter = 'Physics 4' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+			AND Difficulty = 'Certificate'";
+
+	$result = mysqli_query($conn, $sql);
+
+	if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
+				{	
+					echo "<tr>";
+					echo "<td>".$certificate."</td>";
+					echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Certificate Exam</button></td>";
+	        		echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
+					echo "</tr>";
+				}
+
+	mysqli_close($conn);
+	?>
+				
+</div>
 </body>
 
 </html>

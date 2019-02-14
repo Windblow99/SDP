@@ -75,28 +75,35 @@
   <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
     <tr>
 
-      <td>Overall Performance</td>
-      <td>75/100</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">View Details</button></td>
-    </tr>
-    <tr>
+<?php
+  
+  $id = $_GET['id'];
 
-      <td>Chapter 1</td>
-      <td>75/100</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">View Details</button></td>
-    </tr>
-    <tr>
+  $conn = mysqli_connect('localhost','root','','educo');
 
-      <td>Chapter 2</td>
-      <td>75/100</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">View Details</button></td>
-    </tr>
-    <tr>
+  if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
 
-      <td>Chapter 3</td>
-      <td>75/100</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">View Details</button></td>
-    </tr>
+  $sql = "SELECT S_ID,S_Name FROM student_class WHERE C_ID = '$id'";
+
+  $result = mysqli_query($conn, $sql);
+
+  while($row = mysqli_fetch_array($result))
+  {
+    echo "<tr>";
+    echo "<td>" . $row['S_ID'] . "</td>";
+    echo "<td>" . $row['S_Name'] . "</td>";
+  echo "<td>";
+  echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
+        background-color:#333333;' onclick=\"window.location.href='view_student_performance.php?id=".$row['S_ID']."'\">View Performance</button></td>";
+    echo "</tr>";
+    }
+    echo "</table>";
+
+  mysqli_close($conn);
+?>
 
   </tbody> <br/>
 </table>

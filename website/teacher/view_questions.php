@@ -27,11 +27,6 @@
       SUBMITTED QUESTIONS
       </p>
     </div>
-    <div class="col-sm-3">
-      <p class="text-center" style="font-size: 18px; color: #F7478A; padding-top: 18px; float: left;">
-      CLASS 1
-      </p>
-    </div>
   </div>
 </div>
 
@@ -39,7 +34,7 @@
 <br/><br/>
 
 <center>
-<div class="row" style="margin-left: 25%;">
+<div class="row" style="margin-left: 10%;">
   <div class="dropdown col-sm-2">
     <button class="btn btn-secondary dropdown-toggle"type="button" id="questionapproval" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by status</button>
       <div class="dropdown-menu" aria-labelledby="questionapproval">
@@ -47,7 +42,7 @@
         <a class="dropdown-item" href="#!">Pending</a>
       </div>
   </div>
-  <div class="dropdown col-sm-2">
+  <div class="dropdown col-sm-3">
     <button class="btn btn-secondary dropdown-toggle"type="button" id="chapters" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by chapter</button>
       <div class="dropdown-menu" aria-labelledby="chapters">
         <a class="dropdown-item" href="#!">Chapter 1</a>
@@ -61,7 +56,7 @@
         <a class="dropdown-item" href="#!">Lab Session</a>
       </div>
   </div>
-  <div class="dropdown col-sm-2">
+  <div class="dropdown col-sm-3">
     <button class="btn btn-secondary dropdown-toggle"type="button" id="questiondifficulty" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort by difficulty</button>
       <div class="dropdown-menu" aria-labelledby="questiondifficulty">
         <a class="dropdown-item" href="#!">Beginner</a>
@@ -83,60 +78,47 @@
       <th>Difficulty</th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
-  <tbody>
-    <tr style="color: #F7478A;">
+<tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
 
-      <td>Question 1</td>
-      <td>Approved</td>
-      <td>1</td>
-      <td>E</td>
-      <td>A</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr style="color: #F7478A;">
+<?php
+$conn = mysqli_connect('localhost','root','','educo');
+$username = $_SESSION['user'];
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
-      <td>Question 2</td>
-      <td>Pending</td>
-      <td>1</td>
-      <td>L</td>
-      <td>B</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr style="color: #F7478A;">
+$sql = "SELECT Q_No,Approval,Chapter,Format,Difficulty FROM question";
+$result = mysqli_query($conn, $sql);
 
-      <td>Question 3</td>
-      <td>Approved</td>
-      <td>1</td>
-      <td>E</td>
-      <td>C</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr style="color: #F7478A;">
+while($row = mysqli_fetch_array($result))
+{
+  echo "<tr>";
+  echo "<td>" . $row['Q_No'] . "</td>";
+  echo "<td>" . $row['Approval'] . "</td>";
+  echo "<td>" . $row['Chapter'] . "</td>";
+  echo "<td>" . $row['Format'] . "</td>";
+  echo "<td>" . $row['Difficulty'] . "</td>";
+  echo "<td>";
+  echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
+        background-color:#333333;' onclick=\"window.location.href='edit_question_teacher.php?id=".$row['Q_No']."'\">Modify</button></td>";
+  echo "<td>";
+  echo "<td>";
+  echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
+        background-color:#333333;'>Remove</button></td>";
+  echo "<td>";
+  echo "</tr>";
+  }
+  echo "</table>";
 
-      <td>Question 4</td>
-      <td>Pending</td>
-      <td>1</td>
-      <td>E</td>
-      <td>C</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Modify</button></td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-  </tbody>
+mysqli_close($conn);
+?>
+
 </table>
-
-<p style="opacity: 0.7">
-  Note: <br/>
-   E = Exam <br/>
-   L = Lab <br/>
-   A = Beginner <br/>
-   B = Intermediate <br/>
-   C = Expert <br/>
-</p>
 
 </center>
 </body>

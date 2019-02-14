@@ -50,7 +50,14 @@
 
 <br/><br/>
 
-<table class="table table-hover" style="margin-left: 20%; width: 80%;">
+<table class="table table-hover" style="margin-left: 20%; width: 60%;">
+  <thead>
+    <tr style="background-color: #CC2865; color: white;">
+      <th>Class ID</th>
+      <th>Class Name</th>
+      <th></th>
+    </tr>
+  </thead>
   <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
 
 <?php
@@ -100,13 +107,13 @@ mysqli_close($conn);
 
 <div class="row" style="margin-left: 25%;">
   <div class="col-2">
-    <button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#addchapter">Add Chapter</button> 
+    <button type="submit" onclick="window.location.href='add_question_teacher.php'" class="btn btn-secondary">Add Question</button>
+  </div>
+  <div class="col-1">
+
   </div>
   <div class="col-2">
-    <a href="add_question_teacher.php"><button type="submit" class="btn btn-secondary">Add Question</button>
-  </div>
-  <div class="col-2">
-    <a href="view_questions.php"><button type="submit" class="btn btn-secondary">View Details</button> 
+    <button type="submit" onclick="window.location.href='view_questions.php'" class="btn btn-secondary">View Details</button> 
   </div>
 
 <!-- Modal here -->
@@ -122,32 +129,6 @@ mysqli_close($conn);
           </div>
           <div class="modal-body">
             <input name="class_name" class="form-control" type="text" placeholder="Class Name">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-
-<!-- Second Modal -->
-  <form method="post" action="add_chapter_function.php">
-    <div class="modal" style="color: maroon;" id="addchapter" tabindex="-1" role="dialog" aria-labelledby="addclasslabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content" style="background-color: beige; opacity: 0.9;">
-          <div class="modal-header">
-            <h5 class="modal-title" id="addclasslabel">ADD A CHAPTER</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <input name="chapter" class="form-control" type="text" placeholder="Insert Chapter">
-          </div>
-          <div class="modal-body">
-            <input name="year" class="form-control" type="text" placeholder="Insert Year Number 4/5">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

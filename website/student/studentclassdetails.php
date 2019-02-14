@@ -142,53 +142,53 @@ mysqli_close($conn);
 				<h5 style="box-sizing: border-box; background-color: #ff1a8c; color: white; width: 300px; padding: 10px"><center>Top Scores</center></h5>
 			</div>
 
-		<div class="col-sm-6" style="margin-top: 40px; margin-right: 5px;">
-			<?php
-
-			$conn = mysqli_connect('localhost','root','','educo');
-
-			$sql = "SELECT Chap_Name FROM chapter";
-
-			$result = mysqli_query($conn, $sql);
-
-			echo '<select name="Chapter">';
-
-			while ($row = mysqli_fetch_assoc($result)) {
-
-			    echo "<option value='" . $row['Chap_Name'] ."'>" . $row['Chap_Name'] ."</option>";
-
-			}
-
-			echo '</select>';
-
-			?>
-		</div>
 		</div>
 		<br/>
 
 		This scoreboard only shows the Top 3 scorers.<br/><br/>
 
 		
+<table class="table table-hover" style="width: 90%;">
+  <thead>
+    <tr style="background-color: #CC2865; color: white;">
+      <th>Placement</th>
+      <th>Student</th>
+      <th>Score</th>
 
-		<div class="row">
-			<div class="col-sm-3">
-			<label style="font-weight: bold; color: #ffcc00; font-size: 30px;">1.</label>
-			<div>
+    </tr>
+  </thead>
+  <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
 
-			<div class="col-sm-3" style="font-size: 30px;">
-			Student 1
-			</div>
-		</div>
-			2. Student 2 <br/>
-			3. Student 3
-		</div>
+<?php
+$conn = mysqli_connect('localhost','root','','educo');
+$username = $_SESSION['user'];
+$placement = "";
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
-	
-		
-		</div>
-		
+$sql = "SELECT Name, ROUND(AVG(E_Result)) FROM users U 
+		INNER JOIN result R ON U.U_ID = R.U_ID
+		ORDER BY E_Result DESC";
 
+$result = mysqli_query($conn, $sql);
 
+while($row = mysqli_fetch_array($result))
+{
+  echo "<tr>";
+  echo "<td>" .$placement. "</td>";
+  echo "<td>" . $row['Name'] . "</td>";
+  echo "<td>" . $row['ROUND(AVG(E_Result))'] . "</td>";
+  echo "</tr>";
+  }
+  echo "</table>";
+
+mysqli_close($conn);
+?>
+
+</table>
 
 </body>
 
