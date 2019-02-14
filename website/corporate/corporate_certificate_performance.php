@@ -75,85 +75,51 @@
 
 <br/><br/>
 
-  <div class="row">
-    <div class="col-3">
-      <h4 style="color: #F7478A; font-size: 1.5em; text-indent: 20px;">Student 1</h4>
-    </div>
-    <div class="col-2">
-      <h4 style="font-size: 1.8em; text-indent: 20px; font-weight: bold;">75/100</h4>
-    </div>
-    <div class="col-2">
-      <h4 style="font-size: 1.8em; text-indent: 20px; font-weight: bold; color: #77D353;">PASSED</h4>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">View Details</button>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">Assign Certificate</button>
-    </div>
-  </div>
+<table class="table table-hover" style="width: 90%;">
+  <thead>
+    <tr style="background-color: #CC2865; color: white;">
+      <th>Student Name</th>
+      <th>Certificate Exam Result</th>
+      <th>Name of Certificate</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
 
-<br/>
+<?php
+$conn = mysqli_connect('localhost','root','','educo');
+$username = $_SESSION['user'];
+$fullmark = "/100";
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
 
-  <div class="row">
-    <div class="col-3">
-      <h4 style="color: #F7478A; font-size: 1.5em; text-indent: 20px;">Student 2</h4>
-    </div>
-    <div class="col-2">
-      <h4 style="font-size: 1.8em; text-indent: 20px; font-weight: bold;">75/100</h4>
-    </div>
-    <div class="col-2">
-      <h4 style="font-size: 1.8em; text-indent: 20px; font-weight: bold; color: #77D353;">PASSED</h4>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">View Details</button>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">Assign Certificate</button>
-    </div>
-  </div>
+$sql = "SELECT Name,E_Result,Chapter FROM users U 
+        INNER JOIN result R ON U.U_ID = R.U_ID
+        WHERE Difficulty = 'Lab' ";
 
-<br/>
+$result = mysqli_query($conn, $sql);
 
-  <div class="row">
-    <div class="col-3">
-      <h4 style="color: #F7478A; font-size: 1.5em; text-indent: 20px;">Student 3</h4>
-    </div>
-    <div class="col-2">
-      <h4 style="font-size: 1.8em; text-indent: 20px; font-weight: bold;">75/100</h4>
-    </div>
-    <div class="col-2">
-      <h4 style="font-size: 1.8em; text-indent: 20px; font-weight: bold; color: #77D353;">PASSED</h4>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">View Details</button>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">Assign Certificate</button>
-    </div>
-  </div>
+while($row = mysqli_fetch_array($result))
+{
+  echo "<tr>";
+  echo "<td>" . $row['Name'] . "</td>";
+  echo "<td>" . $row['E_Result'] . "</td>";
+  echo "<td>" . $row['Chapter'] . "</td>";
+  echo "<td>";
+  echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+        background-color:#333333;' >Assign Certificate</button></td>";
+  echo "<td>";
+  echo "</tr>";
+  }
+  echo "</table>";
 
-<br/>
+mysqli_close($conn);
+?>
 
-  <div class="row">
-    <div class="col-3">
-      <h4 style="color: #F7478A; font-size: 1.5em; text-indent: 20px;">Student 4</h4>
-    </div>
-    <div class="col-2">
-      <h4 style="font-size: 1.8em; text-indent: 20px; font-weight: bold;"></h4>
-    </div>
-    <div class="col-2">
-      <h4 style="font-size: 1.3em; text-indent: 20px; font-weight: bold; color: #F95F62;">NOT GRADED</h4>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">View Details</button>
-    </div>
-    <div class="col-2">
-      <button class="btn btn-secondary">Assign Certificate</button>
-    </div>
-  </div>
-
-</div>
+</table>
 
 <!-- Modal here -->
 <form method="post" action="modify_cert_function.php" enctype="multipart/form-data">

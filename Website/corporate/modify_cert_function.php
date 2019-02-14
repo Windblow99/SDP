@@ -44,8 +44,9 @@
 
 	if(mysqli_affected_rows($conn) <=0)
 	{
+		/*echo $sql;*/
 		die("<script>alert('Fail: Unable To Upload File!');window.history.go(-1);</script>");
 	}
-
+	
 	echo "<script>alert('Certificate Updated!')</script>";
 	echo "<script>window.history.go(-1);</script>";

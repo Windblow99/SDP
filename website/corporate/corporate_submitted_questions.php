@@ -28,9 +28,6 @@
       <h4 class="float-left" style="font-size: 2.5em; color: #953031; font-weight: bold;">
       SUBMITTED QUESTIONS&nbsp;&nbsp;&nbsp;
       </h4>
-      <p class="float-left" style="font-size: 1em; color: #CC2865; padding-top: 18px;float: left;">
-      CERTIFICATE 1
-      </p>
     </div>
   </div>
 </div>
@@ -57,37 +54,56 @@
 
 <br/><br/>
 
-<table class="table table-striped table-dark">
+<table class="table table-hover" style="margin-left: 10%; width: 80%;">
   <thead>
-    <tr>
-      <th scope="col">Questions</th>
-      <th scope="col">Status</th>
-      <th scope="col">Certificate</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+    <tr style="background-color: #CC2865; color: white;">
+      <th>Question</th>
+      <th>Status</th>
+      <th>Chapter</th>
+      <th>Type</th>
+      <th>Difficulty</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Question 1</th>
-      <td>Approved</td>
-      <td>1</td>
-      <td><button class="btn btn-secondary">Modify</button></td>
-      <td><button class="btn btn-secondary">Remove</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+<tbody style="color: #F7478A; font-size: 18px; font-weight: bold;">
+
+<?php
+$conn = mysqli_connect('localhost','root','','educo');
+$username = $_SESSION['user'];
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$sql = "SELECT Q_No,Approval,Chapter,Format,Difficulty FROM question";
+$result = mysqli_query($conn, $sql);
+
+while($row = mysqli_fetch_array($result))
+{
+  echo "<tr>";
+  echo "<td>" . $row['Q_No'] . "</td>";
+  echo "<td>" . $row['Approval'] . "</td>";
+  echo "<td>" . $row['Chapter'] . "</td>";
+  echo "<td>" . $row['Format'] . "</td>";
+  echo "<td>" . $row['Difficulty'] . "</td>";
+  echo "<td>";
+  echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
+        background-color:#333333;' onclick=\"window.location.href='edit_question_teacher.php?id=".$row['Q_No']."'\">Modify</button></td>";
+  echo "<td>";
+  echo "<td>";
+  echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
+        background-color:#333333;'>Remove</button></td>";
+  echo "<td>";
+  echo "</tr>";
+  }
+  echo "</table>";
+
+mysqli_close($conn);
+?>
+
 </table>
 
 </div>
