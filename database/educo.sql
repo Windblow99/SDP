@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 14, 2019 at 09:35 AM
--- Server version: 5.7.21
--- PHP Version: 5.6.35
+-- Generation Time: Feb 16, 2019 at 04:17 PM
+-- Server version: 5.7.23
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -129,50 +129,74 @@ CREATE TABLE IF NOT EXISTS `examq_request` (
 DROP TABLE IF EXISTS `question`;
 CREATE TABLE IF NOT EXISTS `question` (
   `Q_No` int(11) NOT NULL AUTO_INCREMENT,
-  `Chapter` varchar(255) DEFAULT NULL,
-  `Format` varchar(255) DEFAULT NULL,
-  `Difficulty` varchar(255) DEFAULT NULL,
-  `Mark` int(1) DEFAULT NULL,
-  `QuestionContent` text,
+  `U_ID` int(11) NOT NULL,
+  `Chapter` varchar(255) NOT NULL,
+  `Format` varchar(255) NOT NULL,
+  `Difficulty` varchar(255) NOT NULL,
+  `Mark` int(1) NOT NULL,
+  `QuestionContent` text NOT NULL,
   `Image` mediumblob,
   `Imagepath` varchar(255) DEFAULT NULL,
-  `A` varchar(255) DEFAULT NULL,
-  `B` varchar(255) DEFAULT NULL,
-  `C` varchar(255) DEFAULT NULL,
-  `D` varchar(255) DEFAULT NULL,
-  `TrueAnswer` varchar(255) DEFAULT NULL,
+  `A` varchar(255) NOT NULL,
+  `B` varchar(255) NOT NULL,
+  `C` varchar(255) NOT NULL,
+  `D` varchar(255) NOT NULL,
+  `TrueAnswer` varchar(255) NOT NULL,
   `Approval` int(11) DEFAULT NULL,
   PRIMARY KEY (`Q_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=105 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `question`
 --
 
-INSERT INTO `question` (`Q_No`, `Chapter`, `Format`, `Difficulty`, `Mark`, `QuestionContent`, `Image`, `Imagepath`, `A`, `B`, `C`, `D`, `TrueAnswer`, `Approval`) VALUES
-(102, 'Chapter 3', 'MCQ', 'Exam', 5, '1-1', NULL, NULL, '1', '0', '3', '2', 'B', NULL),
-(101, 'Chapter 3', 'MCQ', 'Exam', 5, '6-1', NULL, NULL, '5', '4', '3', '2', 'A', NULL),
-(100, 'Chapter 3', 'MCQ', 'Exam', 5, '3+3+3', NULL, NULL, '3', '6', '9', '12', 'C', NULL),
-(99, 'Chapter 3', 'MCQ', 'Exam', 5, '7+8', NULL, NULL, '13', '14', '15', '16', 'C', NULL),
-(98, 'Chapter 3', 'MCQ', 'Exam', 5, '9+6', NULL, NULL, '0', '5', '10', '15', 'D', NULL),
-(97, 'Chapter 3', 'MCQ', 'Exam', 5, '4-3', NULL, NULL, '0', '1', '2', '3', 'B', NULL),
-(96, 'Chapter 3', 'MCQ', 'Exam', 5, '5-5', NULL, NULL, '0', '1', '2', '3', 'A', NULL),
-(95, 'Chapter 3', 'MCQ', 'Exam', 5, '6-4', NULL, NULL, '0', '1', '2', '3', 'C', NULL),
-(94, 'Chapter 3', 'MCQ', 'Exam', 5, '8-5', NULL, NULL, '3', '2', '1', '0', 'A', NULL),
-(93, 'Chapter 3', 'MCQ', 'Exam', 5, '4+3', NULL, NULL, '7', '6', '5', '4', 'A', NULL),
-(92, 'Chapter 3', 'MCQ', 'Exam', 5, '3+2', NULL, NULL, '3', '4', '5', '6', 'C', NULL),
-(91, 'Chapter 3', 'MCQ', 'Exam', 5, '15-10', NULL, NULL, '0', '5', '10', '15', 'B', NULL),
-(90, 'Chapter 3', 'MCQ', 'Exam', 5, '6+5', NULL, NULL, '8', '9', '10', '11', 'D', NULL),
-(89, 'Chapter 3', 'MCQ', 'Exam', 5, '1+10', NULL, NULL, '8', '9', '10', '11', 'D', NULL),
-(88, 'Chapter 3', 'MCQ', 'Exam', 5, '5+5', NULL, NULL, '7', '8', '9', '10', 'D', NULL),
-(87, 'Chapter 3', 'MCQ', 'Exam', 5, '4+4', NULL, NULL, '7', '8', '9', '10', 'B', NULL),
-(86, 'Chapter 3', 'MCQ', 'Exam', 5, '1+2+3+4', NULL, NULL, '7', '8', '9', '10', 'D', NULL),
-(85, 'Chapter 3', 'MCQ', 'Exam', 5, '1+2+3', NULL, NULL, '4', '5', '6', '7', 'C', NULL),
-(84, 'Chapter 3', 'MCQ', 'Exam', 5, '2+2', NULL, NULL, '1', '2', '3', '4', 'D', NULL),
-(83, 'Chapter 3', 'MCQ', 'Exam', 5, '2+1', NULL, NULL, '2', '3', '4', '5', 'B', NULL),
-(82, 'Chapter 3', 'MCQ', 'Exam', 5, '1+1', NULL, NULL, '2', '3', '4', '5', 'A', NULL),
-(103, 'Chapter 3', 'MCQ', 'Exam', 5, '10-7', NULL, NULL, '4', '3', '2', '1', 'B', NULL),
-(104, 'Chapter 3', 'MCQ', 'Exam', 5, '16-8', NULL, NULL, '8', '9', '10', '11', 'A', NULL);
+INSERT INTO `question` (`Q_No`, `U_ID`, `Chapter`, `Format`, `Difficulty`, `Mark`, `QuestionContent`, `Image`, `Imagepath`, `A`, `B`, `C`, `D`, `TrueAnswer`, `Approval`) VALUES
+(102, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '1-1', NULL, NULL, '1', '0', '3', '2', 'B', NULL),
+(101, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '6-1', NULL, NULL, '5', '4', '3', '2', 'A', NULL),
+(100, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '3+3+3', NULL, NULL, '3', '6', '9', '12', 'C', NULL),
+(99, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '7+8', NULL, NULL, '13', '14', '15', '16', 'C', NULL),
+(98, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '9+6', NULL, NULL, '0', '5', '10', '15', 'D', NULL),
+(97, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '4-3', NULL, NULL, '0', '1', '2', '3', 'B', NULL),
+(96, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '5-5', NULL, NULL, '0', '1', '2', '3', 'A', NULL),
+(95, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '6-4', NULL, NULL, '0', '1', '2', '3', 'C', NULL),
+(94, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '8-5', NULL, NULL, '3', '2', '1', '0', 'A', NULL),
+(93, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '4+3', NULL, NULL, '7', '6', '5', '4', 'A', NULL),
+(92, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '3+2', NULL, NULL, '3', '4', '5', '6', 'C', NULL),
+(91, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '15-10', NULL, NULL, '0', '5', '10', '15', 'B', NULL),
+(90, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '6+5', NULL, NULL, '8', '9', '10', '11', 'D', NULL),
+(89, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '1+10', NULL, NULL, '8', '9', '10', '11', 'D', NULL),
+(88, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '5+5', NULL, NULL, '7', '8', '9', '10', 'D', NULL),
+(87, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '4+4', NULL, NULL, '7', '8', '9', '10', 'B', NULL),
+(86, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '1+2+3+4', NULL, NULL, '7', '8', '9', '10', 'D', NULL),
+(85, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '1+2+3', NULL, NULL, '4', '5', '6', '7', 'C', NULL),
+(84, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '2+2', NULL, NULL, '1', '2', '3', '4', 'D', NULL),
+(83, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '2+1', NULL, NULL, '2', '3', '4', '5', 'B', NULL),
+(82, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '1+1', NULL, NULL, '2', '3', '4', '5', 'A', NULL),
+(103, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '10-7', NULL, NULL, '4', '3', '2', '1', 'B', NULL),
+(104, 7, 'Chapter 3', 'MCQ', 'Exam', 5, '16-8', NULL, NULL, '8', '9', '10', '11', 'A', NULL),
+(105, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'One', NULL, NULL, '1', '0', '11', '2', 'A', NULL),
+(106, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Two', NULL, NULL, '2', '3', '4', '5', 'A', NULL),
+(107, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Three', NULL, NULL, '3', '1', '0', '7', 'A', NULL),
+(108, 7, 'Chapter 1', 'MCQ', 'Exam', 5, 'Thirteen', NULL, NULL, '1', '3', '13', '31', 'C', NULL),
+(109, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Twenty', NULL, NULL, '2', '0', '12', '20', 'D', NULL),
+(110, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Nineteen', NULL, NULL, '9', '1', '91', '19', 'D', NULL),
+(111, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Thirty', NULL, NULL, '3', '30', '0', '13', 'B', NULL),
+(112, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Fifteen', NULL, NULL, '5', '15', '50', '1', 'B', NULL),
+(113, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Fifty', NULL, NULL, '15', '0', '50', '5', 'C', NULL),
+(114, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '6', NULL, NULL, 'Six', 'Sixty', 'Sixteen', 'None of above', 'A', NULL),
+(115, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '9', NULL, NULL, 'Nine', 'Ninety', 'Nineteen', 'None of above', 'A', NULL),
+(116, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '10', NULL, NULL, 'Ten', 'One', 'One hundred', 'Zero', 'A', NULL),
+(117, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '41', NULL, NULL, 'Four', 'Fourteen', 'Forty-One', 'None of above', 'C', NULL),
+(118, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '0', NULL, NULL, 'Zero', 'Ten', 'One hundred', 'None of above', 'A', NULL),
+(119, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'One hundred', NULL, NULL, '1', '10', '100', 'None of above', 'C', NULL),
+(120, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Seven', NULL, NULL, '7', '8', '9', '10', 'A', NULL),
+(121, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '65', NULL, NULL, 'Sixty-five', 'Fifty-six', 'Sixteen', 'None of above', 'A', NULL),
+(122, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '99', NULL, NULL, 'Nine', 'Ninety-nine', 'Ninety', 'None of above', 'B', NULL),
+(123, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '78', NULL, NULL, 'Eight', 'Seven', 'Seventy-eight', 'None of above', 'C', NULL),
+(124, 13, 'Physics 1', 'MCQ', 'Certificate', 5, '36', NULL, NULL, 'Three', 'Thirty-six', 'Sixty-three', 'None of above', 'B', NULL),
+(125, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Eighty-four', NULL, NULL, '48', '84', '8', '4', 'B', NULL),
+(126, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Twenty-five', NULL, NULL, '52', '2', '5', '25', 'D', NULL),
+(127, 13, 'Physics 1', 'MCQ', 'Certificate', 5, 'Eighty', NULL, NULL, '8', '10', '88', '80', 'D', NULL);
 
 -- --------------------------------------------------------
 
@@ -191,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `result` (
   `EndTime` timestamp NULL DEFAULT NULL,
   `Difficulty` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`E_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `result`
@@ -200,7 +224,8 @@ CREATE TABLE IF NOT EXISTS `result` (
 INSERT INTO `result` (`E_No`, `U_ID`, `Score`, `E_Result`, `Chapter`, `StartTime`, `EndTime`, `Difficulty`) VALUES
 (1, 6, 14, 70, 'Chapter 3', '2019-02-13 17:38:34', '2019-02-13 17:49:23', 'Exam'),
 (2, 6, 17, 85, 'Chapter 3', '2019-02-13 17:56:56', '2019-02-13 17:58:13', 'Lab'),
-(3, 6, 18, 90, 'Chapter 3', '2019-02-13 17:59:04', '2019-02-13 18:00:00', 'Certificate');
+(3, 6, 18, 90, 'Chapter 3', '2019-02-13 17:59:04', '2019-02-13 18:00:00', 'Certificate'),
+(15, 14, 18, 90, 'Physics 1', '2019-02-16 14:50:04', '2019-02-16 14:50:56', 'Certificate');
 
 -- --------------------------------------------------------
 
@@ -243,7 +268,7 @@ CREATE TABLE IF NOT EXISTS `student_question` (
   `S_QAnswer` varchar(255) DEFAULT NULL,
   `TrueAnswer` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`S_Q_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student_question`
@@ -309,7 +334,87 @@ INSERT INTO `student_question` (`S_Q_No`, `E_No`, `Q_No`, `S_QAnswer`, `TrueAnsw
 (57, 3, 98, 'D', 'D'),
 (58, 3, 88, 'D', 'D'),
 (59, 3, 90, 'D', 'D'),
-(60, 3, 100, 'C', 'C');
+(60, 3, 100, 'C', 'C'),
+(61, 12, 110, 'D', 'D'),
+(62, 12, 127, 'D', 'D'),
+(63, 12, 118, 'D', 'A'),
+(64, 12, 117, 'C', 'C'),
+(65, 12, 112, 'B', 'B'),
+(66, 12, 105, 'A', 'A'),
+(67, 12, 125, 'B', 'B'),
+(68, 12, 126, 'D', 'D'),
+(69, 12, 107, 'A', 'A'),
+(70, 12, 116, 'A', 'A'),
+(71, 12, 124, 'B', 'B'),
+(72, 12, 120, 'A', 'A'),
+(73, 12, 113, 'C', 'C'),
+(74, 12, 121, 'B', 'A'),
+(75, 12, 109, 'B', 'D'),
+(76, 12, 114, 'B', 'A'),
+(77, 12, 111, 'B', 'B'),
+(78, 12, 106, 'A', 'A'),
+(79, 12, 119, 'C', 'C'),
+(80, 12, 115, 'A', 'A'),
+(81, 13, 125, 'C', 'B'),
+(82, 13, 118, 'D', 'A'),
+(83, 13, 121, 'A', 'A'),
+(84, 13, 123, 'C', 'C'),
+(85, 13, 109, 'D', 'D'),
+(86, 13, 106, 'A', 'A'),
+(87, 13, 110, 'D', 'D'),
+(88, 13, 116, 'A', 'A'),
+(89, 13, 120, 'A', 'A'),
+(90, 13, 112, 'B', 'B'),
+(91, 13, 117, 'C', 'C'),
+(92, 13, 119, 'C', 'C'),
+(93, 13, 122, 'B', 'B'),
+(94, 13, 105, 'B', 'A'),
+(95, 13, 126, 'D', 'D'),
+(96, 13, 113, 'C', 'C'),
+(97, 13, 114, 'A', 'A'),
+(98, 13, 124, 'B', 'B'),
+(99, 13, 127, 'D', 'D'),
+(100, 13, 111, 'B', 'B'),
+(101, 14, 116, 'A', 'A'),
+(102, 14, 120, 'B', 'A'),
+(103, 14, 106, 'A', 'A'),
+(104, 14, 123, 'C', 'C'),
+(105, 14, 110, 'D', 'D'),
+(106, 14, 113, 'C', 'C'),
+(107, 14, 122, 'B', 'B'),
+(108, 14, 109, 'D', 'D'),
+(109, 14, 115, 'A', 'A'),
+(110, 14, 125, 'B', 'B'),
+(111, 14, 114, 'A', 'A'),
+(112, 14, 124, 'B', 'B'),
+(113, 14, 119, 'C', 'C'),
+(114, 14, 105, 'A', 'A'),
+(115, 14, 107, 'A', 'A'),
+(116, 14, 118, 'A', 'A'),
+(117, 14, 127, 'D', 'D'),
+(118, 14, 126, 'D', 'D'),
+(119, 14, 111, 'B', 'B'),
+(120, 14, 121, 'A', 'A'),
+(121, 15, 123, 'C', 'C'),
+(122, 15, 106, 'A', 'A'),
+(123, 15, 109, 'D', 'D'),
+(124, 15, 111, 'D', 'B'),
+(125, 15, 117, 'C', 'C'),
+(126, 15, 121, 'B', 'A'),
+(127, 15, 110, 'D', 'D'),
+(128, 15, 126, 'D', 'D'),
+(129, 15, 116, 'A', 'A'),
+(130, 15, 122, 'B', 'B'),
+(131, 15, 118, 'A', 'A'),
+(132, 15, 124, 'B', 'B'),
+(133, 15, 107, 'A', 'A'),
+(134, 15, 125, 'B', 'B'),
+(135, 15, 120, 'A', 'A'),
+(136, 15, 127, 'D', 'D'),
+(137, 15, 114, 'A', 'A'),
+(138, 15, 113, 'C', 'C'),
+(139, 15, 112, 'B', 'B'),
+(140, 15, 105, 'A', 'A');
 
 -- --------------------------------------------------------
 
@@ -320,6 +425,7 @@ INSERT INTO `student_question` (`S_Q_No`, `E_No`, `Q_No`, `S_QAnswer`, `TrueAnsw
 DROP TABLE IF EXISTS `test`;
 CREATE TABLE IF NOT EXISTS `test` (
   `T_No` int(11) NOT NULL AUTO_INCREMENT,
+  `Difficulty` varchar(255) DEFAULT NULL,
   `Chapter` varchar(255) DEFAULT NULL,
   `Q_No` int(11) DEFAULT NULL,
   `QuestionContent` text,
@@ -330,113 +436,7 @@ CREATE TABLE IF NOT EXISTS `test` (
   `TrueAnswer` varchar(255) DEFAULT NULL,
   `UserAnswer` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`T_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=381 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `test`
---
-
-INSERT INTO `test` (`T_No`, `Chapter`, `Q_No`, `QuestionContent`, `A`, `B`, `C`, `D`, `TrueAnswer`, `UserAnswer`) VALUES
-(281, 'Chapter 3', 84, '2+2', '1', '2', '3', '4', 'D', 'D'),
-(282, 'Chapter 3', 82, '1+1', '2', '3', '4', '5', 'A', NULL),
-(283, 'Chapter 3', 86, '1+2+3+4', '7', '8', '9', '10', 'D', NULL),
-(284, 'Chapter 3', 96, '5-5', '0', '1', '2', '3', 'A', NULL),
-(285, 'Chapter 3', 95, '6-4', '0', '1', '2', '3', 'C', NULL),
-(286, 'Chapter 3', 85, '1+2+3', '4', '5', '6', '7', 'C', NULL),
-(287, 'Chapter 3', 89, '1+10', '8', '9', '10', '11', 'D', NULL),
-(288, 'Chapter 3', 90, '6+5', '8', '9', '10', '11', 'D', NULL),
-(289, 'Chapter 3', 83, '2+1', '2', '3', '4', '5', 'B', NULL),
-(290, 'Chapter 3', 97, '4-3', '0', '1', '2', '3', 'B', NULL),
-(291, 'Chapter 3', 102, '1-1', '1', '0', '3', '2', 'B', NULL),
-(292, 'Chapter 3', 88, '5+5', '7', '8', '9', '10', 'D', NULL),
-(293, 'Chapter 3', 93, '4+3', '7', '6', '5', '4', 'A', NULL),
-(294, 'Chapter 3', 104, '16-8', '8', '9', '10', '11', 'A', NULL),
-(295, 'Chapter 3', 94, '8-5', '3', '2', '1', '0', 'A', NULL),
-(296, 'Chapter 3', 100, '3+3+3', '3', '6', '9', '12', 'C', NULL),
-(297, 'Chapter 3', 99, '7+8', '13', '14', '15', '16', 'C', NULL),
-(298, 'Chapter 3', 98, '9+6', '0', '5', '10', '15', 'D', NULL),
-(299, 'Chapter 3', 87, '4+4', '7', '8', '9', '10', 'B', NULL),
-(300, 'Chapter 3', 91, '15-10', '0', '5', '10', '15', 'B', NULL),
-(301, 'Chapter 3', 101, '6-1', '5', '4', '3', '2', 'A', NULL),
-(302, 'Chapter 3', 94, '8-5', '3', '2', '1', '0', 'A', NULL),
-(303, 'Chapter 3', 89, '1+10', '8', '9', '10', '11', 'D', NULL),
-(304, 'Chapter 3', 92, '3+2', '3', '4', '5', '6', 'C', NULL),
-(305, 'Chapter 3', 85, '1+2+3', '4', '5', '6', '7', 'C', NULL),
-(306, 'Chapter 3', 102, '1-1', '1', '0', '3', '2', 'B', NULL),
-(307, 'Chapter 3', 104, '16-8', '8', '9', '10', '11', 'A', NULL),
-(308, 'Chapter 3', 82, '1+1', '2', '3', '4', '5', 'A', NULL),
-(309, 'Chapter 3', 88, '5+5', '7', '8', '9', '10', 'D', NULL),
-(310, 'Chapter 3', 98, '9+6', '0', '5', '10', '15', 'D', NULL),
-(311, 'Chapter 3', 95, '6-4', '0', '1', '2', '3', 'C', NULL),
-(312, 'Chapter 3', 96, '5-5', '0', '1', '2', '3', 'A', NULL),
-(313, 'Chapter 3', 93, '4+3', '7', '6', '5', '4', 'A', NULL),
-(314, 'Chapter 3', 83, '2+1', '2', '3', '4', '5', 'B', NULL),
-(315, 'Chapter 3', 90, '6+5', '8', '9', '10', '11', 'D', NULL),
-(316, 'Chapter 3', 84, '2+2', '1', '2', '3', '4', 'D', NULL),
-(317, 'Chapter 3', 97, '4-3', '0', '1', '2', '3', 'B', NULL),
-(318, 'Chapter 3', 91, '15-10', '0', '5', '10', '15', 'B', NULL),
-(319, 'Chapter 3', 87, '4+4', '7', '8', '9', '10', 'B', NULL),
-(320, 'Chapter 3', 99, '7+8', '13', '14', '15', '16', 'C', NULL),
-(321, 'Chapter 3', 84, '2+2', '1', '2', '3', '4', 'D', NULL),
-(322, 'Chapter 3', 101, '6-1', '5', '4', '3', '2', 'A', NULL),
-(323, 'Chapter 3', 85, '1+2+3', '4', '5', '6', '7', 'C', NULL),
-(324, 'Chapter 3', 89, '1+10', '8', '9', '10', '11', 'D', NULL),
-(325, 'Chapter 3', 88, '5+5', '7', '8', '9', '10', 'D', NULL),
-(326, 'Chapter 3', 82, '1+1', '2', '3', '4', '5', 'A', NULL),
-(327, 'Chapter 3', 87, '4+4', '7', '8', '9', '10', 'B', NULL),
-(328, 'Chapter 3', 102, '1-1', '1', '0', '3', '2', 'B', NULL),
-(329, 'Chapter 3', 104, '16-8', '8', '9', '10', '11', 'A', NULL),
-(330, 'Chapter 3', 90, '6+5', '8', '9', '10', '11', 'D', NULL),
-(331, 'Chapter 3', 95, '6-4', '0', '1', '2', '3', 'C', NULL),
-(332, 'Chapter 3', 96, '5-5', '0', '1', '2', '3', 'A', NULL),
-(333, 'Chapter 3', 93, '4+3', '7', '6', '5', '4', 'A', NULL),
-(334, 'Chapter 3', 83, '2+1', '2', '3', '4', '5', 'B', NULL),
-(335, 'Chapter 3', 91, '15-10', '0', '5', '10', '15', 'B', NULL),
-(336, 'Chapter 3', 92, '3+2', '3', '4', '5', '6', 'C', NULL),
-(337, 'Chapter 3', 99, '7+8', '13', '14', '15', '16', 'C', NULL),
-(338, 'Chapter 3', 97, '4-3', '0', '1', '2', '3', 'B', NULL),
-(339, 'Chapter 3', 98, '9+6', '0', '5', '10', '15', 'D', NULL),
-(340, 'Chapter 3', 94, '8-5', '3', '2', '1', '0', 'A', NULL),
-(341, 'Chapter 3', 82, '1+1', '2', '3', '4', '5', 'A', NULL),
-(342, 'Chapter 3', 104, '16-8', '8', '9', '10', '11', 'A', NULL),
-(343, 'Chapter 3', 84, '2+2', '1', '2', '3', '4', 'D', NULL),
-(344, 'Chapter 3', 91, '15-10', '0', '5', '10', '15', 'B', NULL),
-(345, 'Chapter 3', 99, '7+8', '13', '14', '15', '16', 'C', NULL),
-(346, 'Chapter 3', 102, '1-1', '1', '0', '3', '2', 'B', NULL),
-(347, 'Chapter 3', 94, '8-5', '3', '2', '1', '0', 'A', NULL),
-(348, 'Chapter 3', 103, '10-7', '4', '3', '2', '1', 'B', NULL),
-(349, 'Chapter 3', 89, '1+10', '8', '9', '10', '11', 'D', NULL),
-(350, 'Chapter 3', 87, '4+4', '7', '8', '9', '10', 'B', NULL),
-(351, 'Chapter 3', 93, '4+3', '7', '6', '5', '4', 'A', NULL),
-(352, 'Chapter 3', 86, '1+2+3+4', '7', '8', '9', '10', 'D', NULL),
-(353, 'Chapter 3', 100, '3+3+3', '3', '6', '9', '12', 'C', NULL),
-(354, 'Chapter 3', 98, '9+6', '0', '5', '10', '15', 'D', NULL),
-(355, 'Chapter 3', 92, '3+2', '3', '4', '5', '6', 'C', NULL),
-(356, 'Chapter 3', 95, '6-4', '0', '1', '2', '3', 'C', NULL),
-(357, 'Chapter 3', 83, '2+1', '2', '3', '4', '5', 'B', NULL),
-(358, 'Chapter 3', 96, '5-5', '0', '1', '2', '3', 'A', NULL),
-(359, 'Chapter 3', 97, '4-3', '0', '1', '2', '3', 'B', NULL),
-(360, 'Chapter 3', 85, '1+2+3', '4', '5', '6', '7', 'C', NULL),
-(361, 'Chapter 3', 89, '1+10', '8', '9', '10', '11', 'D', NULL),
-(362, 'Chapter 3', 92, '3+2', '3', '4', '5', '6', 'C', NULL),
-(363, 'Chapter 3', 82, '1+1', '2', '3', '4', '5', 'A', NULL),
-(364, 'Chapter 3', 86, '1+2+3+4', '7', '8', '9', '10', 'D', NULL),
-(365, 'Chapter 3', 103, '10-7', '4', '3', '2', '1', 'B', NULL),
-(366, 'Chapter 3', 93, '4+3', '7', '6', '5', '4', 'A', NULL),
-(367, 'Chapter 3', 91, '15-10', '0', '5', '10', '15', 'B', NULL),
-(368, 'Chapter 3', 84, '2+2', '1', '2', '3', '4', 'D', NULL),
-(369, 'Chapter 3', 90, '6+5', '8', '9', '10', '11', 'D', NULL),
-(370, 'Chapter 3', 85, '1+2+3', '4', '5', '6', '7', 'C', NULL),
-(371, 'Chapter 3', 83, '2+1', '2', '3', '4', '5', 'B', NULL),
-(372, 'Chapter 3', 97, '4-3', '0', '1', '2', '3', 'B', NULL),
-(373, 'Chapter 3', 99, '7+8', '13', '14', '15', '16', 'C', NULL),
-(374, 'Chapter 3', 87, '4+4', '7', '8', '9', '10', 'B', NULL),
-(375, 'Chapter 3', 98, '9+6', '0', '5', '10', '15', 'D', NULL),
-(376, 'Chapter 3', 101, '6-1', '5', '4', '3', '2', 'A', NULL),
-(377, 'Chapter 3', 100, '3+3+3', '3', '6', '9', '12', 'C', NULL),
-(378, 'Chapter 3', 94, '8-5', '3', '2', '1', '0', 'A', NULL),
-(379, 'Chapter 3', 95, '6-4', '0', '1', '2', '3', 'C', NULL),
-(380, 'Chapter 3', 88, '5+5', '7', '8', '9', '10', 'D', NULL);
+) ENGINE=MyISAM AUTO_INCREMENT=521 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
