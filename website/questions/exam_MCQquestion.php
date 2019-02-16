@@ -54,7 +54,7 @@
         
             $sql = "Select * from test WHERE T_No = ".$tno." limit 1";
             $result = mysqli_query($conn,$sql)
-            or die("<script>alert('Maybe select wrong table / columns');</script>");
+            or die("<script>alert('Maybe select wrong table1 / columns');</script>");
       
             $count = (mysqli_num_rows($result)>=1? true:
             die("<script>alert('No data available in the table!');</script>"));
@@ -68,7 +68,7 @@ echo "</div>";
 
 echo "<div class='container-fluid title2'>";
   echo "<div class='row-xl'>";
-    //echo "<b>Section A</b>";
+    echo "<b>".$rows['Difficulty']."</b>";
 echo "</div>";
 
 echo "<div class='container-fluid title3'>";
@@ -83,7 +83,7 @@ echo "<div class='container-fluid questiontitle'>";
 
 echo "<br/>";
 
-echo "<form class='justify-content-center needs-validation' novalidate method='post' action='MCQquestion_function.php?eno=".$eno."&tno=".$tno."&qno=".$qno."'>";
+echo "<form class='justify-content-center needs-validation' novalidate method='post' action='MCQquestion_function.php?difficulty=".$rows['Difficulty']."&chapter=".$rows['Chapter']."&eno=".$eno."&tno=".$tno."&qno=".$qno."'>";
 	echo "<div class='container-fluid question form-group'>";
   		echo "<div class='col-12'>";
   			echo "<br/>";

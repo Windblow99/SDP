@@ -210,7 +210,7 @@
 					echo "<td>".$certificate."</td>";
 					echo "<td>";
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Certificate Exam</button></td>";
+	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
@@ -241,7 +241,7 @@
 					echo "<td>".$certificate."</td>";
 					echo "<td>";
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Certificate Exam</button></td>";
+	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
@@ -272,7 +272,7 @@
 					echo "<td>".$certificate."</td>";
 					echo "<td>";
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Certificate Exam</button></td>";
+	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
@@ -303,7 +303,7 @@
 					echo "<td>".$certificate."</td>";
 					echo "<td>";
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Certificate Exam</button></td>";
+	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";

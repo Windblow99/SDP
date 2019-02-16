@@ -1,7 +1,9 @@
 <?php
+	session_start(); 
+
 	$conn = mysqli_connect('localhost','root','','educo');
 
-	$filename = basename($_FILES['fileupload']['name']);
+	/*$filename = basename($_FILES['fileupload']['name']);
 	
 	$getfilesize = $_FILES['fileupload']['size'];
 	
@@ -30,12 +32,21 @@
 	{
 		echo "<script>alert('Technical Problem: File not uploaded!');</script>";
 		die("<script>window.history.go(-1);</script>");
-	}
+	}*/
+	$name = $_SESSION['user'];
+
+    $select = "SELECT * FROM users WHERE Name = '$name';";
+    $result = mysqli_query($conn,$select)
+    or die("<script>alert('Maybe select wrong table / columns');</script>");
+      
+    $count = (mysqli_num_rows($result)>=1? true:
+    die("<script>alert('No data available in the table!');</script>"));
+    $rows = mysqli_fetch_array($result);
+    $uid = $rows['U_ID'];  
 	
 	$chapter = $_POST['chapter'];
 	$format = "MCQ";
 	$difficulty = "Exam";
-	//$mark = $_POST['mark'];
 	$question = $_POST['question'];
 	$answer1 = $_POST['answer1'];
 	$answer2 = $_POST['answer2'];
@@ -43,10 +54,7 @@
 	$answer4 = $_POST['answer4'];
 	$trueanswer = $_POST['trueanswer'];
 
-/*echo "$difficulty";
-echo "$format";*/
-
-	$sql = "INSERT INTO question (Chapter, Format, Difficulty, QuestionContent, A, B, C, D, TrueAnswer) VALUES ('$chapter', '$format', '$difficulty', '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
+	$sql = "INSERT INTO question (Chapter, U_ID, Format, Difficulty, Mark, QuestionContent, A, B, C, D, TrueAnswer) VALUES ('$chapter', '$uid', '$format', '$difficulty', 5, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
 
 	//$sql = "INSERT INTO question (Image, Imagepath) VALUES ('$getimageobj', '$destination');";
 	

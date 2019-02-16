@@ -1,5 +1,8 @@
 <?php	
-	$eno = $_GET['eno'];
+	
+    $difficulty = $_GET['difficulty'];
+    $chapter = $_GET['chapter'];    
+    $eno = $_GET['eno'];
 
 	$conn = mysqli_connect("localhost","root","","educo")
     or die("<script>alert('error in db connection');<script>");
@@ -49,11 +52,8 @@
 
     $finalmark = $mark * $score;
 
-	$update = "UPDATE result SET E_Result = '$finalmark' WHERE E_No = ".$eno.";";
+	$update = "UPDATE result SET E_Result = '$finalmark', EndTime = NOW(), Chapter = '$chapter', Difficulty = '$difficulty' WHERE E_No = ".$eno.";";
 	mysqli_query($conn, $update);
-
-	$update2 = "UPDATE result SET EndTime = NOW() WHERE E_No = ".$eno.";";
-	mysqli_query($conn, $update2);
 
 	$delete = "Delete from test where Chapter = '$chapter';";
 	mysqli_query($conn, $delete);

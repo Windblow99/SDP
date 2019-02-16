@@ -1,6 +1,8 @@
 <?php
 
-	$eno = $_GET['eno'];
+	$difficulty = $_GET['difficulty'];
+    $chapter = $_GET['chapter'];
+    $eno = $_GET['eno'];
 	$qno = $_GET['qno'];
 	$tno = $_GET['tno'];
 	$answer = $_POST['answer'];
@@ -45,7 +47,7 @@
 	++$qno;
 	if($qno == 21)
 	{
-		echo ("<script>window.location.href='insertresult.php?eno=".$eno."';</script>");
+		echo ("<script>window.location.href='insertresult.php?difficulty=".$difficulty."&chapter=".$chapter."&eno=".$eno."';</script>");
 	}
 	else{
 		echo ("<script>window.location.href='exam_MCQquestion.php?eno=".$eno."&tno=".$tno."&qno=".$qno."';</script>"); 

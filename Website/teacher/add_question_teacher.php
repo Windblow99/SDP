@@ -57,7 +57,11 @@
           <option>Chapter 3</option>
           <option>Chapter 4</option> 
           <option>Chapter 5</option> 
-          <option>Chapter 6</option>                 
+          <option>Chapter 6</option>
+          <option>Chapter 7</option>
+          <option>Chapter 8</option>
+          <option>Chapter 9</option>
+          <option>Chapter 10</option>                 
       </select>
       </div>
 

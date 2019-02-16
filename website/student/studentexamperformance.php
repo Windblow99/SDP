@@ -185,7 +185,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-        			 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -213,7 +213,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -242,7 +242,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -271,7 +271,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -300,7 +300,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -329,7 +329,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -358,7 +358,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -387,7 +387,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -416,7 +416,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 
@@ -445,7 +445,7 @@ if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
 				echo "<td>".$chapter."</td>";
 				echo "<td>";
 				echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-       				 background-color:#333333;' onclick=\"window.location.href='http://localhost:8080/Website/questions/exam_function.php'\">Take Exam</button></td>";
+       				 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Exam&chapter=".$chapter."'\">Take Exam</button></td>";
 				echo "</tr>";
 			}
 

@@ -4,7 +4,7 @@
 
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 
-<title>Add Questions (Corporate)</title>
+<title>Add Questions</title>
 
 <style>
   h4{
@@ -21,7 +21,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/corporatenavbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/teachernavbar.php'); ?>
 
 <br/>
 
@@ -32,35 +32,39 @@
 
 <hr>
 
-<form class="justify-content-center"  method="post" action="add_question_corporate_function.php" enctype="multipart/form-data" style="padding-top: 30px;">
-	<div class="container-fluid form-group" style="width: 80%;">
+<form class="justify-content-center" method="post" action="add_question_corporate_function.php" enctype="multipart/form-data" style="padding-top: 20px;">
+  <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
         <h4>Question</h4>
       </div>
       <div class="col">
-        <textarea class="form-control" id="exampleFormControlTextarea1" name="question" rows="3" placeholder="Enter your question here..."></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="question" rows="3" placeholder="Enter your question here..." required="required"></textarea>
       </div>
     </div>
   </div>
 
-	<div class="container-fluid form-group" style="width: 80%;">
+  <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
+        <h4>Chapter</h4>
+      </div>
+      <div class="col-4">
+        <select class="form-control form-control-sm" name="chapter" required="required">
+        <option disabled selected>Select a chapter</option>
+          <option>Physics 1</option>
+          <option>Physics 2</option>  
+          <option>Physics 3</option>
+          <option>Physics 4</option>               
+      </select>
+      </div>
+
+      <!--<div class="col-2">
         <h4>Image</h4>
       </div>
       <div class="col-4">
         <input type="file" name="fileupload" class="form-control-file form-control-sm">
-      </div>
-      <div class="col-2">
-        <h4>Certificate</h4>
-      </div>
-      <div class="col-4">
-        <select class="form-control form-control-sm" name="difficulty">
-        <option disabled selected>Select a certificate</option>
-        <option>Certificate 1</option>
-      </select>
-      </div>
+      </div>-->
     </div>
   </div>
 
@@ -70,12 +74,30 @@
         <h4>Format</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm" name="format">
+        <input type="text" name="format" value="MCQ" disabled="disabled" class="form-control form-control-sm">
+        <!--<select class="form-control form-control-sm" name="format" id="format">
           <option disabled selected>Select a format</option>
-          <option>Text</option>
-          <option>MCQ</option>
-        </select>
+          <option value='Text'>Text</option>
+          <option value='MCQ'>MCQ</option>
+        </select>-->
       </div>
+      <div class="col-2">
+        <h4>Difficulty</h4>
+      </div>
+      <div class="col-4">
+        <!--<select class="form-control form-control-sm" name="difficulty">
+          <option disabled selected>Select difficulty</option>
+          <option>Beginner</option>
+          <option>Intermediate</option>
+          <option>Expert</option>
+        </select>-->
+        <input type="text" name="difficulty" value="Certificate" disabled="disabled" class="form-control form-control-sm">
+      </div>
+    </div>
+  </div>
+
+ <!--<div class="container-fluid form-group" style="width: 80%;">
+    <div class="row">
       <div class="col-2">
         <h4>Marks</h4>
       </div>
@@ -83,7 +105,7 @@
         <input type="number" class="form-control form-control-sm" name="mark" id="colFormLabelSm" placeholder="Enter marks here...">
       </div>
     </div>
-  </div>
+  </div>-->
 
   <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
@@ -91,7 +113,6 @@
         <h4>Selections</h4>
       </div>
       <div class="col">
-        <input type="text" class="form-control form-control-sm" name="answer1" id="colFormLabelSm" placeholder="Enter first selection here...">
       </div>
     </div>
   </div>
@@ -99,19 +120,10 @@
   <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
+        <h4 style="text-align: right;">A</h4>
       </div>
-      <div class="col">
-        <input type="text" class="form-control form-control-sm" name="answer2" id="colFormLabelSm" placeholder="Enter second selection here...">
-      </div>
-    </div>
-  </div>
-
-  <div class="container-fluid form-group" style="width: 80%;">
-    <div class="row">
-      <div class="col-2">
-      </div>
-      <div class="col">
-        <input type="text" class="form-control form-control-sm" name="answer3" id="colFormLabelSm" placeholder="Enter third selection here...">
+      <div class="col-6">
+        <input type="text" class="form-control form-control-sm" name="answer1" id="colFormLabelSm" placeholder="Enter first selection here..." required="required">
       </div>
     </div>
   </div>
@@ -119,9 +131,32 @@
   <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
+        <h4 style="text-align: right;">B</h4>
       </div>
-      <div class="col">
-        <input type="text" class="form-control form-control-sm" name="answer4" id="colFormLabelSm" placeholder="Enter fourth selection here...">
+      <div class="col-6">
+        <input type="text" class="form-control form-control-sm" name="answer2" id="colFormLabelSm" placeholder="Enter second selection here..." required="required">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid form-group" style="width: 80%;">
+    <div class="row">
+      <div class="col-2">
+        <h4 style="text-align: right;">C</h4>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control form-control-sm" name="answer3" id="colFormLabelSm" placeholder="Enter third selection here..." required="required">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid form-group" style="width: 80%;">
+    <div class="row">
+      <div class="col-2">
+        <h4 style="text-align: right;">D</h4>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control form-control-sm" name="answer4" id="colFormLabelSm" placeholder="Enter fourth selection here..." required="required">
       </div>
     </div>
   </div>
@@ -131,8 +166,15 @@
       <div class="col-2">
         <h4>True Answer</h4>
       </div>
-      <div class="col">
-        <input type="text" class="form-control form-control-sm" name="trueanswer" id="colFormLabelSm" placeholder="Enter true answer here.">
+      <div class="col-6">
+      <select class="form-control form-control-sm" name="trueanswer" required="required">
+        <option disabled selected>Select True Answer</option>
+          <option>A</option>
+          <option>B</option>  
+          <option>C</option>
+          <option>D</option>
+        </select>
+        <!--<input type="text" class="form-control form-control-sm" name="trueanswer" id="colFormLabelSm" placeholder="Enter true answer here.">-->
       </div>
     </div>
   </div>
@@ -140,6 +182,7 @@
   <div class="container-fluid questionbuttons">
     <div class="col">
       <input type="submit" value="Add Question" class="btn btn-secondary">
+      <!--<button type="button" class="btn btn-secondary">Add Question</button>-->
     </div>
   </div>
   
