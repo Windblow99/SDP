@@ -4,7 +4,7 @@
 
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 
-<title>Add Questions</title>
+<title>Add Questions (Corporate)</title>
 
 <style>
   h4{
@@ -21,7 +21,7 @@
 
 <body>
 
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/teachernavbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/corporatenavbar.php'); ?>
 
 <br/>
 
