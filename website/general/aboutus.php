@@ -87,7 +87,10 @@
     <div class="card-body">
         <h4 class="card-title">Here's something about what we stand for</h4>
 
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ante turpis, fringilla nec dignissim vel, pellentesque quis lacus. Mauris et mi ornare, tincidunt justo ut, pulvinar nisl. Etiam sed lacinia ipsum, eu posuere tortor. Nulla facilisi. Duis sed mollis erat. Nunc consequat nulla in feugiat vestibulum. Cras nulla tortor, pretium sed ultrices et, hendrerit sed odio. Cras imperdiet, lectus vel iaculis fringilla, quam orci elementum lectus, et dignissim elit eros sit amet dui. Pellentesque vitae euismod tellus, a consequat metus. Morbi malesuada turpis sit amet est eleifend ornare sed non nisi. Mauris scelerisque sagittis quam, ac tincidunt dui venenatis et. Suspendisse a fermentum diam, at porta magna.</p>
+        <p class="card-text">Educo Academic Platform is an active learning program that was created to increase the academic performance of the students that use the platform. Our platform helps students to participate in their own learning process. The mission of this platform is to provide efficiency and easy to those who use it.
+            The idea of this platform is to enable teachers to have a foreground for sharing examination and laboratory questions to their students to attempt to complete based on questions that may appear in exams and for students to be able to do more in the terms of their studies outside the environment of school. Alternatively, students can also take certificate examinations from external corporations that can upload their exams to the platform. 
+            Students are given the opportunity to monitor their own progress. The teachers also can monitor the progress of each of their students to better understand the weaknesses and strengths of their students that can be worked on.</p>
+
       </div>
     </div>
   </div>
