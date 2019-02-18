@@ -199,7 +199,7 @@
 	}
 
 	$sql = "SELECT Chapter FROM result
-			WHERE Chapter = 'Physics 1' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+			WHERE Chapter = 'Physics 1' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')	
 			AND Difficulty = 'Certificate'";
 
 	$result = mysqli_query($conn, $sql);
@@ -230,7 +230,7 @@
 	}
 
 	$sql = "SELECT Chapter FROM result
-			WHERE Chapter = 'Physics 2' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+			WHERE Chapter = 'Physics 2' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')	
 			AND Difficulty = 'Certificate'";
 
 	$result = mysqli_query($conn, $sql);
@@ -261,7 +261,7 @@
 	}
 
 	$sql = "SELECT Chapter FROM result
-			WHERE Chapter = 'Physics 3' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+			WHERE Chapter = 'Physics 3' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')	
 			AND Difficulty = 'Certificate'";
 
 	$result = mysqli_query($conn, $sql);
@@ -292,7 +292,7 @@
 	}
 
 	$sql = "SELECT Chapter FROM result
-			WHERE Chapter = 'Physics 4' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+			WHERE Chapter = 'Physics 4' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')	
 			AND Difficulty = 'Certificate'";
 
 	$result = mysqli_query($conn, $sql);
@@ -312,6 +312,38 @@
 
 	mysqli_close($conn);
 	?>
+	<?php
+	$conn = mysqli_connect('localhost','root','','educo');
+	$username = $_SESSION['user'];
+	$certificate = "Chapter 3";
+	// Check connection
+	if (mysqli_connect_errno())
+	{
+	echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+
+	$sql = "SELECT Chapter FROM result
+			WHERE Chapter = 'Chapter 3' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')	
+			AND Difficulty = 'Certificate'";
+
+	$result = mysqli_query($conn, $sql);
+
+	if(mysqli_num_rows($result)<=0) // if num rows less than = 0, means no result
+				{	
+					echo "<tr>";
+					echo "<td>".$certificate."</td>";
+					echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
+	        		echo "<td>";
+					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
+	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
+					echo "</tr>";
+				}
+
+	mysqli_close($conn);
+	?>
+
 				
 </div>
 </body>
