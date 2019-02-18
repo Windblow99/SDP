@@ -7,13 +7,6 @@
 
 <title>Corporate Main Menu</title>
 
-  <style>
-  	body{
-  		background-image: url("/pictures/Corporate Background.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-  	}
-  </style>
 </head>
 
 <body>
@@ -35,25 +28,7 @@
 <hr/><br/>
 
 <div class="container">
-  <div class="row">
-    <div class="col-sm-3"> 
-      <select class="custom-select" id="inputGroupSelect01">
-        <option selected disabled>Filter By</option>
-        <option value="1">Approved</option>
-        <option value="2">Pending</option>
-      </select>
-    </div>
-    <div class="col-sm-3">
-      <select class="custom-select" id="inputGroupSelect01">
-        <option selected disabled>Select A Certificate</option>
-        <option value="1">Certificate 1</option>
-        <option value="2">Certificate 2</option>
-      </select>
-    </div>
-  </div>
-
-<br/><br/>
-
+  
 <table class="table table-hover" style="margin-left: 10%; width: 80%;">
   <thead>
     <tr style="background-color: #CC2865; color: white;">
@@ -78,7 +53,7 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql = "SELECT Q_No,Approval,Chapter,Format,Difficulty FROM question";
+$sql = "SELECT Q_No,Approval,Chapter,Format,Difficulty FROM question WHERE Difficulty = 'Certificate'";
 $result = mysqli_query($conn, $sql);
 
 while($row = mysqli_fetch_array($result))
