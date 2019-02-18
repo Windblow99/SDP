@@ -144,14 +144,15 @@ mysqli_close($conn);
 
 		</div>
 		<br/>
-
-		This scoreboard only shows the Top 3 scorers.<br/><br/>
+		<div style="color: #F7478A; font-size: 18px; font-weight: bold;">
+		Top Scorers Place Higher On This List.
+		</div>
+		<br/><br/>
 
 		
 <table class="table table-hover" style="width: 90%;">
   <thead>
     <tr style="background-color: #CC2865; color: white;">
-      <th>Placement</th>
       <th>Student</th>
       <th>Score</th>
 
@@ -162,15 +163,16 @@ mysqli_close($conn);
 <?php
 $conn = mysqli_connect('localhost','root','','educo');
 $username = $_SESSION['user'];
-$placement = "";
 // Check connection
 if (mysqli_connect_errno())
 {
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql = "SELECT Name, ROUND(AVG(E_Result)) FROM users U 
-		INNER JOIN result R ON U.U_ID = R.U_ID
+
+$sql = "SELECT ROUND(AVG(E_Result)),S_Name FROM result R 
+		INNER JOIN student_class S ON R.U_ID = S.S_ID 
+		AND S.C_ID = (SELECT C_ID FROM student_class WHERE S_Name = '$username')
 		ORDER BY E_Result DESC";
 
 $result = mysqli_query($conn, $sql);
@@ -178,8 +180,7 @@ $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result))
 {
   echo "<tr>";
-  echo "<td>" .$placement. "</td>";
-  echo "<td>" . $row['Name'] . "</td>";
+  echo "<td>" . $row['S_Name'] . "</td>";
   echo "<td>" . $row['ROUND(AVG(E_Result))'] . "</td>";
   echo "</tr>";
   }
