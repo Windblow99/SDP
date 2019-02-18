@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 16, 2019 at 04:17 PM
--- Server version: 5.7.23
--- PHP Version: 7.2.10
+-- Generation Time: Feb 18, 2019 at 04:51 PM
+-- Server version: 5.7.21
+-- PHP Version: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `class` (
   `T_ID` int(10) NOT NULL,
   `C_Name` varchar(25) NOT NULL,
   PRIMARY KEY (`C_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `class`
@@ -101,7 +101,7 @@ INSERT INTO `class` (`C_No`, `T_ID`, `C_Name`) VALUES
 (3, 7, 'Class B'),
 (4, 7, 'Class C'),
 (5, 7, 'Class D'),
-(6, 7, 'Class E');
+(9, 7, 'Class E');
 
 -- --------------------------------------------------------
 
@@ -246,13 +246,11 @@ CREATE TABLE IF NOT EXISTS `student_class` (
 --
 
 INSERT INTO `student_class` (`C_ID`, `S_ID`, `S_Name`) VALUES
-(6, 14, 'Peter Parker'),
 (2, 15, 'James Frank'),
 (2, 17, 'Amir Azman'),
-(3, 14, 'Peter Parker'),
 (2, 6, 'John'),
 (4, 19, 'Emily Amelia'),
-(5, 20, 'Hank Pym');
+(9, 14, 'Peter Parker');
 
 -- --------------------------------------------------------
 
