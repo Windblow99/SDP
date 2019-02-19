@@ -97,7 +97,9 @@ echo "<form class='justify-content-center needs-validation' novalidate method='p
 
   echo "<div class='container-flui form-group' style='width: 65%;'>";
  echo "<div class='row'>";
-   echo "<div class='col'>";
+ echo "<div class='col-4'>";
+ echo "</div>";
+   echo "<div class='col-4'>";
    /*<label class="form-check-label">
         <input type="radio" class="form-check-input">0ms
       </label>-->*/
@@ -107,7 +109,7 @@ echo "<form class='justify-content-center needs-validation' novalidate method='p
             
                 
   echo "</div>";
-   echo "<div class='col'>";
+   echo "<div class='col-4'>";
       /*<!--<label class="form-check-label">
         <input type="radio" class="form-check-input">1ms
       </label>-->*/
@@ -123,7 +125,9 @@ echo "<br/>";
 
 echo "<div class='container-flui form-group' style='width: 65%;'>";
   echo "<div class='row'>";
-    echo "<div class='col'>";
+   echo "<div class='col-4'>";
+ echo "</div>";
+    echo "<div class='col-4'>";
      /* <!--<label class="form-check-label">
         <input type="radio" class="form-check-input">0ms
       </label>-->*/
@@ -133,7 +137,7 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
             
                 
     echo "</div>";
-    echo "<div class='col'>";
+    echo "<div class='col-4'>";
       /*<!--<label class="form-check-label">
         <input type="radio" class="form-check-input">1ms
       </label>-->*/
@@ -149,12 +153,14 @@ echo "<div class='container-flui form-group' style='width: 65%;'>";
 
 <div class='container-fluid questionbuttons'>
   <div class='row'>
+    <div class='col-8'>
+    </div>
     <div class='col-1'>";
     if($qno == 1)
       {echo "<i class='fas fa-angle-left' style='font-size: 45px;'></i>";}
     else
     {
-      echo "<a href='backquestion.php?eno=".$eno."&tno=".$tno."&qno=".$qno."'><i class='fas fa-angle-left' style='font-size: 45px;''></i></a>";
+      echo "<a href='backquestion.php?eno=".$eno."&tno=".$tno."&qno=".$qno."'><i class='fas fa-angle-left' style='font-size: 45px;'></i></a>";
     }      
     echo "</div>
 
