@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Feb 18, 2019 at 04:51 PM
--- Server version: 5.7.21
--- PHP Version: 5.6.35
+-- Host: 127.0.0.1
+-- Generation Time: Feb 19, 2019 at 03:44 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,14 +28,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `certificate`
 --
 
-DROP TABLE IF EXISTS `certificate`;
-CREATE TABLE IF NOT EXISTS `certificate` (
-  `Cert_No` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `certificate` (
+  `Cert_No` int(10) NOT NULL,
   `Corp_ID` int(10) NOT NULL,
   `Cert_File` varchar(255) NOT NULL,
-  `Cert_Name` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Cert_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+  `Cert_Name` varchar(50) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `certificate`
@@ -54,13 +52,11 @@ INSERT INTO `certificate` (`Cert_No`, `Corp_ID`, `Cert_File`, `Cert_Name`) VALUE
 -- Table structure for table `chapter`
 --
 
-DROP TABLE IF EXISTS `chapter`;
-CREATE TABLE IF NOT EXISTS `chapter` (
-  `Chap_ID` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `chapter` (
+  `Chap_ID` int(10) NOT NULL,
   `Chap_Name` varchar(50) NOT NULL,
-  `Year_No` int(1) NOT NULL,
-  PRIMARY KEY (`Chap_ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+  `Year_No` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chapter`
@@ -84,13 +80,11 @@ INSERT INTO `chapter` (`Chap_ID`, `Chap_Name`, `Year_No`) VALUES
 -- Table structure for table `class`
 --
 
-DROP TABLE IF EXISTS `class`;
-CREATE TABLE IF NOT EXISTS `class` (
-  `C_No` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `class` (
+  `C_No` int(10) NOT NULL,
   `T_ID` int(10) NOT NULL,
-  `C_Name` varchar(25) NOT NULL,
-  PRIMARY KEY (`C_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+  `C_Name` varchar(25) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `class`
@@ -109,15 +103,13 @@ INSERT INTO `class` (`C_No`, `T_ID`, `C_Name`) VALUES
 -- Table structure for table `examq_request`
 --
 
-DROP TABLE IF EXISTS `examq_request`;
-CREATE TABLE IF NOT EXISTS `examq_request` (
-  `R_No` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `examq_request` (
+  `R_No` int(10) NOT NULL,
   `Q_No` int(11) NOT NULL,
   `Result` varchar(255) NOT NULL,
   `T_ID` int(10) NOT NULL,
   `Corp_No` int(10) NOT NULL,
-  `M_ID` int(10) NOT NULL,
-  PRIMARY KEY (`R_No`)
+  `M_ID` int(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -126,9 +118,8 @@ CREATE TABLE IF NOT EXISTS `examq_request` (
 -- Table structure for table `question`
 --
 
-DROP TABLE IF EXISTS `question`;
-CREATE TABLE IF NOT EXISTS `question` (
-  `Q_No` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `question` (
+  `Q_No` int(11) NOT NULL,
   `U_ID` int(11) NOT NULL,
   `Chapter` varchar(255) NOT NULL,
   `Format` varchar(255) NOT NULL,
@@ -142,9 +133,8 @@ CREATE TABLE IF NOT EXISTS `question` (
   `C` varchar(255) NOT NULL,
   `D` varchar(255) NOT NULL,
   `TrueAnswer` varchar(255) NOT NULL,
-  `Approval` int(11) DEFAULT NULL,
-  PRIMARY KEY (`Q_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
+  `Approval` int(11) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `question`
@@ -204,18 +194,16 @@ INSERT INTO `question` (`Q_No`, `U_ID`, `Chapter`, `Format`, `Difficulty`, `Mark
 -- Table structure for table `result`
 --
 
-DROP TABLE IF EXISTS `result`;
-CREATE TABLE IF NOT EXISTS `result` (
-  `E_No` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `result` (
+  `E_No` int(11) NOT NULL,
   `U_ID` int(11) DEFAULT NULL,
   `Score` int(11) DEFAULT NULL,
   `E_Result` int(11) DEFAULT NULL,
   `Chapter` varchar(50) DEFAULT NULL,
   `StartTime` timestamp NULL DEFAULT NULL,
   `EndTime` timestamp NULL DEFAULT NULL,
-  `Difficulty` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`E_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+  `Difficulty` varchar(50) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `result`
@@ -233,12 +221,10 @@ INSERT INTO `result` (`E_No`, `U_ID`, `Score`, `E_Result`, `Chapter`, `StartTime
 -- Table structure for table `student_class`
 --
 
-DROP TABLE IF EXISTS `student_class`;
-CREATE TABLE IF NOT EXISTS `student_class` (
+CREATE TABLE `student_class` (
   `C_ID` int(10) NOT NULL,
   `S_ID` int(10) NOT NULL,
-  `S_Name` varchar(50) NOT NULL,
-  PRIMARY KEY (`C_ID`,`S_ID`)
+  `S_Name` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -258,15 +244,13 @@ INSERT INTO `student_class` (`C_ID`, `S_ID`, `S_Name`) VALUES
 -- Table structure for table `student_question`
 --
 
-DROP TABLE IF EXISTS `student_question`;
-CREATE TABLE IF NOT EXISTS `student_question` (
-  `S_Q_No` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `student_question` (
+  `S_Q_No` int(11) NOT NULL,
   `E_No` int(11) DEFAULT NULL,
   `Q_No` int(11) DEFAULT NULL,
   `S_QAnswer` varchar(255) DEFAULT NULL,
-  `TrueAnswer` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`S_Q_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=latin1;
+  `TrueAnswer` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student_question`
@@ -420,9 +404,8 @@ INSERT INTO `student_question` (`S_Q_No`, `E_No`, `Q_No`, `S_QAnswer`, `TrueAnsw
 -- Table structure for table `test`
 --
 
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE IF NOT EXISTS `test` (
-  `T_No` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `test` (
+  `T_No` int(11) NOT NULL,
   `Difficulty` varchar(255) DEFAULT NULL,
   `Chapter` varchar(255) DEFAULT NULL,
   `Q_No` int(11) DEFAULT NULL,
@@ -432,9 +415,8 @@ CREATE TABLE IF NOT EXISTS `test` (
   `C` varchar(255) DEFAULT NULL,
   `D` varchar(255) DEFAULT NULL,
   `TrueAnswer` varchar(255) DEFAULT NULL,
-  `UserAnswer` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`T_No`)
-) ENGINE=MyISAM AUTO_INCREMENT=521 DEFAULT CHARSET=latin1;
+  `UserAnswer` varchar(255) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -442,33 +424,156 @@ CREATE TABLE IF NOT EXISTS `test` (
 -- Table structure for table `users`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `U_ID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `users` (
+  `U_ID` int(11) NOT NULL,
   `Name` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
   `Contact_No` int(11) NOT NULL,
   `Role` varchar(255) NOT NULL,
-  PRIMARY KEY (`U_ID`),
-  UNIQUE KEY `Email` (`Email`)
-) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+  `Status` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`U_ID`, `Name`, `Email`, `Password`, `Contact_No`, `Role`) VALUES
-(7, 'Anna Marie', 'abc123@hotmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'teacher'),
-(6, 'John', 'john123@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student'),
-(13, 'Caity Lotz', 'def@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'corporate'),
-(14, 'Peter Parker', 'spiderman@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student'),
-(15, 'James Frank', 'james@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student'),
-(16, 'Dr. Steven Lim', 'jkl1@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'teacher'),
-(17, 'Amir Azman', 'amir@gmail.com', '202cb962ac59075b964b07152d234b70', 12345678, 'student'),
-(18, 'Amy Chamberlain', 'amy@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student'),
-(19, 'Emily Amelia', 'emily@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student'),
-(20, 'Hank Pym', 'hank@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student');
+INSERT INTO `users` (`U_ID`, `Name`, `Email`, `Password`, `Contact_No`, `Role`, `Status`) VALUES
+(7, 'Anna Marie', 'abc123@hotmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'teacher', 0),
+(6, 'John', 'john123@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student', 1),
+(13, 'Caity Lotz', 'dfe@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'corporate', 0),
+(14, 'Peter Parker', 'spiderman@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student', 0),
+(15, 'James Frank', 'james@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student', 0),
+(16, 'Dr. Steven Lim', 'jkl1@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'teacher', 0),
+(17, 'Amir Azman', 'amir@gmail.com', '202cb962ac59075b964b07152d234b70', 12345678, 'student', 0),
+(18, 'Amy Chamberlain', 'amy@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student', 0),
+(19, 'Emily Amelia', 'emily@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student', 0),
+(20, 'Hank Pym', 'hank@gmail.com', '202cb962ac59075b964b07152d234b70', 123456789, 'student', 0),
+(21, 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 123, 'admin', 0),
+(22, 'moderator', 'moderator', '0408f3c997f309c03b08bf3a4bc7b730', 123456, 'moderator', 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `certificate`
+--
+ALTER TABLE `certificate`
+  ADD PRIMARY KEY (`Cert_No`);
+
+--
+-- Indexes for table `chapter`
+--
+ALTER TABLE `chapter`
+  ADD PRIMARY KEY (`Chap_ID`);
+
+--
+-- Indexes for table `class`
+--
+ALTER TABLE `class`
+  ADD PRIMARY KEY (`C_No`);
+
+--
+-- Indexes for table `examq_request`
+--
+ALTER TABLE `examq_request`
+  ADD PRIMARY KEY (`R_No`);
+
+--
+-- Indexes for table `question`
+--
+ALTER TABLE `question`
+  ADD PRIMARY KEY (`Q_No`);
+
+--
+-- Indexes for table `result`
+--
+ALTER TABLE `result`
+  ADD PRIMARY KEY (`E_No`);
+
+--
+-- Indexes for table `student_class`
+--
+ALTER TABLE `student_class`
+  ADD PRIMARY KEY (`C_ID`,`S_ID`);
+
+--
+-- Indexes for table `student_question`
+--
+ALTER TABLE `student_question`
+  ADD PRIMARY KEY (`S_Q_No`);
+
+--
+-- Indexes for table `test`
+--
+ALTER TABLE `test`
+  ADD PRIMARY KEY (`T_No`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`U_ID`),
+  ADD UNIQUE KEY `Email` (`Email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `certificate`
+--
+ALTER TABLE `certificate`
+  MODIFY `Cert_No` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `chapter`
+--
+ALTER TABLE `chapter`
+  MODIFY `Chap_ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `class`
+--
+ALTER TABLE `class`
+  MODIFY `C_No` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `examq_request`
+--
+ALTER TABLE `examq_request`
+  MODIFY `R_No` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `question`
+--
+ALTER TABLE `question`
+  MODIFY `Q_No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+
+--
+-- AUTO_INCREMENT for table `result`
+--
+ALTER TABLE `result`
+  MODIFY `E_No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `student_question`
+--
+ALTER TABLE `student_question`
+  MODIFY `S_Q_No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+
+--
+-- AUTO_INCREMENT for table `test`
+--
+ALTER TABLE `test`
+  MODIFY `T_No` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=521;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `U_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
