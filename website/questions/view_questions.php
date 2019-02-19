@@ -70,7 +70,7 @@ while($row = mysqli_fetch_array($result))
   echo "<td>" . $row['Difficulty'] . "</td>";
   echo "<td>";
   echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-        background-color:#333333;' onclick=\"window.location.href='edit_question_teacher.php?id=".$row['Q_No']."'\">Modify</button></td>";
+        background-color:#333333;' onclick=\"window.location.href='edit_question.php?id=".$row['Q_No']."'\">Modify</button></td>";
   echo "<td>";
   echo "<td>";
   echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 

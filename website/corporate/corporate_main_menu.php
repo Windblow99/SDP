@@ -129,7 +129,7 @@ mysqli_close($conn);
       <button onclick="window.location.href='add_question_corporate.php'" class="btn btn-secondary">Add Questions</button>
     </div>
     <div class="col-3">
-      <button onclick="window.location.href='corporate_submitted_questions.php'" class="btn btn-secondary">View Details</button>
+      <button onclick="window.location.href='/website/questions/view_questions.php'" class="btn btn-secondary">View Details</button>
     </div>
   </div>
 </center>

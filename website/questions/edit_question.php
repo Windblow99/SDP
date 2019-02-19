@@ -42,7 +42,7 @@
 ?>
 
 
-<form class="justify-content-center" method="post" action="add_question_teacher_function.php" enctype="multipart/form-data" style="padding-top: 20px;">
+<form class="justify-content-center" method="post" action="edit_question_function.php?id='$row['Q_No']'" enctype="multipart/form-data" style="padding-top: 20px;">
   <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">
@@ -194,6 +194,15 @@
       </div>
     </div>
   </div>
+
+  <div class="container-fluid questionbuttons">
+    <div class="col">
+      <input type="submit" value="Edit Question" class="btn btn-secondary">
+      <!--<button type="button" class="btn btn-secondary">Add Question</button>-->
+    </div>
+  </div>
+  
+</form>  
 
 
 

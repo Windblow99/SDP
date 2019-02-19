@@ -113,7 +113,7 @@ mysqli_close($conn);
 
   </div>
   <div class="col-2">
-    <button type="submit" onclick="window.location.href='view_questions.php'" class="btn btn-secondary">View Details</button> 
+    <button type="submit" onclick="window.location.href='/website/questions/view_questions.php'" class="btn btn-secondary">View Details</button> 
   </div>
 
 <!-- Modal here -->
