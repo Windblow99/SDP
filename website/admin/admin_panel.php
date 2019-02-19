@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -36,78 +38,53 @@
 
 <hr/><br/>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 offset-2">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Enter a name..." aria-label="" aria-describedby="basic-addon1">
-      <div class="input-group-append">
-        <button class="btn btn-default" style="background-color: #9A9A9A; color: white;" type="button">Search</button>
-      </div>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle"
-          type="button" id="dropdownMenu1" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Sort by
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <a class="dropdown-item" href="#!">Role</a>
-          <a class="dropdown-item" href="#!">Date registered</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<br/><br/>
-
 <center>
 <table class="table table-hover" style="width: 70%;">
   <thead>
     <tr style="background-color: #CC2865; color: white;">
+      <th>ID</th>
       <th>Name</th>
-      <th>Role</th>
-      <th>Date Registered</th>
+      <th>Email</th>
+      <th>Contact</th>
+      <th>Status</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <tr>
 
-      <td>Name 1</td>
-      <td>Student</td>
-      <td>1/12/2018</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Ban</button></td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
+  <?php
+    $conn = mysqli_connect('localhost','root','','educo');
+    $username = $_SESSION['user'];
+    if (mysqli_connect_errno())
+      {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+      }
+    
+    $sql = "Select * from users WHERE Role = 'student'";
+    $result = mysqli_query($conn, $sql);
 
-      <td>Name 2</td>
-      <td>Teacher</td>
-      <td>1/12/2018</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Ban</button></td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
-
-      <td>Name 3</td>
-      <td>Corporate</td>
-      <td>1/12/2018</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Ban</button></td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
-    <tr>
-
-      <td>Name 4</td>
-      <td>Teacher</td>
-      <td>1/12/2018</td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Ban</button></td>
-      <td><button style="width: 175px; height: 35px; background-color: #333333;" type="submit" class="btn btn-primary">Remove</button></td>
-    </tr>
+    if(mysqli_num_rows($result)<=0)
+    {
+      die("<script>alert('No result from table!');</script>");
+    }
+    
+    //display the data from $result one by one
+    while($row = mysqli_fetch_assoc($result))
+    {
+      echo "<tr>"; //build next row for line of result
+      echo "<td>".$row['U_ID']."</td>";
+      echo "<td>".$row['Name']."</td>";
+      echo "<td>".$row['Email']."</td>";
+      echo "<td>".$row['Contact_No']."</td>";
+      echo "<td>".$row['Status']."</td>";
+      echo "<td><a href='banusers.php?id=".$row['U_ID']."'>";
+      echo "<button class='btn btn-secondary'>Ban</button></a></td>";
+      echo "<td><a href='unbanusers.php?id=".$row['U_ID']."'>";
+      echo "<button class='btn btn-secondary'>Remove Ban</button></a></td>";
+      echo "</tr>";
+    }
+  ?>
   </tbody>
 </table>
 </center>

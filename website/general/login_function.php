@@ -8,12 +8,20 @@
 	$sql="SELECT * from users where Email = '$email' and Password='".md5($password)."'";
 	
 	$result=mysqli_query($conn, $sql);
+
+	$array=mysqli_fetch_assoc($result);
 	
 	//echo $sql
 	if(mysqli_num_rows($result)<=0)
 	{
 		echo "<script>alert('Unable to Login!');</script>";
 		die ("<script>window.history.go(-1);</script>");
+	}
+
+	if($array['Status'] == "1")
+	{
+		echo "<script>alert('You have been banned! Please contact the site admin for further assistance if you wish to resolve this issue.')</script>";
+		die ("<script>window.location.href='index.php';</script>");
 	}
 	
 	if($row = mysqli_fetch_array($result))
