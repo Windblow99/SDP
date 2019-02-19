@@ -38,11 +38,11 @@
 
   $sql = "SELECT * from question WHERE Q_No = '$id';";
   $result = mysqli_query($conn,$sql);
-  $row = mysqli_fetch_array($result); 
-?>
+  $row = mysqli_fetch_array($result);
+  $qno = $row['Q_No'];
 
 
-<form class="justify-content-center" method="post" action="edit_question_function.php?id='$row['Q_No']'" enctype="multipart/form-data" style="padding-top: 20px;">
+echo "<form class='justify-content-center' method='post' action='edit_question_function.php?id=".$qno."' enctype='multipart/form-data' style='padding-top: 20px;'>";?>
   <div class="container-fluid form-group" style="width: 80%;">
     <div class="row">
       <div class="col-2">

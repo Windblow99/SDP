@@ -53,8 +53,9 @@
 	$answer3 = $_POST['answer3'];
 	$answer4 = $_POST['answer4'];
 	$trueanswer = $_POST['trueanswer'];
+	$status = "Pending";
 
-	$sql = "INSERT INTO question (Chapter, U_ID, Format, Difficulty, Mark, QuestionContent, A, B, C, D, TrueAnswer) VALUES ('$chapter', '$uid', '$format', '$difficulty', 5, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer');";
+	$sql = "INSERT INTO question (Chapter, U_ID, Format, Difficulty, Mark, QuestionContent, A, B, C, D, TrueAnswer, Approval) VALUES ('$chapter', '$uid', '$format', '$difficulty', 5, '$question', '$answer1', '$answer2', '$answer3', '$answer4', '$trueanswer', '$status');";
 
 	//$sql = "INSERT INTO question (Image, Imagepath) VALUES ('$getimageobj', '$destination');";
 	
