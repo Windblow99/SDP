@@ -78,7 +78,7 @@
 
 					$sql = "SELECT ROUND(AVG(E_Result)) AS E_Result FROM result
 							WHERE U_ID = '$id'
-							AND Difficulty = 'Exam' OR Difficulty = 'Lab'";
+							AND Difficulty = 'Exam' AND Difficulty = 'Lab'";
 
 					$result = mysqli_query($conn, $sql);
 
