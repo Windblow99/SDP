@@ -1,7 +1,7 @@
 <?php
 	
 	$id = $_GET['id'];
-	$role = $_SESSION['role'];
+	//$role = $_SESSION['role'];
 	$conn = mysqli_connect('localhost','root','','educo');
 
 	$sql = "DELETE from question WHERE $id = Q_No";
