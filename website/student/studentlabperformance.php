@@ -174,7 +174,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 1' AND (SELECT U_ID FROM users WHERE Name = '$username')	
+		WHERE Chapter = 'Chapter 1' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')	
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -202,7 +202,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 2' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 2' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -231,7 +231,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 3' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 3' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -260,7 +260,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 4' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 4' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -289,7 +289,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 5' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 5' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -318,7 +318,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 6' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 6' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -347,7 +347,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 7' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 7' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -376,7 +376,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 8' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 8' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -405,7 +405,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 9' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 9' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
@@ -434,7 +434,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 $sql = "SELECT Chapter FROM result
-		WHERE Chapter = 'Chapter 10' AND (SELECT U_ID FROM users WHERE Name = '$username')
+		WHERE Chapter = 'Chapter 10' AND U_ID = (SELECT U_ID FROM users WHERE Name = '$username')
 		AND Difficulty = 'Lab'";
 
 $result = mysqli_query($conn, $sql);
