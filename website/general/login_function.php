@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$conn = mysqli_connect('localhost','root','','educo');
+	$conn = mysqli_connect('localhost','root','','educo1');
 	
 	$email = mysqli_real_escape_string($conn,$_POST['email']);
 	$password = mysqli_real_escape_string($conn,$_POST['password']);
@@ -9,7 +9,7 @@
 	
 	$result=mysqli_query($conn, $sql);
 
-	$array=mysqli_fetch_assoc($result);
+	$array=mysqli_fetch_array($result);
 	
 	//echo $sql
 	if(mysqli_num_rows($result)<=0)
@@ -18,7 +18,7 @@
 		die ("<script>window.history.go(-1);</script>");
 	}
 
-	if($array['Status'] == "1")
+	if($array['Status'] == 1)
 	{
 		echo "<script>alert('You have been banned! Please contact the site admin for further assistance if you wish to resolve this issue.')</script>";
 		die ("<script>window.location.href='index.php';</script>");
@@ -34,28 +34,28 @@
 	else if($array['Role'] == "corporate")
 	{
 		$_SESSION['user_id'] =  $array['U_ID'];
-		$_SESSION['role'] = 'admin';
+		$_SESSION['role'] = 'corporate';
 		$_SESSION['user'] = $array['Name'];
 		echo "<script>window.location.href='/website/corporate/corporate_main_menu.php';</script>";
 	}
 	else if($array['Role'] == "moderator")
 	{
 		$_SESSION['user_id'] =  $array['U_ID'];
-		$_SESSION['role'] = 'admin';
+		$_SESSION['role'] = 'moderator';
 		$_SESSION['user'] = $array['Name'];
 		echo "<script>window.location.href='/website/moderator/moderator_panel.php';</script>";
 	}
 	else if($array['Role'] == "teacher")
 	{
 		$_SESSION['user_id'] =  $array['U_ID'];
-		$_SESSION['role'] = 'admin';
+		$_SESSION['role'] = 'teacher';
 		$_SESSION['user'] = $array['Name'];
 		echo "<script>window.location.href='/website/teacher/teacher_menu.php';</script>";
 	}
 	else if($array['Role'] == "student")
 	{
 		$_SESSION['user_id'] =  $array['U_ID'];
-		$_SESSION['role'] = 'admin';
+		$_SESSION['role'] = 'student';
 		$_SESSION['user'] = $array['Name'];
 		echo "<script>window.location.href='/website/student/studentmainpage.php';</script>";
 	}

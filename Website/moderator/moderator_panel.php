@@ -7,7 +7,7 @@
 
 <?php include($_SERVER["DOCUMENT_ROOT"].'/template/header.php'); ?>
 
-<title>Admin Panel</title>
+<title>Moderator Panel</title>
 
 <style>
   body{

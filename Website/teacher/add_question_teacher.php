@@ -39,7 +39,7 @@
         <h4>Question</h4>
       </div>
       <div class="col">
-        <textarea class="form-control" id="exampleFormControlTextarea1" name="question" rows="3" placeholder="Enter your question here..."></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="question" rows="3" placeholder="Enter your question here..." required="required"></textarea>
       </div>
     </div>
   </div>
@@ -50,8 +50,8 @@
         <h4>Chapter</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm" name="chapter">
-        <option disabled selected>Select a chapter</option>
+        <select class="form-control form-control-sm" name="chapter" required="required">
+        <!--<option disabled selected>Select a chapter</option>-->
           <option>Chapter 1</option>
           <option>Chapter 2</option>  
           <option>Chapter 3</option>
@@ -91,8 +91,8 @@
         <h4>Difficulty</h4>
       </div>
       <div class="col-4">
-        <select class="form-control form-control-sm" name="difficulty">
-          <option disabled selected>Select difficulty</option>
+        <select class="form-control form-control-sm" name="difficulty" required="required">
+          <!--<option disabled selected>Select difficulty</option>-->
           <option>Exam</option>
           <option>Lab</option>
         </select>
@@ -128,7 +128,7 @@
         <h4 style="text-align: right;">A</h4>
       </div>
       <div class="col-6">
-        <input type="text" class="form-control form-control-sm" name="answer1" id="colFormLabelSm" placeholder="Enter first selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer1" id="colFormLabelSm" placeholder="Enter first selection here..." required="required">
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@
         <h4 style="text-align: right;">B</h4>
       </div>
       <div class="col-6">
-        <input type="text" class="form-control form-control-sm" name="answer2" id="colFormLabelSm" placeholder="Enter second selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer2" id="colFormLabelSm" placeholder="Enter second selection here..." required="required">
       </div>
     </div>
   </div>
@@ -150,7 +150,7 @@
         <h4 style="text-align: right;">C</h4>
       </div>
       <div class="col-6">
-        <input type="text" class="form-control form-control-sm" name="answer3" id="colFormLabelSm" placeholder="Enter third selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer3" id="colFormLabelSm" placeholder="Enter third selection here..." required="required">
       </div>
     </div>
   </div>
@@ -161,7 +161,7 @@
         <h4 style="text-align: right;">D</h4>
       </div>
       <div class="col-6">
-        <input type="text" class="form-control form-control-sm" name="answer4" id="colFormLabelSm" placeholder="Enter fourth selection here...">
+        <input type="text" class="form-control form-control-sm" name="answer4" id="colFormLabelSm" placeholder="Enter fourth selection here..." required="required">
       </div>
     </div>
   </div>
@@ -172,7 +172,7 @@
         <h4>True Answer</h4>
       </div>
       <div class="col-6">
-      <select class="form-control form-control-sm" name="trueanswer">
+      <select class="form-control form-control-sm" name="trueanswer" required="required">
         <option disabled selected>Select True Answer</option>
           <option>A</option>
           <option>B</option>  

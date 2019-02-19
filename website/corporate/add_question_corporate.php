@@ -51,7 +51,7 @@
       </div>
       <div class="col-4">
         <select class="form-control form-control-sm" name="chapter" required="required">
-        <option disabled selected>Select a chapter</option>
+        <!--<option disabled selected>Select a chapter</option>-->
           <option>Physics 1</option>
           <option>Physics 2</option>  
           <option>Physics 3</option>

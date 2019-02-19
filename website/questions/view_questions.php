@@ -64,7 +64,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
 //$sql = "SELECT * FROM question q INNER JOIN users u ON q.U_D = u.U_ID WHERE Name = '$username';";
-$select = "SELECT * FROM question q INNER JOIN users u ON q.U_ID = u.U_ID WHERE Name = '$username' order by Q_No;";
+$select = "SELECT * FROM question q INNER JOIN users u ON q.U_ID = u.U_ID WHERE Name = '$username' order by Q_No DESC;";
 $result = mysqli_query($conn,$select)
 or die("<script>alert('Maybe select wrong table / columns');</script>");
       
@@ -85,7 +85,7 @@ while($row = mysqli_fetch_array($result))
   echo "<td>";
   echo "<td>";
   echo "<button class= 'btn btn-primary' style='width: 165px; height: 40px; color: white; 
-        background-color:#333333;'>Remove</button></td>";
+        background-color:#333333;' onclick=\"window.location.href='deletequestion.php?id=".$row['Q_No']."'\">Remove</button></td>";
   echo "<td>";
   echo "</tr>";
   }
