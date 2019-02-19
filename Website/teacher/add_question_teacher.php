@@ -91,13 +91,12 @@
         <h4>Difficulty</h4>
       </div>
       <div class="col-4">
-        <!--<select class="form-control form-control-sm" name="difficulty">
+        <select class="form-control form-control-sm" name="difficulty">
           <option disabled selected>Select difficulty</option>
-          <option>Beginner</option>
-          <option>Intermediate</option>
-          <option>Expert</option>
-        </select>-->
-        <input type="text" name="difficulty" value="Exam" disabled="disabled" class="form-control form-control-sm">
+          <option>Exam</option>
+          <option>Lab</option>
+        </select>
+        <!--<input type="text" name="difficulty" value="Exam" disabled="disabled" class="form-control form-control-sm">-->
       </div>
     </div>
   </div>

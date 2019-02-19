@@ -52,8 +52,13 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-$sql = "SELECT Q_No,Approval,Chapter,Format,Difficulty FROM question WHERE Difficulty = 'Exam'";
-$result = mysqli_query($conn, $sql);
+//$sql = "SELECT * FROM question q INNER JOIN users u ON q.U_D = u.U_ID WHERE Name = '$username';";
+$select = "SELECT * FROM question q INNER JOIN users u ON q.U_ID = u.U_ID WHERE Name = '$username' order by Q_No;";
+$result = mysqli_query($conn,$select)
+or die("<script>alert('Maybe select wrong table / columns');</script>");
+      
+$count = (mysqli_num_rows($result)>=1? true:
+die("<script>alert('No data available in the table!');</script>"));
 
 while($row = mysqli_fetch_array($result))
 {

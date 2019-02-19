@@ -46,7 +46,7 @@
 	
 	$chapter = $_POST['chapter'];
 	$format = "MCQ";
-	$difficulty = "Exam";
+	$difficulty = $_POST['difficulty'];
 	$question = $_POST['question'];
 	$answer1 = $_POST['answer1'];
 	$answer2 = $_POST['answer2'];
