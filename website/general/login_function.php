@@ -7,9 +7,9 @@
 	
 	$sql="SELECT * from users where Email = '$email' and Password='".md5($password)."'";
 	
-	$array=mysqli_fetch_assoc($result);
-	
 	$result=mysqli_query($conn, $sql);
+
+	$array=mysqli_fetch_assoc($result);
 	
 	//echo $sql
 	if(mysqli_num_rows($result)<=0)
@@ -23,31 +23,40 @@
 		echo "<script>alert('You have been banned! Please contact the site admin for further assistance if you wish to resolve this issue.')</script>";
 		die ("<script>window.location.href='index.php';</script>");
 	}
-	
-	if($row = mysqli_fetch_array($result))
+
+	if($array['Role'] == "admin")
 	{
-		$_SESSION['user'] = $row['Name'];
-		//echo "<script>alert('Welcome back," .$_SESSION['user']." ');</script>";
-		if($row['Role'] == 'student'){
-		echo "<script>window.location.href='/website/student/studentmainpage.php';</script>";
-			//echo "a";
-		}
-
-		elseif($row['Role'] == 'teacher'){
-		echo "<script>window.location.href='/website/teacher/teacher_menu.php';</script>";
-			//echo "b";
-		}
-
-		elseif($row['Role'] == 'corporate'){
-		echo "<script>window.location.href='/website/corporate/corporate_main_menu.php';</script>";
-			//echo "c";
-		}
-		elseif($row['Role'] == 'admin'){
+		$_SESSION['user_id'] =  $array['U_ID'];
+		$_SESSION['role'] = 'admin';
+		$_SESSION['user'] = $array['Name'];
 		echo "<script>window.location.href='/website/admin/admin_panel.php';</script>";
-			//echo "c";
-		}elseif($row['Role'] == 'moderator'){
+	}
+	else if($array['Role'] == "corporate")
+	{
+		$_SESSION['user_id'] =  $array['U_ID'];
+		$_SESSION['role'] = 'admin';
+		$_SESSION['user'] = $array['Name'];
+		echo "<script>window.location.href='/website/corporate/corporate_main_menu.php';</script>";
+	}
+	else if($array['Role'] == "moderator")
+	{
+		$_SESSION['user_id'] =  $array['U_ID'];
+		$_SESSION['role'] = 'admin';
+		$_SESSION['user'] = $array['Name'];
 		echo "<script>window.location.href='/website/moderator/moderator_panel.php';</script>";
-			//echo "c";
-		}
+	}
+	else if($array['Role'] == "teacher")
+	{
+		$_SESSION['user_id'] =  $array['U_ID'];
+		$_SESSION['role'] = 'admin';
+		$_SESSION['user'] = $array['Name'];
+		echo "<script>window.location.href='/website/teacher/teacher_menu.php';</script>";
+	}
+	else if($array['Role'] == "student")
+	{
+		$_SESSION['user_id'] =  $array['U_ID'];
+		$_SESSION['role'] = 'admin';
+		$_SESSION['user'] = $array['Name'];
+		echo "<script>window.location.href='/website/student/studentmainpage.php';</script>";
 	}
 ?>

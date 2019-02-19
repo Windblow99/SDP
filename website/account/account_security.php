@@ -86,7 +86,7 @@
 
 <br/><br/>
 
-<form style="width: 80%;" method="post" action="emailupdate.php" method="post" action="passwordupdate.php">
+<form style="width: 80%;" method="post" action="emailupdate.php">
   <div class="form-group row">
     <label for="old_email" class="col-sm-2 col-form-label">Old Email: </label>
     <div class="col-sm-10">
