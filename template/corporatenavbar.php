@@ -18,9 +18,6 @@
         <a class="nav-link" href="/website/corporate/corporate_main_menu.php">Corporate</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/website/general/aboutus.php">About</a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="/website/corporate/corporate_submitted_questions.php">Questions</a>
       </li>
     </ul>

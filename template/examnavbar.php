@@ -13,25 +13,6 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-auto">
-
-      <!--<li class="nav-item">
-        <a class="nav-link" href="studentmainpage.php">Student</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="aboutus.php">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="studentexamperformance.php">Exams</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="studentlabperformance.php">Lab Sessions</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="studentcertificate.php">Certificates</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="studentclassdetails.php">Class Details</a>
-      </li>-->
     </ul>
 
     <ul class="navbar-nav">
@@ -39,10 +20,6 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Welcome Back, <?php echo $_SESSION['user']; ?>.
         </a>
-       <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Account Settings</a>
-          <a class="dropdown-item" href="#">Account Details</a>
-          <a class="dropdown-item" href="/website/account/logout.php">Log Out</a>-->
         </div>
       </li>
     </ul>

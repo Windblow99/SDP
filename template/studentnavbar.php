@@ -17,9 +17,6 @@
       <li class="nav-item">
         <a class="nav-link" href="studentmainpage.php">Student</a>
       </li>
-      <!--<li class="nav-item">
-        <a class="nav-link" href="aboutus.php">About</a>
-      </li>-->
       <li class="nav-item">
         <a class="nav-link" href="studentexamperformance.php">Exams</a>
       </li>

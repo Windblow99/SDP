@@ -34,5 +34,12 @@
 		echo "<script>window.location.href='/website/corporate/corporate_main_menu.php';</script>";
 			//echo "c";
 		}
+		elseif($row['Role'] == 'admin'){
+		echo "<script>window.location.href='/website/admin/admin_panel.php';</script>";
+			//echo "c";
+		}elseif($row['Role'] == 'moderator'){
+		echo "<script>window.location.href='/website/moderator/moderator_panel.php';</script>";
+			//echo "c";
+		}
 	}
 ?>

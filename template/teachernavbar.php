@@ -17,9 +17,6 @@
       <li class="nav-item">
         <a class="nav-link" href="teacher_menu.php">Teacher</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/website/general/aboutus.php">About</a>
-      </li>
     </ul>
 
     <ul class="navbar-nav">

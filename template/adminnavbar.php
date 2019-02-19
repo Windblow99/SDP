@@ -9,9 +9,6 @@
       <li class="nav-item">
         <a class="nav-link" href="/website/admin/admin_panel.php">Admin</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/website/general/aboutus.php">About</a>
-      </li>
     </ul>
 
     <ul class="navbar-nav">
