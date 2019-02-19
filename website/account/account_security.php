@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +19,7 @@
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/homenavbar.php'); ?>
+<?php include($_SERVER["DOCUMENT_ROOT"].'/template/accountnavbar.php'); ?>
 
 <br/>
 
@@ -26,11 +28,6 @@
     <div class="col-lg-4">
       <h4 class="float-left" style="font-size: 2em; color: #953031; font-weight: bold;">
       ACCOUNT SETTINGS
-      </h4>
-    </div>
-    <div class="col-lg-8">
-      <h4 class="float-left" style="font-size: 1em; color: #CC2865; padding-top: 18px;">
-      ACCOUNT NAME | ACCOUNT TYPE
       </h4>
     </div>
   </div>
@@ -50,23 +47,23 @@
 
 <center>
 
-<form style="width: 80%;">
+<form style="width: 80%;" method="post" action="passwordupdate.php">
   <div class="form-group row">
     <label for="old_pass" class="col-sm-2 col-form-label">Old Password: </label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="old_pass" placeholder="Old Password">
+      <input type="password" class="form-control" name="old_pass" id="old_pass" placeholder="Old Password">
     </div>
   </div>
   <div class="form-group row">
     <label for="new_pass" class="col-sm-2 col-form-label">New Password: </label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="new_pass" placeholder="New Password">
+      <input type="password" class="form-control" name="new_pass" id="new_pass" placeholder="New Password">
     </div>
   </div>
   <div class="form-group row">
     <label for="confirm_pass" class="col-sm-2 col-form-label">Confirm Password: </label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="confirm_pass" placeholder="Confirm New Password">
+      <input type="password" class="form-control" name="confirm_pass" id="confirm_pass" placeholder="Confirm New Password">
     </div>
   </div>
   <div class="form-group row" style="float: right;">
@@ -89,23 +86,23 @@
 
 <br/><br/>
 
-<form style="width: 80%;">
+<form style="width: 80%;" method="post" action="emailupdate.php" method="post" action="passwordupdate.php">
   <div class="form-group row">
     <label for="old_email" class="col-sm-2 col-form-label">Old Email: </label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="old_email" placeholder="Old Email">
+      <input type="email" class="form-control" name="old_email" id="old_email" placeholder="Old Email">
     </div>
   </div>
   <div class="form-group row">
     <label for="new_email" class="col-sm-2 col-form-label">New Email: </label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="new_email" placeholder="New Email">
+      <input type="email" class="form-control" name="new_email" id="new_email" placeholder="New Email">
     </div>
   </div>
   <div class="form-group row">
     <label for="confirm_email" class="col-sm-2 col-form-label">Confirm Email: </label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="confirm_email" placeholder="Confirm New Email">
+      <input type="email" class="form-control" name="confirm_email" id="confirm_email" placeholder="Confirm New Email">
     </div>
   </div>
   <div class="form-group row" style="float: right;">

@@ -37,8 +37,7 @@
           Welcome Back, <?php echo $_SESSION['user']; ?>.
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Account Settings</a>
-          <a class="dropdown-item" href="#">Account Details</a>
+          <a class="dropdown-item" href="/website/account/account_security.php">Account Settings</a>
           <a class="dropdown-item" href="/website/account/logout.php">Log Out</a>
         </div>
       </li>

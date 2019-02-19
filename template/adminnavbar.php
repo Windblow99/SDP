@@ -14,7 +14,7 @@
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Welcome Back, Eren.
+          Welcome Back, <?php echo $_SESSION['user']; ?>.
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="/website/account/account_security.php">Account Settings</a>

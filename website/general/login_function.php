@@ -7,9 +7,9 @@
 	
 	$sql="SELECT * from users where Email = '$email' and Password='".md5($password)."'";
 	
-	$result=mysqli_query($conn, $sql);
-
 	$array=mysqli_fetch_assoc($result);
+	
+	$result=mysqli_query($conn, $sql);
 	
 	//echo $sql
 	if(mysqli_num_rows($result)<=0)
