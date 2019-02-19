@@ -70,7 +70,7 @@
 
 
 						
-				<tr><th><br/>E-mail: </th><td><br/><input id="email" type="text" placeholder=" E-mail" name="email" required="required" style="margin-left: 15px; padding: 12px 5px; width: 300px;"></td></tr>
+				<tr><th><br/>E-mail: </th><td><br/><input id="email" type="email" placeholder=" E-mail" name="email" required="required" style="margin-left: 15px; padding: 12px 5px; width: 300px;"></td></tr>
 				<tr><th><br/>Password: </th><td><br/><input type="password" placeholder=" Password" id="password" name="password" maxlength="15" required="required" style="margin-left: 15px; padding: 12px 5px; width: 300px;"> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword()"/> View Password<br/><span id="checkpassword"></span></td></tr>
 				<!--<tr><th><br/>Confirm Password: </th><td><br/><input type="password" placeholder=" Confirm Password" id="password2" name="password2" required="required" style="margin-left: 20px;padding-top: 5px; padding-bottom: 5px; width: 300px;"> &nbsp; &nbsp; <input type="checkbox" onclick="viewpassword2()"/> View Password<br/><span id="checkpassword"></span></td></tr>	-->			
 				<tr><th><br/>Name: </th><td><br/><input id="name" type="text" placeholder=" Name" name="name" required="required" style="margin-left: 15px; padding: 12px 5px; width: 300px;"></td></tr>

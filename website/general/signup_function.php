@@ -8,7 +8,7 @@
 	$role = $_POST['position'];	
 	
 	//echo "$role";
-	$sql = "Insert into users (Name, Contact_No, Email, Password, Role) VALUES ('$name', '$contact', '$email', '".md5($password)."', '$role')";
+	$sql = "Insert into users (Name, Contact_No, Email, Password, Role, Status) VALUES ('$name', '$contact', '$email', '".md5($password)."', '$role', 0)";
 	
 	mysqli_query($conn, $sql);
 	

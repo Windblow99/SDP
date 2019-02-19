@@ -68,9 +68,7 @@
         <option value="4">NOT GRADED</option>
       </select>
     </div>
-    <div class="col-sm-2">
-    <button type="submit" class="btn btn-secondary" data-toggle="modal" data-target="#modifycert">Modify Certificate</button> 
-  </div>
+
   </div>
 
 <br/><br/>
@@ -108,10 +106,6 @@ while($row = mysqli_fetch_array($result))
   echo "<td>" . $row['Name'] . "</td>";
   echo "<td>" . $row['E_Result'] . "</td>";
   echo "<td>" . $row['Chapter'] . "</td>";
-  echo "<td>";
-  echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-        background-color:#333333;' >Assign Certificate</button></td>";
-  echo "<td>";
   echo "</tr>";
   }
   echo "</table>";

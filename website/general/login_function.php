@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$conn = mysqli_connect('localhost','root','','educo1');
+	$conn = mysqli_connect('localhost','root','','educo');
 	
 	$email = mysqli_real_escape_string($conn,$_POST['email']);
 	$password = mysqli_real_escape_string($conn,$_POST['password']);

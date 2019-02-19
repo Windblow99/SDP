@@ -15,7 +15,7 @@
     <ul class="navbar-nav mr-auto">
 
       <li class="nav-item">
-        <a class="nav-link" href="teacher_menu.php">Teacher</a>
+        <a class="nav-link" href="/website/teacher/teacher_menu.php">Teacher</a>
       </li>
     </ul>
 

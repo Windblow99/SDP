@@ -105,11 +105,7 @@
 
 					mysqli_close($conn);
 					?>
-				</div>
-
-				<div class="col-sm">
-				Each certificate grading may vary. For more information, please visit the respective websites.
-				</div>				
+				</div>			
 				
 			</div>
 
@@ -159,8 +155,6 @@
 		  echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 		        background-color:#333333;' onclick=\"window.location.href='detailed_result.php?id=".$row['E_No']."'\">View Detailed Result</button></td>";
 		  echo "<td>";
-					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
 		  echo "</tr>";
 		  }
 		  echo "</table>";
@@ -212,8 +206,6 @@
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
-					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
 					echo "</tr>";
 				}
 
@@ -243,8 +235,6 @@
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
-					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
 					echo "</tr>";
 				}
 
@@ -274,8 +264,6 @@
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
-					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
 					echo "</tr>";
 				}
 
@@ -305,8 +293,6 @@
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
-					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
 					echo "</tr>";
 				}
 
@@ -336,8 +322,6 @@
 					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
 	        			 background-color:#333333;' onclick=\"window.location.href='/Website/questions/exam_function.php?difficulty=Certificate&chapter=".$certificate."'\">Take Certificate Exam</button></td>";
 	        		echo "<td>";
-					echo "<button class= 'btn btn-primary' style='width: 200px; height: 40px; color: white; 
-	        			 background-color:#333333;' onclick=\"window.location.href='#'\">Official Website</button></td>";
 					echo "</tr>";
 				}
 
