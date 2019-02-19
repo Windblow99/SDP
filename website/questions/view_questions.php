@@ -10,7 +10,19 @@
 </head>
 
 <body>
-<?php include($_SERVER["DOCUMENT_ROOT"].'/template/teachernavbar.php'); ?>
+<?php
+    $role = $_GET['role'];
+
+    if($role == 'teacher'){
+      include($_SERVER["DOCUMENT_ROOT"].'/template/teachernavbar.php');
+    }
+
+    elseif($role == 'corporate'){
+      include($_SERVER["DOCUMENT_ROOT"].'/template/corporatenavbar.php');
+    }
+
+?>
+    
 
 <br/>
 <div class="container">

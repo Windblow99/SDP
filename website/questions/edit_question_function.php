@@ -20,21 +20,33 @@
 	$answer3 = $_POST['answer3'];
 	$answer4 = $_POST['answer4'];
 	$trueanswer = $_POST['trueanswer'];
+	$status = "Pending";
 
-	$update = "UPDATE question SET A = '$answer1', B = '$answer2', C = '$answer3', D = '$answer4', TrueAnswer = 'TrueAnswer' WHERE Q_No = '$id;";
+	echo $answer1."<br>";
+	echo $answer2."<br>";
+	echo $answer3."<br>";
+	echo $answer4."<br>";
+	echo $trueanswer."<br>";
+	echo $status."<br>";
+
+	$update = "UPDATE question SET A = '$answer1' WHERE Q_No = '$id';";
 	mysqli_query($conn, $update);
 	
 	if (mysqli_affected_rows($conn) <= 0)
 	{
 		echo "<script>alert('Update Failed!');</script>";
-		die ("<script>window.history.go(-1);</script>");
+		//die ("<script>window.history.go(-1);</script>");
 	}
+	else
+	{
 
 	echo "<script>alert('Question Updated!');</script>";
-	if($row['Role'] == 'teacher'){
-		echo "<script>window.location.href='/website/teacher/teacher_menu.php';</script>";
-	}
+	//if($row['Role'] == 'teacher'){
+		//echo "<script>window.location.href='/website/teacher/teacher_menu.php';</script>";
+	//}
 
-	elseif($row['Role'] == 'corporate'){
-		echo "<script>window.location.href='/website/corporate/corporate_main_menu.php';</script>";
+	//elseif($row['Role'] == 'corporate'){
+		//echo "<script>window.location.href='/website/corporate/corporate_main_menu.php';</script>";
+	//}
 	}
+?>
